@@ -16,7 +16,7 @@ export default {
             type: "string"
         },
         {
-            name: 'ProjectImage',
+            name: 'projectImage',
             title: 'Project image',
             type: 'image',
             options: {
