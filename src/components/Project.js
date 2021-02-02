@@ -34,11 +34,6 @@ const Project = () => {
                 <section className="grid grid-cols-2 gap-8">
                     {projectData && projectData.map((project, index) => (
                         <article key={index} className="relative rounded-lg shadow-xl bg-white p-16">
-                            <img
-                                src={project.projectImage.asset.url}
-                                alt={project.projectImage.alt}
-                                className="w-full h-full rounded-r object-cover absolute"
-                            />
                             <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-blue-400">
                                 <a
                                     href={project.link}
@@ -47,6 +42,11 @@ const Project = () => {
                                     rel="noopener noreferrer"
                                 >{project.title}</a>
                             </h3>
+                            <img
+                                src={project.projectImage.asset.url}
+                                alt={project.projectImage.alt}
+                                className="w-full h-full rounded-r object-cover absolute"
+                            />
                             <div className="text-gray-500 text-xs space-x-4">
                                 <span>
                                     <strong className="font-bold">Finished on</strong>:{" "}
