@@ -1,0 +1,27 @@
+.NavBar {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Nav {
+	width: 93%;
+	margin-top: 2rem;
+}
+.nav-items {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	/* margin: 0 auto; */
+	align-items: center;
+}
+
+.nav-items img {
+	width: 50px;
+	height: 50px;
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import image from "../kevin-ku-w7ZyuGYNpRQ-unsplash.jpg";
 import "./Home.css";
 
 const Home = () => {
