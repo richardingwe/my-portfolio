@@ -23,10 +23,9 @@ const Post = () => {
             .catch(console.error);
     }, []);
     return (
-        <main className="bg-gray-100 min-h-screen p-12">
+        <main className="bg-gray-800 min-h-screen p-12">
             <section className="container mx-auto">
-                <h1 className="text-5xl flex justify-center cursive">Blog Posts Page</h1>
-                <h2 className="text-lg text-gray-600 flex justify-center mb-12">Welcome To My Blog</h2>
+                <h1 className="text-4xl my-16 flex justify-center text-white text-lg">Blog</h1>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {postData && postData.map((post, index) => (
                         <article key={index}>
