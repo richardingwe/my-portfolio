@@ -25,7 +25,6 @@ const About = () => {
     // if (!author) return <div>Loading...</div>;
     return (
         <main className="relative bg-gray-800">
-            {/* <img src={img} alt="wallpaper" className="absolute w-full" /> */}
             {author &&
                 <div className="p-10 lg:pt-48 container mx-auto relative">
                     <section className="bg-gray-900 rounded-lg shadow-2xl lg:flex p-20">
@@ -42,6 +41,9 @@ const About = () => {
                     </section>
                 </div>
             }
+            <div>
+                <h1>Skills</h1>
+            </div>
         </main>
     );
 };
