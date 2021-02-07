@@ -25,7 +25,7 @@ const Post = () => {
     }, []);
     return (
         <main className="bg-gray-800 min-h-screen p-12">
-            <section class="ftco-section mt-24" data-section="blog">
+            <section class="ftco-section text-white" data-section="blog">
                 <div class="container">
                     <div class="row justify-content-center mb-5 pb-5">
                         <div class="col-md-7 heading-section text-center ftco-animate">
@@ -36,10 +36,10 @@ const Post = () => {
 
                     <div class="row d-flex" >
                         {postData && postData.map((post, index) => (
-                            <div class="col-md-4 d-flex ftco-animate" key={index}>
+                            <div class="col-md-4 d-flex ftco-animate" key={post.slug.current}>
                                 <div class="blog-entry justify-content-end">
-                                    <a href="single.html" class="block-20" style={{ backgroundImage: `url(${post.mainImage.asset.url})` }}>
-                                    </a>
+                                    <Link to={`/post/${post.slug.current}`} class="block-20" style={{ backgroundImage: `url(${post.mainImage.asset.url})` }}>
+                                    </Link>
                                     <div class="text mt-3 text-light float-right d-block">
                                         <div class="d-flex align-items-center pt-2 mb-4 topp">
                                             <div class="one mr-3">
@@ -50,13 +50,13 @@ const Post = () => {
                                                 <span class="mos">March</span>
                                             </div>
                                         </div>
-                                        <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                                        <h3 class="heading"><Link to={`/post/${post.slug.current}`}>{post.title}</Link></h3>
                                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                                         <div class="d-flex align-items-center mt-4 meta">
-                                            <p class="mb-0"><a href="/" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                            <p class="mb-0"><Link to={`/post/${post.slug.current}`} class="btn text-dark btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></Link></p>
                                             <p class="ml-auto mb-0">
-                                                <a href="/" class="mr-2">Admin</a>
-                                                <a href="/" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                                <Link to="/about" class="mr-2">Rui</Link>
+                                                {/* <a href="/" class="meta-chat"><span class="icon-chat"></span> 3</a> */}
                                             </p>
                                         </div>
                                     </div>
