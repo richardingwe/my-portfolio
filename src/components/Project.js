@@ -51,6 +51,7 @@ const Project = () => {
                                 <span>
                                     <strong className="font-bold">Finished on</strong>:{" "}
                                     {new Date(project.date).toLocaleDateString()}
+                                    {console.log("date is", project.date)}
                                 </span>
                                 <span>
                                     <strong className="font-bold">Company</strong>:{" "}

@@ -105,6 +105,9 @@
 	margin-bottom: 16px;
 	font-weight: 500;
 }
+.blog-entry .text p {
+	min-height: 80px;
+}
 .blog-entry .text .heading a {
 	color: #9db5c5;
 }
