@@ -1,0 +1,215 @@
+.main {
+	/* height: 100vh; */
+}
+
+.img,
+.blog-img,
+.user-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.testimony-section {
+	position: relative;
+}
+.testimony-section .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	opacity: .7;
+	background: #232931;
+}
+.testimony-section .owl-carousel {
+	margin: 0;
+}
+.testimony-section .owl-carousel .owl-stage-outer {
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+}
+.testimony-section .owl-nav {
+	position: absolute;
+	bottom: 50% !important;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	opacity: 0;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+@media (max-width: 991.98px) {
+	.testimony-section .owl-nav {
+		display: none;
+	}
+}
+.testimony-section .owl-nav .owl-prev,
+.testimony-section .owl-nav .owl-next {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background: #2e9e5b !important;
+	opacity: 1;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	-webkit-transition: all 0.7s ease;
+	-ms-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+}
+.testimony-section .owl-nav .owl-prev span:before,
+.testimony-section .owl-nav .owl-next span:before {
+	font-size: 24px;
+	margin-top: 7px;
+	color: #fff;
+}
+.testimony-section .owl-nav .owl-prev {
+	top: -31px !important;
+	right: 0 !important;
+}
+@media (min-width: 992px) {
+	.testimony-section .owl-nav .owl-prev {
+		right: 0 !important;
+	}
+}
+.testimony-section .owl-nav .owl-prev:hover,
+.testimony-section .owl-nav .owl-prev:focus {
+	background: #2e9e5b !important;
+	outline: none !important;
+}
+.testimony-section .owl-nav .owl-prev:hover span:before,
+.testimony-section .owl-nav .owl-prev:focus span:before {
+	margin-top: 7px;
+	color: #fff;
+}
+.testimony-section .owl-nav .owl-next {
+	top: 30px !important;
+	right: 0 !important;
+}
+@media (min-width: 992px) {
+	.testimony-section .owl-nav .owl-next {
+		right: 0 !important;
+	}
+}
+.testimony-section .owl-nav .owl-next:hover,
+.testimony-section .owl-nav .owl-next:focus {
+	background: #2e9e5b !important;
+	outline: none !important;
+}
+.testimony-section .owl-nav .owl-next:hover span:before,
+.testimony-section .owl-nav .owl-next:focus span:before {
+	margin-top: 7px;
+	color: #fff;
+}
+.testimony-section .owl-dots {
+	text-align: center;
+}
+.testimony-section .owl-dots .owl-dot {
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+}
+.testimony-section .owl-dots .owl-dot.active {
+	background: #2e9e5b;
+}
+.testimony-section:hover .owl-nav,
+.testimony-section:focus .owl-nav {
+	opacity: 1;
+}
+
+.testimony-wrap {
+	display: block;
+	position: relative;
+}
+.testimony-wrap .user-img {
+	width: 40%;
+	height: 590px;
+	position: relative;
+	margin: 0 auto;
+	background-position: top center;
+}
+.testimony-wrap .text {
+	width: 60%;
+	padding: 0 5em;
+	position: relative;
+}
+.testimony-wrap .text > div {
+	position: relative;
+}
+.testimony-wrap p {
+	font-size: 20px;
+}
+.testimony-wrap .icon-quote {
+	position: absolute;
+	top: -70px;
+	left: 0;
+}
+.testimony-wrap .icon-quote span {
+	font-size: 60px;
+	color: rgba(0, 0, 0, 0.1);
+}
+.testimony-wrap .name {
+	font-weight: 500;
+	font-size: 20px;
+	margin-bottom: 0;
+	color: #2e9e5b;
+}
+.testimony-wrap .position {
+	color: #000000;
+	font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+	.about-image {
+		height: 400px;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.about-image {
+		height: 400px;
+		margin-bottom: 30px;
+	}
+}
+
+.image-popup {
+	cursor: -webkit-zoom-in;
+	cursor: -moz-zoom-in;
+	cursor: zoom-in;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+	opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
