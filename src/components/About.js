@@ -54,9 +54,6 @@ const About = () => {
                     </div>
                 </section>
             }
-            {/* <div>
-                <h1>Skills</h1>
-            </div> */}
         </main>
     );
     // return (
