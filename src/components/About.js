@@ -23,7 +23,7 @@ const About = () => {
             .catch(console.error);
     }, []);
 
-    // if (!author) return <div>Loading...</div>;
+    if (!author) return <div>Loading...</div>; s;
     return (
         <main className="bg-gray-800 main">
             {author &&
