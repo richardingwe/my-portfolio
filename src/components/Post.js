@@ -41,7 +41,7 @@ const Post = () => {
 
                     <div className="row d-flex" >
                         {postData && postData.map((post, index) => (
-                            <div className="col-md-4 d-flex ftco-animate" key={post.slug.current}>
+                            <div className="col-lg-4 col-md-6 col-xs-12 d-flex ftco-animate" key={post.slug.current}>
                                 <div className="blog-entry justify-content-end">
                                     <Link to={`/post/${post.slug.current}`} className="block-20" style={{ backgroundImage: `url(${post.mainImage.asset.url})` }}>
                                     </Link>
