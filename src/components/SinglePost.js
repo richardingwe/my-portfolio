@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
@@ -31,11 +31,37 @@ const SinglePost = () => {
             .catch(console.error);
     }, [slug]);
 
-    // if (!singlePost) return <div>Loading...</div>;
+    if (!singlePost) return (
+        <div>
+            <div className="preloader-area">
+                <div className="loader-box">
+                    <div className="loader"></div>
+                </div>
+            </div>
+        </div>
+    );
 
     return (
 
-        <main className="bg-gray-800 min-h-screen p-12">
+        <main className="bg-gray-800 min-h-screen">
+            <section className="banner-area relative">
+                <div className="container">
+                    <div className="row d-flex align-items-center justify-content-center">
+                        <div className="about-content col-lg-12">
+                            <h1 className="text-white">
+                                {singlePost && singlePost.title}
+                            </h1>
+                            <p className="link-nav">
+                                <span className="box">
+                                    <Link to="/">Home </Link>
+                                    <Link to="/post">Blog</Link>
+                                    <Link to={`/post/${slug}`}>Blog Details</Link>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             {singlePost &&
                 <article className="container shadow-lg mx-auto bg-gray-100 rounded-lg mt-32">
                     <header className="relative">

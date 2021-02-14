@@ -28,16 +28,44 @@ const Post = () => {
     }, []);
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+
+    if (!postData) return (
+        <div>
+            <div className="preloader-area">
+                <div className="loader-box">
+                    <div className="loader"></div>
+                </div>
+            </div>
+        </div>
+    );
     return (
-        <main className="bg-gray-800 min-h-screen p-12">
+        <main className="bg-gray-800 min-h-screen">
+            <section className="banner-area relative">
+                <div className="container">
+                    <div className="row d-flex align-items-center justify-content-center">
+                        <div className="about-content col-lg-12">
+                            <h1 className="text-white">
+                                Blog
+                            </h1>
+                            <p className="link-nav">
+                                <span className="box">
+                                    <Link to="/">Home</Link>
+                                    <Link to="/post">Blog</Link>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="ftco-section text-white" data-section="blog">
                 <div className="container">
-                    <div className="row justify-content-center mb-5 pb-5">
+                    {/* <div className="row justify-content-center mb-5 pb-5">
                         <div className="col-md-7 heading-section text-center ftco-animate">
                             <span className="subheading">Blog</span>
                             <h2 className="mb-4">Read My Stories</h2>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="row d-flex" >
                         {postData && postData.map((post, index) => (

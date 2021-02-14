@@ -25,9 +25,17 @@ const About = () => {
             .catch(console.error);
     }, []);
 
-    // if (!author) return <div>Loading...</div>;
+    if (!author) return (
+        <div>
+            <div className="preloader-area">
+                <div className="loader-box">
+                    <div className="loader"></div>
+                </div>
+            </div>
+        </div>
+    );
     return (
-        <main className="bg-gray-800 main">
+        <main className="bg-gray-800 min-h-screen main">
             <section className="banner-area relative">
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center">
