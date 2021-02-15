@@ -79,15 +79,15 @@ const SinglePost = () => {
                                         </div>
                                     </div>
                                     <div class="col-lg-3  col-md-3 meta-details">
-                                        <ul class="tags">
+                                        {/* <ul class="tags">
                                             <li><a href="/">Food,</a></li>
                                             <li><a href="/">Technology,</a></li>
                                             <li><a href="/">Politics,</a></li>
                                             <li><a href="/">Lifestyle</a></li>
-                                        </ul>
-                                        <div class="user-details row">
-                                            <p class="user-name col-lg-12 col-md-12 col-6"><a href="/">Mark wiens</a><i class="fa fa-user" /></p>
-                                            <p class="date col-lg-12 col-md-12 col-6"><a href="/">12 Dec, 2017</a><i class="fa fa-calendar" /></p>
+                                        </ul> */}
+                                        <div class="user-details row mt-2">
+                                            <p class="user-name col-lg-12 col-md-12 col-6"><a href="/about">{singlePost.name}</a><i class="fa fa-user" /></p>
+                                            <p class="date col-lg-12 col-md-12 col-6">12 Dec, 2017    <i class="fa fa-calendar" /></p>
                                             {/* <p class="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span class="lnr lnr-eye"></span></p> */}
                                             {/* <p class="comments col-lg-12 col-md-12 col-6"><a href="/">06 Comments</a> <span class="lnr lnr-bubble"></span></p> */}
                                             {/* <ul class="social-links col-lg-12 col-md-12 col-6">
@@ -99,8 +99,11 @@ const SinglePost = () => {
                                         </div>
                                     </div>
                                     <div class="col-lg-9 col-md-9">
-                                        <a class="posts-title" href="/"><h3>{singlePost && singlePost.title}</h3></a>
-                                        <p class="excert">
+                                        <h3 className="mt-5 mb-1">{singlePost && singlePost.title}</h3>
+                                        <div className="excert">
+                                            <BlockContent blocks={singlePost.body} projectId="y0xdnwwh" dataset="production" />
+                                        </div>
+                                        {/* <p class="excert">
                                             MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money
                                             on boot camp when you can get the MCSE study materials yourself at a fraction.
 							            </p>
@@ -113,34 +116,7 @@ const SinglePost = () => {
                                             Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot
                                             camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower
                                             to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
-							            </p>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="quotes">
-                                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money
-                                            on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has
-                                            the willpower to actually sit through a self-imposed MCSE training.
-							            </div>
-                                        <div class="row mt-30 mb-30">
-                                            <div class="col-6">
-                                                <img class="img-fluid" src="img/blog/post-img1.jpg" alt="" />
-                                            </div>
-                                            <div class="col-6">
-                                                <img class="img-fluid" src="img/blog/post-img2.jpg" alt="" />
-                                            </div>
-                                            <div class="col-lg-12 mt-30">
-                                                <p>
-                                                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money
-                                                    on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has
-                                                    the willpower.
-									            </p>
-                                                <p>
-                                                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money
-                                                    on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has
-                                                    the willpower.
-									            </p>
-                                            </div>
-                                        </div>
+							            </p> */}
                                     </div>
                                 </div>
                                 {/* <div class="navigation-area">
