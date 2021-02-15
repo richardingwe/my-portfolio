@@ -18,7 +18,7 @@
 	font-size: 14px;
 }
 .post-content-area .single-post .meta-details .tags li a {
-	color: #000;
+	color: rgb(158, 158, 158);
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;

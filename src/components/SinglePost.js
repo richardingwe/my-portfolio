@@ -15,6 +15,10 @@ const SinglePost = () => {
     const { slug } = useParams();
 
     useEffect(() => {
+        document.title = "Rui - Blog Details";
+    }, []);
+
+    useEffect(() => {
         sanityClient.fetch(`*[slug.current == "${slug}"]{
             title,
             _id,
@@ -50,7 +54,7 @@ const SinglePost = () => {
                     <div className="row d-flex align-items-center justify-content-center">
                         <div className="about-content col-lg-12">
                             <h1 className="text-white">
-                                {singlePost && singlePost.title}
+                                Blog Details
                             </h1>
                             <p className="link-nav">
                                 <span className="box">
@@ -84,18 +88,18 @@ const SinglePost = () => {
                                         <div class="user-details row">
                                             <p class="user-name col-lg-12 col-md-12 col-6"><a href="/">Mark wiens</a> <span class="lnr lnr-user"></span></p>
                                             <p class="date col-lg-12 col-md-12 col-6"><a href="/">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-                                            <p class="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-                                            <p class="comments col-lg-12 col-md-12 col-6"><a href="/">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
-                                            <ul class="social-links col-lg-12 col-md-12 col-6">
+                                            {/* <p class="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span class="lnr lnr-eye"></span></p> */}
+                                            {/* <p class="comments col-lg-12 col-md-12 col-6"><a href="/">06 Comments</a> <span class="lnr lnr-bubble"></span></p> */}
+                                            {/* <ul class="social-links col-lg-12 col-md-12 col-6">
                                                 <li><a href="/"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="/"><i class="fa fa-twitter"></i></a></li>
                                                 <li><a href="/"><i class="fa fa-github"></i></a></li>
                                                 <li><a href="/"><i class="fa fa-behance"></i></a></li>
-                                            </ul>
+                                            </ul> */}
                                         </div>
                                     </div>
                                     <div class="col-lg-9 col-md-9">
-                                        <a class="posts-title" href="/"><h3>Astronomy Binoculars A Great Alternative</h3></a>
+                                        <a class="posts-title" href="/"><h3>{singlePost && singlePost.title}</h3></a>
                                         <p class="excert">
                                             MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money
                                             on boot camp when you can get the MCSE study materials yourself at a fraction.

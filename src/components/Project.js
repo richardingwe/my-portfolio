@@ -5,6 +5,10 @@ const Project = () => {
     const [projectData, setProjectData] = useState(null);
 
     useEffect(() => {
+        document.title = "Rui - Projects";
+    }, []);
+
+    useEffect(() => {
         sanityClient
             .fetch(
                 `*[_type == "project"]{

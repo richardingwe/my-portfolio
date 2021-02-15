@@ -7,6 +7,10 @@ const Post = () => {
     const [postData, setPostData] = useState(null);
 
     useEffect(() => {
+        document.title = "Rui - Blog";
+    }, []);
+
+    useEffect(() => {
         sanityClient
             .fetch(
                 `*[_type == "post"]{

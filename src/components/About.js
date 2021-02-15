@@ -17,6 +17,10 @@ const About = () => {
     const [author, setAuthor] = useState(null);
 
     useEffect(() => {
+        document.title = "Rui - About";
+    }, []);
+
+    useEffect(() => {
         sanityClient.fetch(`*[_type == "author"]{
             name,
             bio,
