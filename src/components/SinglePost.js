@@ -35,7 +35,7 @@ const SinglePost = () => {
     }, [slug]);
 
     useEffect(() => {
-        document.title = `Rui - Blog - ${singlePost && singlePost.title}`;
+        document.title = `Rui - Blog ${singlePost ? `- ${singlePost.title}` : " "}`;
     }, [singlePost]);
 
     if (!singlePost) return (
@@ -72,42 +72,42 @@ const SinglePost = () => {
                 </div>
             </section>
             {singlePost &&
-                <section class="post-content-area single-post-area section-gap">
-                    <div class="container">
-                        <div class="">
-                            <div class="posts-list">
-                                <div class="single-post row text-white">
-                                    <div class="col-lg-12">
-                                        <div class="feature-img" style={{ backgroundImage: `url(${singlePost.mainImage.asset.url})` }}>
-                                            {/* <img class="img-fluid" src={singlePost.mainImage.asset.url} alt={singlePost.title} /> */}
+                <section className="post-content-area single-post-area section-gap">
+                    <div className="container">
+                        <div className="">
+                            <div className="posts-list">
+                                <div className="single-post row text-white">
+                                    <div className="col-lg-12">
+                                        <div className="feature-img" style={{ backgroundImage: `url(${singlePost.mainImage.asset.url})` }}>
+                                            {/* <img className="img-fluid" src={singlePost.mainImage.asset.url} alt={singlePost.title} /> */}
                                         </div>
                                     </div>
-                                    <div class="col-lg-3  col-md-3 meta-details">
-                                        {/* <ul class="tags">
+                                    <div className="col-lg-3  col-md-3 meta-details">
+                                        {/* <ul className="tags">
                                             <li><a href="/">Food,</a></li>
                                             <li><a href="/">Technology,</a></li>
                                             <li><a href="/">Politics,</a></li>
                                             <li><a href="/">Lifestyle</a></li>
                                         </ul> */}
-                                        <div class="user-details row mt-2">
-                                            <p class="user-name col-lg-12 col-md-12 col-6"><a href="/about">{singlePost.name}</a><i class="fa fa-user" /></p>
-                                            <p class="date col-lg-12 col-md-12 col-6">{new Date(singlePost.publishedAt).getDate()} {months[new Date(singlePost.publishedAt).getMonth()]},  {new Date(singlePost.publishedAt).getFullYear()}   <i class="fa fa-calendar" /></p>
-                                            {/* <p class="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span class="lnr lnr-eye"></span></p> */}
-                                            {/* <p class="comments col-lg-12 col-md-12 col-6"><a href="/">06 Comments</a> <span class="lnr lnr-bubble"></span></p> */}
-                                            {/* <ul class="social-links col-lg-12 col-md-12 col-6">
-                                                <li><a href="/"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="/"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="/"><i class="fa fa-github"></i></a></li>
-                                                <li><a href="/"><i class="fa fa-behance"></i></a></li>
+                                        <div className="user-details row mt-2">
+                                            <p className="user-name col-lg-12 col-md-12 col-6"><a href="/about">{singlePost.name}</a><i className="fa fa-user" /></p>
+                                            <p className="date col-lg-12 col-md-12 col-6">{new Date(singlePost.publishedAt).getDate()} {months[new Date(singlePost.publishedAt).getMonth()]},  {new Date(singlePost.publishedAt).getFullYear()}   <i className="fa fa-calendar" /></p>
+                                            {/* <p className="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span className="lnr lnr-eye"></span></p> */}
+                                            {/* <p className="comments col-lg-12 col-md-12 col-6"><a href="/">06 Comments</a> <span className="lnr lnr-bubble"></span></p> */}
+                                            {/* <ul className="social-links col-lg-12 col-md-12 col-6">
+                                                <li><a href="/"><i className="fa fa-facebook"></i></a></li>
+                                                <li><a href="/"><i className="fa fa-twitter"></i></a></li>
+                                                <li><a href="/"><i className="fa fa-github"></i></a></li>
+                                                <li><a href="/"><i className="fa fa-behance"></i></a></li>
                                             </ul> */}
                                         </div>
                                     </div>
-                                    <div class="col-lg-9 col-md-9">
+                                    <div className="col-lg-9 col-md-9">
                                         <h3 className="mt-5 mb-1 blog-title">{singlePost && singlePost.title}</h3>
                                         <div className="excert">
                                             <BlockContent blocks={singlePost.body} projectId="y0xdnwwh" dataset="production" />
                                         </div>
-                                        {/* <p class="excert">
+                                        {/* <p className="excert">
                                             MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money
                                             on boot camp when you can get the MCSE study materials yourself at a fraction.
 							            </p>
@@ -123,151 +123,151 @@ const SinglePost = () => {
 							            </p> */}
                                     </div>
                                 </div>
-                                {/* <div class="navigation-area">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                                            <div class="thumb">
-                                                <a href="/"><img class="img-fluid" src="img/blog/prev.jpg" alt="" /></a>
+                                {/* <div className="navigation-area">
+                                    <div className="row">
+                                        <div className="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                                            <div className="thumb">
+                                                <a href="/"><img className="img-fluid" src="img/blog/prev.jpg" alt="" /></a>
                                             </div>
-                                            <div class="arrow">
-                                                <a href="/"><span class="lnr text-white lnr-arrow-left"></span></a>
+                                            <div className="arrow">
+                                                <a href="/"><span className="lnr text-white lnr-arrow-left"></span></a>
                                             </div>
-                                            <div class="detials">
+                                            <div className="detials">
                                                 <p>Prev Post</p>
                                                 <a href="/"><h4>Space The Final Frontier</h4></a>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                                            <div class="detials">
+                                        <div className="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                                            <div className="detials">
                                                 <p>Next Post</p>
                                                 <a href="/"><h4>Telescopes 101</h4></a>
                                             </div>
-                                            <div class="arrow">
-                                                <a href="/"><span class="lnr text-white lnr-arrow-right"></span></a>
+                                            <div className="arrow">
+                                                <a href="/"><span className="lnr text-white lnr-arrow-right"></span></a>
                                             </div>
-                                            <div class="thumb">
-                                                <a href="/"><img class="img-fluid" src="img/blog/next.jpg" alt="" /></a>
+                                            <div className="thumb">
+                                                <a href="/"><img className="img-fluid" src="img/blog/next.jpg" alt="" /></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div> */}
-                                {/* <div class="comments-area">
+                                {/* <div className="comments-area">
                                     <h4>05 Comments</h4>
-                                    <div class="comment-list">
-                                        <div class="single-comment justify-content-between d-flex">
-                                            <div class="user justify-content-between d-flex">
-                                                <div class="thumb">
+                                    <div className="comment-list">
+                                        <div className="single-comment justify-content-between d-flex">
+                                            <div className="user justify-content-between d-flex">
+                                                <div className="thumb">
                                                     <img src="img/blog/c1.jpg" alt="" />
                                                 </div>
-                                                <div class="desc">
+                                                <div className="desc">
                                                     <h5><a href="/">Emilly Blunt</a></h5>
-                                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                    <p class="comment">
+                                                    <p className="date">December 4, 2017 at 3:12 pm </p>
+                                                    <p className="comment">
                                                         Never say goodbye till the end comes!
 										            </p>
                                                 </div>
                                             </div>
-                                            <div class="reply-btn">
-                                                <a href="/" class=" btn-reply text-uppercase">reply</a>
+                                            <div className="reply-btn">
+                                                <a href="/" className=" btn-reply text-uppercase">reply</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="comment-list left-padding">
-                                        <div class="single-comment justify-content-between d-flex">
-                                            <div class="user justify-content-between d-flex">
-                                                <div class="thumb">
+                                    <div className="comment-list left-padding">
+                                        <div className="single-comment justify-content-between d-flex">
+                                            <div className="user justify-content-between d-flex">
+                                                <div className="thumb">
                                                     <img src="img/blog/c2.jpg" alt="" />
                                                 </div>
-                                                <div class="desc">
+                                                <div className="desc">
                                                     <h5><a href="/">Elsie Cunningham</a></h5>
-                                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                    <p class="comment">
+                                                    <p className="date">December 4, 2017 at 3:12 pm </p>
+                                                    <p className="comment">
                                                         Never say goodbye till the end comes!
 										            </p>
                                                 </div>
                                             </div>
-                                            <div class="reply-btn">
-                                                <a href="/" class=" btn-reply text-uppercase">reply</a>
+                                            <div className="reply-btn">
+                                                <a href="/" className=" btn-reply text-uppercase">reply</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="comment-list left-padding">
-                                        <div class="single-comment justify-content-between d-flex">
-                                            <div class="user justify-content-between d-flex">
-                                                <div class="thumb">
+                                    <div className="comment-list left-padding">
+                                        <div className="single-comment justify-content-between d-flex">
+                                            <div className="user justify-content-between d-flex">
+                                                <div className="thumb">
                                                     <img src="img/blog/c3.jpg" alt="" />
                                                 </div>
-                                                <div class="desc">
+                                                <div className="desc">
                                                     <h5><a href="/">Annie Stephens</a></h5>
-                                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                    <p class="comment">
+                                                    <p className="date">December 4, 2017 at 3:12 pm </p>
+                                                    <p className="comment">
                                                         Never say goodbye till the end comes!
 										            </p>
                                                 </div>
                                             </div>
-                                            <div class="reply-btn">
-                                                <a href="/" class=" btn-reply text-uppercase">reply</a>
+                                            <div className="reply-btn">
+                                                <a href="/" className=" btn-reply text-uppercase">reply</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="comment-list">
-                                        <div class="single-comment justify-content-between d-flex">
-                                            <div class="user justify-content-between d-flex">
-                                                <div class="thumb">
+                                    <div className="comment-list">
+                                        <div className="single-comment justify-content-between d-flex">
+                                            <div className="user justify-content-between d-flex">
+                                                <div className="thumb">
                                                     <img src="img/blog/c4.jpg" alt="" />
                                                 </div>
-                                                <div class="desc">
+                                                <div className="desc">
                                                     <h5><a href="/">Maria Luna</a></h5>
-                                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                    <p class="comment">
+                                                    <p className="date">December 4, 2017 at 3:12 pm </p>
+                                                    <p className="comment">
                                                         Never say goodbye till the end comes!
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="reply-btn">
-                                                <a href="/" class=" btn-reply text-uppercase">reply</a>
+                                            <div className="reply-btn">
+                                                <a href="/" className=" btn-reply text-uppercase">reply</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="comment-list">
-                                        <div class="single-comment justify-content-between d-flex">
-                                            <div class="user justify-content-between d-flex">
-                                                <div class="thumb">
+                                    <div className="comment-list">
+                                        <div className="single-comment justify-content-between d-flex">
+                                            <div className="user justify-content-between d-flex">
+                                                <div className="thumb">
                                                     <img src="img/blog/c5.jpg" alt="" />
                                                 </div>
-                                                <div class="desc">
+                                                <div className="desc">
                                                     <h5><a href="/">Ina Hayes</a></h5>
-                                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                    <p class="comment">
+                                                    <p className="date">December 4, 2017 at 3:12 pm </p>
+                                                    <p className="comment">
                                                         Never say goodbye till the end comes!
 										            </p>
                                                 </div>
                                             </div>
-                                            <div class="reply-btn">
-                                                <a href="/" class=" btn-reply text-uppercase">reply</a>
+                                            <div className="reply-btn">
+                                                <a href="/" className=" btn-reply text-uppercase">reply</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div> */}
-                                {/* <div class="comment-form">
+                                {/* <div className="comment-form">
                                     <h4>Leave a Comment</h4>
                                     <form>
-                                        <div class="form-group form-inline">
-                                            <div class="form-group col-lg-6 col-md-12 name">
-                                                <input type="text" class="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'" />
+                                        <div className="form-group form-inline">
+                                            <div className="form-group col-lg-6 col-md-12 name">
+                                                <input type="text" className="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'" />
                                             </div>
-                                            <div class="form-group col-lg-6 col-md-12 email">
-                                                <input type="email" class="form-control" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" />
+                                            <div className="form-group col-lg-6 col-md-12 email">
+                                                <input type="email" className="form-control" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" />
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'" />
                                         </div>
-                                        <div class="form-group">
-                                            <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"
+                                        <div className="form-group">
+                                            <textarea className="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"
                                                 required=""></textarea>
                                         </div>
-                                        <a href="/" class="primary-btn" data-text="Post Comment">
+                                        <a href="/" className="primary-btn" data-text="Post Comment">
                                             <span>P</span>
                                             <span>o</span>
                                             <span>s</span>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { SocialIcon } from "react-social-icons";
+// import { SocialIcon } from "react-social-icons";
 import Logo from "../Rui.svg";
 import "./NavBar.css";
 
