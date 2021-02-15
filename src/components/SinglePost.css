@@ -5,6 +5,10 @@
 	text-align: right;
 	margin-top: 35px;
 }
+.blog-title {
+	font-weight: bolder;
+	font-size: 30px;
+}
 @media (max-width: 767px) {
 	.post-content-area .single-post .meta-details {
 		text-align: left;

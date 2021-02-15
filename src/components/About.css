@@ -1,7 +1,3 @@
-.main {
-	/* height: 100vh; */
-}
-
 a {
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
@@ -752,6 +748,9 @@ h6,
 	/* margin-bottom: 112px; */
 	text-align: center;
 }
+.about-content h1 {
+	margin-bottom: 15px;
+}
 @media (max-width: 767px) {
 	.about-content {
 		margin-top: 150px;
@@ -814,9 +813,9 @@ h6,
 	}
 }
 @media (max-width: 991px) {
-	.about-area .about-left {
-		/* display: none; */
-	}
+	/* .about-area .about-left {
+		display: none;
+	} */
 }
 .about-area .primary-btn.white {
 	margin-right: 10px;

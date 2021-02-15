@@ -1,28 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from "react-router-dom";
 import sanityClient from "../client.js";
-import imageUrlBuilder from "@sanity/image-url";
+// import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import "./SinglePost.css";
 
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-    return builder.image(source);
-}
+// const builder = imageUrlBuilder(sanityClient);
+// function urlFor(source) {
+//     return builder.image(source);
+// }
 
 const SinglePost = () => {
     const [singlePost, setSinglePost] = useState(null);
     const { slug } = useParams();
 
-    useEffect(() => {
-        document.title = "Rui - Blog Details";
-    }, []);
 
     useEffect(() => {
         sanityClient.fetch(`*[slug.current == "${slug}"]{
             title,
             _id,
             slug,
+        publishedAt,
             mainImage {
                 asset-> {
                     _id,
@@ -36,6 +34,10 @@ const SinglePost = () => {
             .catch(console.error);
     }, [slug]);
 
+    useEffect(() => {
+        document.title = `Rui - Blog - ${singlePost && singlePost.title}`;
+    }, [singlePost]);
+
     if (!singlePost) return (
         <div>
             <div className="preloader-area">
@@ -45,6 +47,8 @@ const SinglePost = () => {
             </div>
         </div>
     );
+
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     return (
 
@@ -87,7 +91,7 @@ const SinglePost = () => {
                                         </ul> */}
                                         <div class="user-details row mt-2">
                                             <p class="user-name col-lg-12 col-md-12 col-6"><a href="/about">{singlePost.name}</a><i class="fa fa-user" /></p>
-                                            <p class="date col-lg-12 col-md-12 col-6">12 Dec, 2017    <i class="fa fa-calendar" /></p>
+                                            <p class="date col-lg-12 col-md-12 col-6">{new Date(singlePost.publishedAt).getDate()} {months[new Date(singlePost.publishedAt).getMonth()]},  {new Date(singlePost.publishedAt).getFullYear()}   <i class="fa fa-calendar" /></p>
                                             {/* <p class="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span class="lnr lnr-eye"></span></p> */}
                                             {/* <p class="comments col-lg-12 col-md-12 col-6"><a href="/">06 Comments</a> <span class="lnr lnr-bubble"></span></p> */}
                                             {/* <ul class="social-links col-lg-12 col-md-12 col-6">
@@ -99,7 +103,7 @@ const SinglePost = () => {
                                         </div>
                                     </div>
                                     <div class="col-lg-9 col-md-9">
-                                        <h3 className="mt-5 mb-1">{singlePost && singlePost.title}</h3>
+                                        <h3 className="mt-5 mb-1 blog-title">{singlePost && singlePost.title}</h3>
                                         <div className="excert">
                                             <BlockContent blocks={singlePost.body} projectId="y0xdnwwh" dataset="production" />
                                         </div>
