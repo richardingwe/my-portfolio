@@ -97,38 +97,7 @@ const About = () => {
             }
         </main>
     );
-    // return (
-    //     <main className="bg-gray-800 main">
-    //         {author &&
-    //             <section className="testimony-section text-light" data-section="testimony">
-    //                 <div className="container">
-    //                     <div className="row ftco-animate justify-content-center">
-    //                         <div className="col-md-12 d-flex align-items-center">
-    //                             <div className="carousel-testimony owl-carousel">
-    //                                 <div className="item">
-    //                                     <div className="testimony-wrap my-40 d-flex align-items-stretch">
-    //                                         <div className="user-img d-flex align-self-stretch" style={{ backgroundImage: `url(${urlFor(author.authorImage).url()})` }}>
-    //                                         </div>
-    //                                         <div className="text d-flex align-items-center">
-    //                                             <div>
-    //                                                 <p className="name">Richard Unimke Ingwe</p>
-    //                                                 <span className="position">Software Developer && Graphic Designer</span>
-    //                                                 <div className="icon-quote">
-    //                                                     <span className="icon-quote-left"></span>
-    //                                                 </div>
-    //                                                 <p className="mb-4">Far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-    //                                             </div>
-    //                                         </div>
-    //                                     </div>
-    //                                 </div>
-    //                             </div>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </section>
-    //         }
-    //     </main>
-    // );
+
     // return (
     //     <main className="relative bg-gray-800">
     //         {author &&
