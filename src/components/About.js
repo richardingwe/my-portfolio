@@ -72,7 +72,7 @@ const About = () => {
                                     <div className="text-white mb-30">
                                         <BlockContent blocks={author.bio} projectId="y0xdnwwh" dataset="production" />
                                     </div>
-                                    <a href="/" className="primary-btn white" data-text="Hire Me">
+                                    <a  href="mailto:ruitech00@gmail.com" className="primary-btn white" data-text="Hire Me">
                                         <span>H</span>
                                         <span>i</span>
                                         <span>r</span>

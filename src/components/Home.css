@@ -20,12 +20,10 @@
 .heading-text p {
 	color: white;
 	font-size: 24px;
-	/* font-weight: bold; */
 	padding: 1.5rem 0.6rem 1.8rem 0.6rem;
 	background: rgba(41, 41, 41, 0.671);
 }
 .title {
-	/* color: #e45447 !important; */
 	border-bottom: 2.5px solid white;
 	font-size: 17px;
 	font-weight: 600;
@@ -35,18 +33,22 @@
 }
 .home-name {
 	font-size: 6rem;
-	/* text-align: center; */
 }
 @media (max-width: 991px) {
 	.home-name {
 		font-size: 4.5rem;
-		/* text-align: center; */
+	}
+	.heading-text p {
+		font-size: 20px;
+		padding: 1.2rem 0.6rem 1.3rem 0.6rem;
+	}
+	.title {
+		font-size: 14px;
 	}
 }
 .hello {
 	font-size: 26px;
 	margin-bottom: 0 !important;
-	/* text-align: left; */
 }
 
 .action {
