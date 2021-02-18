@@ -44,7 +44,7 @@ const Post = () => {
         </div>
     );
     return (
-        <main className="bg-gray-800 min-h-screen">
+        <main className="bg-gray-800 min-h-screen main">
             <section className="banner-area relative">
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center">

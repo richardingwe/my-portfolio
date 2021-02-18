@@ -19,19 +19,19 @@ const NavBar = () => {
                     <div>
                         <NavLink
                             to="/about"
-                            activeClassName="text-red-100 navActive"
+                            activeClassName="navActive"
                             className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 text-bold hover:text-blue-400">
                             About Me
                     </NavLink>
                         <NavLink
                             to="/project"
-                            activeClassName="text-red-100 navActive"
+                            activeClassName="navActive"
                             className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400">
                             Projects
                     </NavLink>
                         <NavLink
                             to="/post"
-                            activeClassName="text-red-100 navActive"
+                            activeClassName="navActive"
                             className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400">
                             Blog
                     </NavLink>

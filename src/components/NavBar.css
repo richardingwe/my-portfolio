@@ -7,6 +7,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 2rem;
 }
 
 .Nav {
@@ -18,7 +19,16 @@
 	display: flex;
 	justify-content: space-between;
 	/* margin: 0 auto; */
+	color: white;
 	align-items: center;
+}
+.nav-items a {
+	color: white;
+	font-weight: 400;
+	transition: 500ms;
+}
+.nav-items a:hover {
+	color: #e45447;
 }
 
 .nav-items img {
@@ -28,7 +38,9 @@
 
 .navActive {
 	position: relative;
+	color: #e45447 !important;
 }
+
 .navActive::after {
 	content: "";
 	position: absolute;
