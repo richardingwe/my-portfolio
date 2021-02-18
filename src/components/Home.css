@@ -6,11 +6,49 @@
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 .heading-text {
 	display: flex;
+	flex-direction: column;
 	align-self: center;
 	margin: auto;
+	text-align: center;
+}
+.heading-text p {
+	color: white;
+	font-size: 24px;
+	/* font-weight: bold; */
+	padding: 1.5rem 0.6rem 1.8rem 0.6rem;
+	background: rgba(41, 41, 41, 0.671);
+}
+.title {
+	/* color: #e45447 !important; */
+	border-bottom: 2.5px solid white;
+	font-size: 17px;
+	font-weight: 600;
+}
+.playfair {
+	font-family: 'Playfair Display', serif;
+}
+.home-name {
+	font-size: 6rem;
+	/* text-align: center; */
+}
+@media (max-width: 991px) {
+	.home-name {
+		font-size: 4.5rem;
+		/* text-align: center; */
+	}
+}
+.hello {
+	font-size: 26px;
+	margin-bottom: 0 !important;
+	/* text-align: left; */
+}
+
+.action {
+	width: 100%;
 }

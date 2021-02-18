@@ -7,18 +7,3 @@
 	font-family: "Amatic SC", cursive;
 	font-weight: 700;
 }
-
-.playfair {
-	font-family: 'Playfair Display', serif;
-}
-
-.prose img {
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 5px;
-}
-
-.home-name {
-	font-size: 6rem;
-	text-align: center;
-}
