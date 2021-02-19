@@ -3,9 +3,9 @@ import "./WhatsApp.css";
 
 function WhatsApp() {
     return (
-        <div className="WhatsApp">
+        <div className="WhatsApp  animate__pulse animate__infinite	infinite">
             <a href="https://wa.me/message/FI6OFAJRBKVMI1" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <i className="fa fa-whatsapp" aria-hidden="true"></i>
             </a>
         </div>
     );

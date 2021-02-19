@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import sanityClient from "../client";
 import { Link } from "react-router-dom";
 
 
 const Project = () => {
-    const [projectData, setProjectData] = useState(null);
+    // const [projectData, setProjectData] = useState(null);
 
     useEffect(() => {
         document.title = "Rui - Projects";
@@ -29,7 +30,7 @@ const Project = () => {
             alt
         }
         }`)
-            .then(data => setProjectData(data))
+            // .then(data => setProjectData(data))
             .catch(console.error);
     }, []);
     return (

@@ -34,6 +34,30 @@ const Home = () => {
                     </a>
                 </div>
             </section>
+            <div className="socials">
+                <a href="https://github.com/richardingwe" target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://dribbble.com/Rui_Creative" target="_blank" rel="noopener noreferrer">
+                    <i className=" fa fa-dribbble" aria-hidden="true"></i>
+                </a>
+                <a href="https://behance.net/richardingwe" target="_blank" rel="noopener noreferrer">
+                    <i className=" fa fa-behance" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/RichardIngwe?s=09" target="_blank" rel="noopener noreferrer">
+                    <i className=" fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://facebook.com/ruitech00" target="_blank" rel="noopener noreferrer">
+                    <i className=" fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com/in/richard-ingwe-9a91a5190" target="_blank" rel="noopener noreferrer">
+                    <i className=" fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/rui_creative" target="_blank" rel="noopener noreferrer">
+                    <i className=" fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <div className="Line" />
+            </div>
         </main>
     );
 };
