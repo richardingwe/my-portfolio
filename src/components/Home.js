@@ -11,7 +11,9 @@ const Home = () => {
             /> */}
             <section className="heading-text container">
                 <h1 className="text-white font-bold playfair home-name"><span className="hello">Hello,</span><br /> I am Rui</h1>
-                <p><span className="title">Software Developer && Brand Identity Designer</span><br />I Create Beautiful Experiences, That Could Keep Potential Customers Glued To Your Website</p>
+                <p><span className="title">Software Developer && Brand Identity Designer</span><br />
+                I Create Beautiful Experiences, That Could Keep Potential Customers Glued && Loyal To Your Businesses, Brands And Websites.
+                </p>
                 <div className="action about-area">
                     <a href="mailto:ruitech00@gmail.com" className="primary-btn white" data-text="Hire Me">
                         <span>H</span>
