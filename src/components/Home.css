@@ -9,24 +9,34 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+}
+.Main::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #1f29379a;
 }
 .heading-text {
 	display: flex;
 	flex-direction: column;
 	align-self: center;
 	margin: auto;
-	text-align: center;
+	padding: 0 3rem;
+	z-index: 5;
+	/* text-align: center; */
 }
 .heading-text p {
 	color: white;
 	font-size: 24px;
-	padding: 1.5rem 0.6rem 1.8rem 0.6rem;
-	background: rgba(41, 41, 41, 0.671);
+	padding: 2rem 0;
+	/* background: rgba(41, 41, 41, 0.671); */
 }
 .title {
 	border-bottom: 2.5px solid white;
 	font-size: 17px;
-	font-weight: 600;
+	font-weight: 700;
 }
 .playfair {
 	font-family: 'Playfair Display', serif;

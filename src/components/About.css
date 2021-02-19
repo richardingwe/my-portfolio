@@ -816,12 +816,15 @@ h6,
 	}
 }
 @media (max-width: 991px) {
+	.about-area .section-title {
+		margin-top: 1rem;
+	}
 	/* .about-area .about-left {
 		display: none;
 	} */
 }
 .about-area .primary-btn.white {
-	margin-right: 10px;
+	margin-right: 1rem;
 }
 @media (max-width: 1199px) {
 	.about-area .primary-btn.white {

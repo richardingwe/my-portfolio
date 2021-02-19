@@ -3,9 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish&display=swap');
-/* body {
-	font-family: 'Roboto', sans-serif;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+
+body {
+	font-family: 'Karla', sans-serif;
+	font-style: 400;
+}
 .cursive {
 	font-family: "Amatic SC", cursive;
 	font-weight: 700;
