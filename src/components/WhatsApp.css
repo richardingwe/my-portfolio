@@ -1,0 +1,23 @@
+.WhatsApp {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: rgb(13, 153, 72);
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.WhatsApp a {
+	margin-top: 5px;
+	/* width: 100px; */
+	/* height: 100px; */
+}
+.WhatsApp i {
+	color: rgb(255, 255, 255);
+	font-size: 2rem;
+	width: 100%;
+}

@@ -6,11 +6,13 @@ import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
 import Project from "./components/Project";
 import NavBar from './components/NavBar';
+import WhatsApp from './components/WhatsApp';
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <WhatsApp />
       <Switch>
         <Route component={Home} path="/" exact />
         <Route component={About} path="/about" />
