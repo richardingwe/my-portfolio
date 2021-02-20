@@ -51,3 +51,8 @@
 	transition: 300ms;
 	border-bottom: 2px solid white;
 }
+@media (max-width: 400px) {
+	.Nav {
+		margin-top: 0;
+	}
+}
