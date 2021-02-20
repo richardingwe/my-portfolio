@@ -1,6 +1,11 @@
+/* @media (min-width: 325px) {
+	.Main {
+		height: 100vh;
+	}
+} */
 .Main {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background: url("../kevin-ku-w7ZyuGYNpRQ-unsplash.jpg");
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
@@ -18,6 +23,18 @@
 	position: absolute;
 	background-color: #1f29379a;
 }
+@media (min-width: 400px) {
+	.Main {
+		height: 100vh;
+	}
+}
+/* medid queries for iphone x */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+	.Main {
+		height: 100vh;
+	}
+}
+
 .heading-text {
 	display: flex;
 	flex-direction: column;
@@ -45,7 +62,7 @@
 	font-size: 6rem;
 }
 .socials {
-	position: absolute;
+	position: fixed;
 	left: 2.3rem;
 	bottom: 0;
 	display: flex;
@@ -83,6 +100,20 @@
 	}
 	.socials a {
 		font-size: .9rem;
+	}
+}
+@media (max-width: 400px) {
+	.home-name {
+		font-size: 3.5rem;
+	}
+	.hello {
+		font-size: 21px;
+	}
+}
+@media (max-width: 400px) {
+	.heading-text {
+		padding-top: 10rem;
+		padding-bottom: 3rem;
 	}
 }
 .hello {
