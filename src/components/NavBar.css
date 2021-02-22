@@ -9,7 +9,9 @@
 	align-items: center;
 	margin-top: 1rem;
 }
-
+.hamburger {
+	display: none;
+}
 .Nav {
 	width: 93%;
 	margin-top: 2rem;
@@ -32,10 +34,24 @@
 }
 
 .nav-items img {
-	width: 50px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
 }
-
+@media (max-width: 676px) {
+	.Nav {
+		margin-top: 0;
+	}
+	.NavBar {
+		margin-top: 1.5rem;
+		padding: 0 10px;
+	}
+	.hamburger {
+		display: block;
+	}
+	.NavLinks {
+		display: none;
+	}
+}
 .navActive {
 	position: relative;
 	color: #e45447 !important;
@@ -50,9 +66,4 @@
 	height: 2px;
 	transition: 300ms;
 	border-bottom: 2px solid white;
-}
-@media (max-width: 400px) {
-	.Nav {
-		margin-top: 0;
-	}
 }

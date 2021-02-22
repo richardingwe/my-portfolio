@@ -28,17 +28,32 @@
 		height: 100vh;
 	}
 }
+/* @media only screen and (device-width: 360px) and (max-device-width: 767px) {
+	.Main {
+		height: 100vh;
+	}
+} */
 /* medid queries for iphone x */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 	.Main {
 		height: 100vh;
 	}
 }
-@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+@media only screen and (device-width: 360px) and (device-width: 640px) and (-webkit-min-device-pixel-ratio: 3) {
 	.Main {
 		height: 100%;
 	}
 }
+@media only screen and (min-device-width: 360px) and (min-device-height: 767px) and (-webkit-min-device-pixel-ratio: 3) {
+	.Main {
+		height: 100vh;
+	}
+}
+/* @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+	.Main {
+		height: 100%;
+	}
+} */
 
 .heading-text {
 	display: flex;

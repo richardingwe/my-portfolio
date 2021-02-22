@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 // import { SocialIcon } from "react-social-icons";
 import Logo from "../Rui.svg";
+import hamburger from "../hamburger.svg";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -12,11 +13,11 @@ const NavBar = () => {
                     <NavLink
                         to="/"
                         exact
-                        activeClassName="text-white" className="inline-flex items-center py-6 px-3 mr-4 text-gray-100 hover:text-blue-400 text-4xl font-bold cursive tracking-widest">
+                        activeClassName="text-white" className="">
 
                         <img src={Logo} alt="rui logo" />
                     </NavLink>
-                    <div>
+                    <div className="NavLinks">
                         <NavLink
                             to="/about"
                             activeClassName="navActive"
@@ -35,6 +36,9 @@ const NavBar = () => {
                             className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400">
                             Blog
                     </NavLink>
+                    </div>
+                    <div className="hamburger">
+                        <img src={hamburger} alt="rui logo" />
                     </div>
                 </nav>
                 {/* <div className="inline-flex py-3 px-3 my-6">
