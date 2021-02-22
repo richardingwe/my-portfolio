@@ -5,9 +5,9 @@ import Logo from "../Rui.svg";
 import hamburger from "../hamburger.svg";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ handleClick, navOpen }) => {
     return (
-        <header className="NavBar">
+        <header className="NavBar" style={{ position: `${navOpen ? "fixed" : "absolute"}` }}>
             <div className="Nav">
                 <nav className="nav-items">
                     <NavLink
@@ -17,7 +17,7 @@ const NavBar = () => {
 
                         <img src={Logo} alt="rui logo" />
                     </NavLink>
-                    <div className="NavLinks">
+                    <div className="NavLinks" >
                         <NavLink
                             to="/about"
                             activeClassName="navActive"
@@ -37,7 +37,7 @@ const NavBar = () => {
                             Blog
                     </NavLink>
                     </div>
-                    <div className="hamburger">
+                    <div className="hamburger" onClick={() => handleClick()}>
                         <img src={hamburger} alt="rui logo" />
                     </div>
                 </nav>

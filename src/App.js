@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "./components/Home";
 import About from "./components/About";
@@ -7,11 +7,18 @@ import Post from "./components/Post";
 import Project from "./components/Project";
 import NavBar from './components/NavBar';
 import WhatsApp from './components/WhatsApp';
+import MiniNavBar from './components/MiniNavBar';
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const handleClick = () => {
+    setNavOpen(!navOpen);
+  };
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBar handleClick={handleClick} navOpen={navOpen} />
+      {navOpen && <MiniNavBar handleClick={handleClick} />}
       <WhatsApp />
       <Switch>
         <Route component={Home} path="/" exact />
