@@ -67,3 +67,18 @@
 	transition: 300ms;
 	border-bottom: 2px solid white;
 }
+
+.rotate {
+	transform: rotate(720deg) !important;
+	transition: 700ms;
+	/* animation: rotate; */
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 // import { SocialIcon } from "react-social-icons";
 import Logo from "../Rui.svg";
 import hamburger from "../hamburger.svg";
+import hamburgerClose from "../hamburgerClose.svg";
 import "./NavBar.css";
 
 const NavBar = ({ handleClick, navOpen }) => {
+    const [rotate, setRotate] = useState(false);
+    const handleNavClick = () => {
+        handleClick();
+        setRotate(true);
+        setTimeout(() => {
+            setRotate(false);
+        }, 2000);
+    };
     return (
         <header className="NavBar" style={{ position: `${navOpen ? "fixed" : "absolute"}` }}>
             <div className="Nav">
@@ -37,16 +46,10 @@ const NavBar = ({ handleClick, navOpen }) => {
                             Blog
                     </NavLink>
                     </div>
-                    <div className="hamburger" onClick={() => handleClick()}>
-                        <img src={hamburger} alt="rui logo" />
+                    <div className={`hamburger ${rotate ? "rotate" : " "}`} onClick={handleNavClick}>
+                        <img src={navOpen ? hamburgerClose : hamburger} className={rotate ? "rotate" : " "} alt="hamburger" />
                     </div>
                 </nav>
-                {/* <div className="inline-flex py-3 px-3 my-6">
-                    <SocialIcon url="https://twitter.com/RichardIngwe?s=09" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 35, width: 35 }} />
-                    <SocialIcon url="https://behance.net/richardingwe" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 35, width: 35 }} />
-                    <SocialIcon url="https://linkedin.com/in/richard-ingwe-9a91a5190" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 35, width: 35 }} />
-                    <SocialIcon url="https://wa.me/message/FI6OFAJRBKVMI1" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 35, width: 35 }} />
-                </div> */}
             </div>
         </header>
     );
