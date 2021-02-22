@@ -1,11 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import "./MiniNavBar.css";
+import { motion } from "framer-motion";
 
 const MiniNavBar = ({ handleClick }) => {
     return (
         <header className="MiniNavBar">
-            <div className="Nav">
+            <motion.div
+                initial={{ y: "-100vh" }}
+                animate={{ y: 0 }}
+                className="Nav"
+            >
                 <nav className="nav-items">
                     <div className="NavLinks" onClick={() => handleClick()}>
                         <NavLink
@@ -28,7 +33,7 @@ const MiniNavBar = ({ handleClick }) => {
                         </NavLink>
                     </div>
                 </nav>
-            </div>
+            </motion.div>
         </header>
     );
 };

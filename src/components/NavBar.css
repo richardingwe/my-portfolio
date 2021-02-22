@@ -47,6 +47,7 @@
 	}
 	.hamburger {
 		display: block;
+		cursor: pointer;
 	}
 	.NavLinks {
 		display: none;
@@ -69,7 +70,7 @@
 }
 
 .rotate {
-	transform: rotate(720deg) !important;
+	transform: rotate(450deg) !important;
 	transition: 700ms;
 	/* animation: rotate; */
 }
