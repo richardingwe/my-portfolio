@@ -6,7 +6,7 @@ import hamburger from "../hamburger.svg";
 import hamburgerClose from "../hamburgerClose.svg";
 import "./NavBar.css";
 
-const NavBar = ({ handleClick, navOpen }) => {
+const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
     const [rotate, setRotate] = useState(false);
     const handleNavClick = () => {
         handleClick();
@@ -14,6 +14,10 @@ const NavBar = ({ handleClick, navOpen }) => {
         setTimeout(() => {
             setRotate(false);
         }, 2000);
+    };
+
+    const handleLogoClick = () => {
+        navOpen && setNavOpen(false);
     };
     return (
         <header className="NavBar" style={{ position: `${navOpen ? "fixed" : "absolute"}` }}>
@@ -25,6 +29,7 @@ const NavBar = ({ handleClick, navOpen }) => {
                         activeClassName="text-white" className="">
 
                         <motion.img
+                            onClick={handleLogoClick}
                             initial={{ x: "-10vw", opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             src={Logo}

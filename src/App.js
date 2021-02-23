@@ -17,7 +17,7 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <NavBar handleClick={handleClick} navOpen={navOpen} />
+      <NavBar handleClick={handleClick} navOpen={navOpen} setNavOpen={setNavOpen} />
       {navOpen && <MiniNavBar handleClick={handleClick} />}
       <WhatsApp />
       <Switch>
