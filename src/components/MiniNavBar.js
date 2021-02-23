@@ -7,7 +7,7 @@ const MiniNavBar = ({ handleClick }) => {
     return (
         <header className="MiniNavBar">
             <motion.div
-                initial={{ y: "-100vh" }}
+                initial={{ y: "-50vh" }}
                 animate={{ y: 0 }}
                 className="Nav"
             >

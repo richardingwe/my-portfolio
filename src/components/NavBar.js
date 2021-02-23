@@ -25,13 +25,13 @@ const NavBar = ({ handleClick, navOpen }) => {
                         activeClassName="text-white" className="">
 
                         <motion.img
-                            initial={{ x: "-100vw", opacity: 0 }}
+                            initial={{ x: "-10vw", opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             src={Logo}
                             alt="rui logo" />
                     </NavLink>
                     <motion.div
-                        initial={{ x: "100vw", opacity: 0 }}
+                        initial={{ x: "10vw", opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         className="NavLinks" >
                         <NavLink
@@ -55,7 +55,7 @@ const NavBar = ({ handleClick, navOpen }) => {
                     </motion.div>
                     <div className={`hamburger ${rotate ? "rotate" : " "}`} onClick={handleNavClick}>
                         <motion.img
-                            initial={{ x: "100vw", opacity: 0 }}
+                            initial={{ x: "10vw", opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             src={navOpen ? hamburgerClose : hamburger}
                             className={rotate ? "rotate" : " "}
