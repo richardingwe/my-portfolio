@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion";
 import { NavLink } from 'react-router-dom';
-// import { SocialIcon } from "react-social-icons";
 import Logo from "../Rui.svg";
 import hamburger from "../hamburger.svg";
 import hamburgerClose from "../hamburgerClose.svg";
@@ -24,9 +24,16 @@ const NavBar = ({ handleClick, navOpen }) => {
                         exact
                         activeClassName="text-white" className="">
 
-                        <img src={Logo} alt="rui logo" />
+                        <motion.img
+                            initial={{ x: "-100vw", opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            src={Logo}
+                            alt="rui logo" />
                     </NavLink>
-                    <div className="NavLinks" >
+                    <motion.div
+                        initial={{ x: "100vw", opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        className="NavLinks" >
                         <NavLink
                             to="/about"
                             activeClassName="navActive"
@@ -45,9 +52,14 @@ const NavBar = ({ handleClick, navOpen }) => {
                             className="inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400">
                             Blog
                     </NavLink>
-                    </div>
+                    </motion.div>
                     <div className={`hamburger ${rotate ? "rotate" : " "}`} onClick={handleNavClick}>
-                        <img src={navOpen ? hamburgerClose : hamburger} className={rotate ? "rotate" : " "} alt="hamburger" />
+                        <motion.img
+                            initial={{ x: "100vw", opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            src={navOpen ? hamburgerClose : hamburger}
+                            className={rotate ? "rotate" : " "}
+                            alt="hamburger" />
                     </div>
                 </nav>
             </div>
