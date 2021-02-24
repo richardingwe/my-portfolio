@@ -8,6 +8,7 @@ const MiniNavBar = ({ handleClick }) => {
         <header className="MiniNavBar">
             <motion.div
                 initial={{ y: "-50vh" }}
+                transition={{ type: "spring", stiffness: 300 }}
                 animate={{ y: 0 }}
                 className="Nav"
             >

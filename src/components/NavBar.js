@@ -32,11 +32,13 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
                             onClick={handleLogoClick}
                             initial={{ x: "-10vw", opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
+                            transition={{ delay: 0.5 }}
                             src={Logo}
                             alt="rui logo" />
                     </NavLink>
                     <motion.div
                         initial={{ x: "10vw", opacity: 0 }}
+                        transition={{ delay: 0.5 }}
                         animate={{ x: 0, opacity: 1 }}
                         className="NavLinks" >
                         <NavLink
@@ -61,6 +63,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
                     <div className={`hamburger ${rotate ? "rotate" : " "}`} onClick={handleNavClick}>
                         <motion.img
                             initial={{ x: "10vw", opacity: 0 }}
+                            transition={{ delay: 0.5 }}
                             animate={{ x: 0, opacity: 1 }}
                             src={navOpen ? hamburgerClose : hamburger}
                             className={rotate ? "rotate" : " "}
