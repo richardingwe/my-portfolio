@@ -70,16 +70,6 @@
 }
 
 .rotate {
-	transform: rotate(450deg) !important;
+	transform: rotate(450deg);
 	transition: 700ms;
-	/* animation: rotate; */
-}
-
-@keyframes rotate {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
 }

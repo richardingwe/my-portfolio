@@ -3,7 +3,6 @@ import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import { Link } from "react-router-dom";
 import BlockContent from '@sanity/block-content-to-react';
-// import img from "../img.jpg";
 import "./About.css";
 
 

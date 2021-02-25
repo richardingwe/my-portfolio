@@ -63,7 +63,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
                     <div className={`hamburger ${rotate ? "rotate" : " "}`} onClick={handleNavClick}>
                         <motion.img
                             initial={{ x: "10vw", opacity: 0 }}
-                            transition={{ delay: 0.5 }}
+                            transition={{ delay: 1.5 }}
                             animate={{ x: 0, opacity: 1 }}
                             src={navOpen ? hamburgerClose : hamburger}
                             className={rotate ? "rotate" : " "}
