@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 // import React, { useState, useEffect } from 'react';
 import sanityClient from "../client";
 import { Link } from "react-router-dom";
+import "./Project.css";
 
 
 const Project = () => {
@@ -48,6 +49,42 @@ const Project = () => {
                                     <Link to="/project">Projects</Link>
                                 </span>
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/*  design/code area start  */}
+            <section class="why-choose-us-area bg-gray section-padding-80-0 clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-heading text-white text-center wow fadeInUp" data-wow-delay="100ms">
+                                <h2>Design Or Code??</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="chosse-us-icon">
+                                    <i class="fas fa-code" aria-hidden="true"></i>
+                                </div>
+                                <h1>Code</h1>
+                                {/* <p>Lorem ipsum dolor sit amet, consectetur isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut elit, sed do eiusmod te</p> */}
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
+                                <div class="chosse-us-icon">
+                                    <i class="fas fa-bezier-curve" aria-hidden="true"></i>
+                                </div>
+                                <h1>Design</h1>
+                                {/* <p>Lorem ipsum dolor sit amet, consectetur isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut elit, sed do eiusmod te</p> */}
+                            </div>
                         </div>
                     </div>
                 </div>
