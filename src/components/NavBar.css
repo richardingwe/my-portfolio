@@ -70,6 +70,6 @@
 }
 
 .rotate {
-	transform: rotate(450deg);
+	transform: rotate(540deg);
 	transition: 700ms;
 }
