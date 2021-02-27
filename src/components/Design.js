@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Design = () => {
     return (
@@ -7,7 +8,11 @@ const Design = () => {
             <section className="banner-area relative">
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center">
-                        <div className="about-content col-lg-12">
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="about-content col-lg-12">
                             <h1 className="text-white">
                                 Design Projects
                             </h1>
@@ -18,7 +23,7 @@ const Design = () => {
                                     <Link to="/project/design">Design</Link>
                                 </span>
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
