@@ -3,6 +3,7 @@ import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import { Link } from "react-router-dom";
 import BlockContent from '@sanity/block-content-to-react';
+import { motion } from "framer-motion";
 import "./About.css";
 
 
@@ -42,7 +43,11 @@ const About = () => {
             <section className="banner-area relative">
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center">
-                        <div className="about-content col-lg-12">
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="about-content col-lg-12">
                             <h1 className="text-white">
                                 About Me
                             </h1>
@@ -52,7 +57,7 @@ const About = () => {
                                     <Link to="/about">About</Link>
                                 </span>
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -60,18 +65,34 @@ const About = () => {
                 <section className="about-area section-gap">
                     <div className="container">
                         <div className="row align-items-center justify-content-between">
-                            <div className="col-lg-6 about-left">
+                            <motion.div
+                                initial={{ y: "10vh", opacity: 0 }}
+                                transition={{ type: "spring", stiffness: 300, delay: 1.6 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                className="col-lg-6 about-left">
                                 <img className="img-fluid" src={urlFor(author.authorImage).url()} alt="Richard Ingwe" />
-                            </div>
-                            <div className="col-lg-5 col-md-12 about-right">
+                            </motion.div>
+                            <motion.div
+                                initial={{ y: "10vh", opacity: 0 }}
+                                transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                className="col-lg-5 col-md-12 about-right">
                                 <div className="section-title text-white">
                                     <h2>about myself</h2>
                                 </div>
                                 <div className="mb-50 wow fadeIn text-white" data-wow-duration=".8s">
-                                    <div className="text-white mb-30">
+                                    <motion.div
+                                        initial={{ y: "10vh", opacity: 0 }}
+                                        transition={{ type: "spring", stiffness: 300, delay: 2.5 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        className="text-white mb-30">
                                         <BlockContent blocks={author.bio} projectId="y0xdnwwh" dataset="production" />
-                                    </div>
-                                    <a  href="mailto:ruitech00@gmail.com" className="primary-btn white" data-text="Hire Me">
+                                    </motion.div>
+                                    <motion.a
+                                        initial={{ y: "10vh", opacity: 0 }}
+                                        transition={{ type: "spring", stiffness: 300, delay: 2.8 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        href="mailto:ruitech00@gmail.com" className="primary-btn white" data-text="Hire Me">
                                         <span>H</span>
                                         <span>i</span>
                                         <span>r</span>
@@ -79,17 +100,21 @@ const About = () => {
                                         <span> - </span>
                                         <span>M</span>
                                         <span>e</span>
-                                    </a>
-                                    <a href="/" className="primary-btn" data-text="Resume">
+                                    </motion.a>
+                                    <motion.a
+                                        initial={{ y: "10vh", opacity: 0 }}
+                                        transition={{ type: "spring", stiffness: 300, delay: 2.8 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        href="/" className="primary-btn" data-text="Resume">
                                         <span>R</span>
                                         <span>e</span>
                                         <span>s</span>
                                         <span>u</span>
                                         <span>m</span>
                                         <span>e</span>
-                                    </a>
+                                    </motion.a>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
