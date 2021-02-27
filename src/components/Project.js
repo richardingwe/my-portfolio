@@ -40,7 +40,11 @@ const Project = () => {
             <section className="banner-area relative">
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center">
-                        <div className="about-content col-lg-12">
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="about-content col-lg-12">
                             <h1 className="text-white">
                                 Projects
                             </h1>
@@ -50,7 +54,7 @@ const Project = () => {
                                     <Link to="/project">Projects</Link>
                                 </span>
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -59,23 +63,35 @@ const Project = () => {
             <section className="why-choose-us-area bg-gray section-padding-80-0 clearfix">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12">
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 1.5 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="col-12">
                             <div className="section-heading text-white text-center wow fadeInUp" data-wow-delay="100ms">
                                 <h2>Design Or Code??</h2>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
 
-                    <div className="row">
+                    <motion.div
+                        initial={{ y: "10vh", opacity: 0 }}
+                        transition={{ type: "spring", stiffness: 300, delay: 1.8 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        className="row">
                         <div className="col-md-6">
                             <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="100ms">
                                 <div className="chosse-us-icon">
                                     <i className="fas fa-bezier-curve" aria-hidden="true"></i>
                                 </div>
-                                <h1>Design</h1>
+                                <motion.h1 initial={{ y: "10vh", opacity: 0 }}
+                                    transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                    animate={{ y: 0, opacity: 1 }}>
+                                    Design
+                                </motion.h1 >
                                 <motion.div
                                     initial={{ y: "10vh", opacity: 0 }}
-                                    transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                    transition={{ type: "spring", stiffness: 300, delay: 2.3 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     className="action about-area">
                                     <Link to="/project/design" className="primary-btn whitee" data-text="See Design Projects">
@@ -109,10 +125,14 @@ const Project = () => {
                                 <div className="chosse-us-icon">
                                     <i className="fas fa-code" aria-hidden="true"></i>
                                 </div>
-                                <h1>Code</h1>
+                                <motion.h1 initial={{ y: "10vh", opacity: 0 }}
+                                    transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                    animate={{ y: 0, opacity: 1 }}>
+                                    Code
+                                </motion.h1 >
                                 <motion.div
                                     initial={{ y: "10vh", opacity: 0 }}
-                                    transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                    transition={{ type: "spring", stiffness: 300, delay: 2.3 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     className="action about-area">
                                     <Link to="/project/code" className="primary-btn whitee" data-text="See Code Projects">
@@ -137,7 +157,7 @@ const Project = () => {
                                 </motion.div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             {/* <section className="container mx-auto">
