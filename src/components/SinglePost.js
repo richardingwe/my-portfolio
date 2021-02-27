@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import sanityClient from "../client.js";
 // import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./SinglePost.css";
 
 // const builder = imageUrlBuilder(sanityClient);
@@ -14,6 +17,10 @@ const SinglePost = () => {
     const [singlePost, setSinglePost] = useState(null);
     const { slug } = useParams();
 
+     useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
 
     useEffect(() => {
         sanityClient.fetch(`*[slug.current == "${slug}"]{
@@ -56,7 +63,11 @@ const SinglePost = () => {
             <section className="banner-area relative">
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center">
-                        <div className="about-content col-lg-12">
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="about-content col-lg-12">
                             <h1 className="text-white">
                                 Blog Details
                             </h1>
@@ -67,7 +78,7 @@ const SinglePost = () => {
                                     <Link to={`/post/${slug}`}>Blog Details</Link>
                                 </span>
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -78,7 +89,7 @@ const SinglePost = () => {
                             <div className="posts-list">
                                 <div className="single-post row text-white">
                                     <div className="col-lg-12">
-                                        <div className="feature-img" style={{ backgroundImage: `url(${singlePost.mainImage.asset.url})` }}>
+                                        <div data-aos="fade-up" data-aos-delay="200" className="feature-img" style={{ backgroundImage: `url(${singlePost.mainImage.asset.url})` }}>
                                             {/* <img className="img-fluid" src={singlePost.mainImage.asset.url} alt={singlePost.title} /> */}
                                         </div>
                                     </div>
@@ -89,7 +100,7 @@ const SinglePost = () => {
                                             <li><a href="/">Politics,</a></li>
                                             <li><a href="/">Lifestyle</a></li>
                                         </ul> */}
-                                        <div className="user-details row mt-2">
+                                        <div data-aos="fade-up" data-aos-delay="300" className="user-details row mt-2">
                                             <p className="user-name col-lg-12 col-md-12 col-6"><a href="/about">{singlePost.name}</a><i className="fa fa-user" /></p>
                                             <p className="date col-lg-12 col-md-12 col-6">{new Date(singlePost.publishedAt).getDate()} {months[new Date(singlePost.publishedAt).getMonth()]},  {new Date(singlePost.publishedAt).getFullYear()}   <i className="fa fa-calendar" /></p>
                                             {/* <p className="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span className="lnr lnr-eye"></span></p> */}
@@ -102,7 +113,7 @@ const SinglePost = () => {
                                             </ul> */}
                                         </div>
                                     </div>
-                                    <div className="col-lg-9 col-md-9">
+                                    <div data-aos="fade-up" data-aos-delay="300" className="col-lg-9 col-md-9">
                                         <h3 className="mt-5 mb-1 blog-title">{singlePost && singlePost.title}</h3>
                                         <div className="excert">
                                             <BlockContent blocks={singlePost.body} projectId="y0xdnwwh" dataset="production" />

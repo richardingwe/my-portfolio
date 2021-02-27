@@ -14,12 +14,14 @@ const Post = () => {
     useEffect(() => {
         document.title = "Rui - Blog";
     }, []);
+    
     useEffect(() => {
         AOS.init({
             delay: 200
         });
         AOS.refresh();
     }, []);
+
     useEffect(() => {
         sanityClient
             .fetch(
