@@ -27,9 +27,9 @@ function App() {
         <Route component={About} path="/about" />
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
-        <Route component={Project} path="/project" />
         <Route component={Design} path="/project/design" />
         <Route component={Code} path="/project/code" />
+        <Route component={Project} path="/project" />
       </Switch>
     </BrowserRouter>
   );
