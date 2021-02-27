@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import sanityClient from "../client";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 import "./Post.css";
 
 const Post = () => {
@@ -9,7 +13,12 @@ const Post = () => {
     useEffect(() => {
         document.title = "Rui - Blog";
     }, []);
-
+    useEffect(() => {
+        AOS.init({
+            delay: 200
+        });
+        AOS.refresh();
+    }, []);
     useEffect(() => {
         sanityClient
             .fetch(
@@ -64,16 +73,9 @@ const Post = () => {
             </section>
             <section className="ftco-section text-white" data-section="blog">
                 <div className="container">
-                    {/* <div className="row justify-content-center mb-5 pb-5">
-                        <div className="col-md-7 heading-section text-center ftco-animate">
-                            <span className="subheading">Blog</span>
-                            <h2 className="mb-4">Read My Stories</h2>
-                        </div>
-                    </div> */}
-
                     <div className="row d-flex" >
                         {postData && postData.map((post, index) => (
-                            <div className="col-lg-4 col-md-6 col-xs-12 d-flex ftco-animate" key={post.slug.current}>
+                            <div data-aos="fade-up" className="col-lg-4 col-md-6 col-xs-12 d-flex ftco-animate" key={post.slug.current}>
                                 <div className="blog-entry justify-content-end">
                                     <Link to={`/post/${post.slug.current}`} className="block-20" style={{ backgroundImage: `url(${post.mainImage.asset.url})` }}>
                                     </Link>

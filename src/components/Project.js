@@ -95,7 +95,7 @@ const Project = () => {
                                         transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
                                         animate={{ y: 0, opacity: 1 }}
                                         className="action about-area">
-                                        <Link to="/project/design" className="primary-btn whitee" data-text="See Design Projects">
+                                        <div className="primary-btn whitee" data-text="See Design Projects">
                                             <span>S</span>
                                             <span>e</span>
                                             <span>e</span>
@@ -115,7 +115,7 @@ const Project = () => {
                                             <span>c</span>
                                             <span>t</span>
                                             <span>s</span>
-                                        </Link>
+                                        </div>
                                     </motion.div>
                                 </div>
                             </Link>
@@ -138,7 +138,7 @@ const Project = () => {
                                         transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
                                         animate={{ y: 0, opacity: 1 }}
                                         className="action about-area">
-                                        <Link to="/project/code" className="primary-btn whitee" data-text="See Code Projects">
+                                        <div className="primary-btn whitee" data-text="See Code Projects">
                                             <span>S</span>
                                             <span>e</span>
                                             <span>e</span>
@@ -156,7 +156,7 @@ const Project = () => {
                                             <span>c</span>
                                             <span>t</span>
                                             <span>s</span>
-                                        </Link>
+                                        </div>
                                     </motion.div>
                                 </div>
                             </Link>
