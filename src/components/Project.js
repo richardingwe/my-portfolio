@@ -91,7 +91,7 @@ const Project = () => {
                                 </motion.h1 >
                                 <motion.div
                                     initial={{ y: "10vh", opacity: 0 }}
-                                    transition={{ type: "spring", stiffness: 300, delay: 2.3 }}
+                                    transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     className="action about-area">
                                     <Link to="/project/design" className="primary-btn whitee" data-text="See Design Projects">
@@ -132,7 +132,7 @@ const Project = () => {
                                 </motion.h1 >
                                 <motion.div
                                     initial={{ y: "10vh", opacity: 0 }}
-                                    transition={{ type: "spring", stiffness: 300, delay: 2.3 }}
+                                    transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     className="action about-area">
                                     <Link to="/project/code" className="primary-btn whitee" data-text="See Code Projects">
