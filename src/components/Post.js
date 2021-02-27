@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 import sanityClient from "../client";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -57,7 +58,11 @@ const Post = () => {
             <section className="banner-area relative">
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center">
-                        <div className="about-content col-lg-12">
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 1.2 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="about-content col-lg-12">
                             <h1 className="text-white">
                                 Blog
                             </h1>
@@ -67,7 +72,7 @@ const Post = () => {
                                     <Link to="/post">Blog</Link>
                                 </span>
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
