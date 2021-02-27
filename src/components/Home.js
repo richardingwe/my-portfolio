@@ -31,7 +31,7 @@ const Home = () => {
                         <span>i</span>
                         <span>r</span>
                         <span>e</span>
-                        <span> - </span>
+                        <span style={{ marginLeft: "5px" }}></span>
                         <span>M</span>
                         <span>e</span>
                     </a>

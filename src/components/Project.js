@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import sanityClient from "../client";
 import { Link } from "react-router-dom";
 import "./Project.css";
+import { motion } from "framer-motion";
 
 
 const Project = () => {
@@ -55,35 +56,85 @@ const Project = () => {
             </section>
 
             {/*  design/code area start  */}
-            <section class="why-choose-us-area bg-gray section-padding-80-0 clearfix">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-heading text-white text-center wow fadeInUp" data-wow-delay="100ms">
+            <section className="why-choose-us-area bg-gray section-padding-80-0 clearfix">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="section-heading text-white text-center wow fadeInUp" data-wow-delay="100ms">
                                 <h2>Design Or Code??</h2>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="100ms">
-                                <div class="chosse-us-icon">
-                                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="100ms">
+                                <div className="chosse-us-icon">
+                                    <i className="fas fa-bezier-curve" aria-hidden="true"></i>
                                 </div>
-                                <h1>Code</h1>
-                                {/* <p>Lorem ipsum dolor sit amet, consectetur isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut elit, sed do eiusmod te</p> */}
+                                <h1>Design</h1>
+                                <motion.div
+                                    initial={{ y: "10vh", opacity: 0 }}
+                                    transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    className="action about-area">
+                                    <Link to="/project/design" className="primary-btn whitee" data-text="See Design Projects">
+                                        <span>S</span>
+                                        <span>e</span>
+                                        <span>e</span>
+                                        <span style={{ marginLeft: "5px" }}></span>
+                                        <span>D</span>
+                                        <span>e</span>
+                                        <span>s</span>
+                                        <span>i</span>
+                                        <span>g</span>
+                                        <span>n</span>
+                                        <span style={{ marginLeft: "5px" }}></span>
+                                        <span>P</span>
+                                        <span>r</span>
+                                        <span>o</span>
+                                        <span>j</span>
+                                        <span>e</span>
+                                        <span>c</span>
+                                        <span>t</span>
+                                        <span>s</span>
+                                    </Link>
+                                </motion.div>
                             </div>
                         </div>
 
 
-                        <div class="col-md-6">
-                            <div class="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
-                                <div class="chosse-us-icon">
-                                    <i class="fas fa-bezier-curve" aria-hidden="true"></i>
+                        <div className="col-md-6">
+                            <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
+                                <div className="chosse-us-icon">
+                                    <i className="fas fa-code" aria-hidden="true"></i>
                                 </div>
-                                <h1>Design</h1>
-                                {/* <p>Lorem ipsum dolor sit amet, consectetur isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut elit, sed do eiusmod te</p> */}
+                                <h1>Code</h1>
+                                <motion.div
+                                    initial={{ y: "10vh", opacity: 0 }}
+                                    transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    className="action about-area">
+                                    <Link to="/project/code" className="primary-btn whitee" data-text="See Code Projects">
+                                        <span>S</span>
+                                        <span>e</span>
+                                        <span>e</span>
+                                        <span style={{ marginLeft: "5px" }}></span>
+                                        <span>C</span>
+                                        <span>o</span>
+                                        <span>d</span>
+                                        <span>e</span>
+                                        <span style={{ marginLeft: "5px" }}></span>
+                                        <span>P</span>
+                                        <span>r</span>
+                                        <span>o</span>
+                                        <span>j</span>
+                                        <span>e</span>
+                                        <span>c</span>
+                                        <span>t</span>
+                                        <span>s</span>
+                                    </Link>
+                                </motion.div>
                             </div>
                         </div>
                     </div>

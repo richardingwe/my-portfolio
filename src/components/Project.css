@@ -17,7 +17,7 @@
 }
 @media only screen and (max-width: 767px) {
 	.section-heading h2 {
-		font-size: 24px;
+		font-size: 30px;
 	}
 }
 .section-heading p {
@@ -25,6 +25,7 @@
 }
 .section-heading.white p,
 .section-heading.white h2 {
+	font-weight: 700;
 	color: #ffffff;
 }
 .why-choose-us-content {
@@ -62,9 +63,9 @@
 	/* font-size: 20px; */
 	font-weight: 700;
 	margin-bottom: 15px;
-	-webkit-transition-duration: 800ms;
-	-o-transition-duration: 800ms;
-	transition-duration: 800ms;
+	-webkit-transition-duration: 200ms;
+	-o-transition-duration: 200ms;
+	transition-duration: 200ms;
 }
 .why-choose-us-content p {
 	-webkit-transition-duration: 800ms;
@@ -75,16 +76,37 @@
 }
 .why-choose-us-content:hover,
 .why-choose-us-content:focus {
-	background-color: #fc6060;
+	background-color: #e45447;
+	color: #ffffff !important;
 }
 .why-choose-us-content:hover .chosse-us-icon,
 .why-choose-us-content:focus .chosse-us-icon {
 	background-color: #000000;
 	box-shadow: 0 5px 15px 2px rgba(255, 255, 255, 0.15);
 }
+.why-choose-us-content:hover .primary-btn.whitee,
+.why-choose-us-content:focus .primary-btn.whitee {
+	background: #000;
+}
 .why-choose-us-content:hover h4,
 .why-choose-us-content:hover p,
 .why-choose-us-content:focus h4,
 .why-choose-us-content:focus p {
-	color: #ffffff;
+	color: #ffffff !important;
+}
+.primary-btn.whitee {
+	background: #e45447;
+}
+.primary-btn.whitee span {
+	color: #fff;
+}
+.primary-btn.whitee:before {
+	color: #fff;
+}
+.primary-btn.whitee:hover {
+	background: #000000;
+	color: #fff;
+}
+.primary-btn.whitee:hover span {
+	color: #fff;
 }
