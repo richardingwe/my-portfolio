@@ -39,6 +39,7 @@
 	position: relative;
 	z-index: 1;
 	margin-top: 50px;
+	color: black;
 }
 .why-choose-us-content .chosse-us-icon {
 	-webkit-transition-duration: 800ms;
@@ -66,6 +67,9 @@
 	-webkit-transition-duration: 200ms;
 	-o-transition-duration: 200ms;
 	transition-duration: 200ms;
+}
+.why-choose-us-content a {
+	color: black;
 }
 .why-choose-us-content p {
 	-webkit-transition-duration: 800ms;

@@ -80,82 +80,86 @@ const Project = () => {
                         animate={{ y: 0, opacity: 1 }}
                         className="row">
                         <div className="col-md-6">
-                            <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="100ms">
-                                <div className="chosse-us-icon">
-                                    <i className="fas fa-bezier-curve" aria-hidden="true"></i>
+                            <Link to="/project/design">
+                                <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="100ms">
+                                    <div className="chosse-us-icon">
+                                        <i className="fas fa-bezier-curve" aria-hidden="true"></i>
+                                    </div>
+                                    <motion.h1 initial={{ y: "10vh", opacity: 0 }}
+                                        transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                        animate={{ y: 0, opacity: 1 }}>
+                                        Design
+                                    </motion.h1 >
+                                    <motion.div
+                                        initial={{ y: "10vh", opacity: 0 }}
+                                        transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        className="action about-area">
+                                        <Link to="/project/design" className="primary-btn whitee" data-text="See Design Projects">
+                                            <span>S</span>
+                                            <span>e</span>
+                                            <span>e</span>
+                                            <span style={{ marginLeft: "5px" }}></span>
+                                            <span>D</span>
+                                            <span>e</span>
+                                            <span>s</span>
+                                            <span>i</span>
+                                            <span>g</span>
+                                            <span>n</span>
+                                            <span style={{ marginLeft: "5px" }}></span>
+                                            <span>P</span>
+                                            <span>r</span>
+                                            <span>o</span>
+                                            <span>j</span>
+                                            <span>e</span>
+                                            <span>c</span>
+                                            <span>t</span>
+                                            <span>s</span>
+                                        </Link>
+                                    </motion.div>
                                 </div>
-                                <motion.h1 initial={{ y: "10vh", opacity: 0 }}
-                                    transition={{ type: "spring", stiffness: 300, delay: 2 }}
-                                    animate={{ y: 0, opacity: 1 }}>
-                                    Design
-                                </motion.h1 >
-                                <motion.div
-                                    initial={{ y: "10vh", opacity: 0 }}
-                                    transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    className="action about-area">
-                                    <Link to="/project/design" className="primary-btn whitee" data-text="See Design Projects">
-                                        <span>S</span>
-                                        <span>e</span>
-                                        <span>e</span>
-                                        <span style={{ marginLeft: "5px" }}></span>
-                                        <span>D</span>
-                                        <span>e</span>
-                                        <span>s</span>
-                                        <span>i</span>
-                                        <span>g</span>
-                                        <span>n</span>
-                                        <span style={{ marginLeft: "5px" }}></span>
-                                        <span>P</span>
-                                        <span>r</span>
-                                        <span>o</span>
-                                        <span>j</span>
-                                        <span>e</span>
-                                        <span>c</span>
-                                        <span>t</span>
-                                        <span>s</span>
-                                    </Link>
-                                </motion.div>
-                            </div>
+                            </Link>
                         </div>
 
 
                         <div className="col-md-6">
-                            <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
-                                <div className="chosse-us-icon">
-                                    <i className="fas fa-code" aria-hidden="true"></i>
-                                </div>
-                                <motion.h1 initial={{ y: "10vh", opacity: 0 }}
-                                    transition={{ type: "spring", stiffness: 300, delay: 2 }}
-                                    animate={{ y: 0, opacity: 1 }}>
-                                    Code
+                            <Link to="/project/code">
+                                <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
+                                    <div className="chosse-us-icon">
+                                        <i className="fas fa-code" aria-hidden="true"></i>
+                                    </div>
+                                    <motion.h1 initial={{ y: "10vh", opacity: 0 }}
+                                        transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                                        animate={{ y: 0, opacity: 1 }}>
+                                        Code
                                 </motion.h1 >
-                                <motion.div
-                                    initial={{ y: "10vh", opacity: 0 }}
-                                    transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    className="action about-area">
-                                    <Link to="/project/code" className="primary-btn whitee" data-text="See Code Projects">
-                                        <span>S</span>
-                                        <span>e</span>
-                                        <span>e</span>
-                                        <span style={{ marginLeft: "5px" }}></span>
-                                        <span>C</span>
-                                        <span>o</span>
-                                        <span>d</span>
-                                        <span>e</span>
-                                        <span style={{ marginLeft: "5px" }}></span>
-                                        <span>P</span>
-                                        <span>r</span>
-                                        <span>o</span>
-                                        <span>j</span>
-                                        <span>e</span>
-                                        <span>c</span>
-                                        <span>t</span>
-                                        <span>s</span>
-                                    </Link>
-                                </motion.div>
-                            </div>
+                                    <motion.div
+                                        initial={{ y: "10vh", opacity: 0 }}
+                                        transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        className="action about-area">
+                                        <Link to="/project/code" className="primary-btn whitee" data-text="See Code Projects">
+                                            <span>S</span>
+                                            <span>e</span>
+                                            <span>e</span>
+                                            <span style={{ marginLeft: "5px" }}></span>
+                                            <span>C</span>
+                                            <span>o</span>
+                                            <span>d</span>
+                                            <span>e</span>
+                                            <span style={{ marginLeft: "5px" }}></span>
+                                            <span>P</span>
+                                            <span>r</span>
+                                            <span>o</span>
+                                            <span>j</span>
+                                            <span>e</span>
+                                            <span>c</span>
+                                            <span>t</span>
+                                            <span>s</span>
+                                        </Link>
+                                    </motion.div>
+                                </div>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
