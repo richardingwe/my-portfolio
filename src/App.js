@@ -8,6 +8,8 @@ import Project from "./components/Project";
 import NavBar from './components/NavBar';
 import WhatsApp from './components/WhatsApp';
 import MiniNavBar from './components/MiniNavBar';
+import Design from './components/Design';
+import Code from './components/Code';
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -26,6 +28,8 @@ function App() {
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
         <Route component={Project} path="/project" />
+        <Route component={Design} path="/project/design" />
+        <Route component={Code} path="/project/code" />
       </Switch>
     </BrowserRouter>
   );
