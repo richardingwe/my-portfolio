@@ -49,12 +49,12 @@ const About = () => {
                             animate={{ y: 0, opacity: 1 }}
                             className="about-content col-lg-12">
                             <h1 className="text-white">
-                                About Me
+                                About Me.
                             </h1>
                             <p className="link-nav">
                                 <span className="box">
-                                    <Link to="/">Home</Link>
-                                    <Link to="/about">About</Link>
+                                    <Link to="/">Home.</Link>
+                                    <Link to="/about">About.</Link>
                                 </span>
                             </p>
                         </motion.div>
@@ -78,7 +78,7 @@ const About = () => {
                                 animate={{ y: 0, opacity: 1 }}
                                 className="col-lg-5 col-md-12 about-right">
                                 <div className="section-title text-white">
-                                    <h2>about myself</h2>
+                                    <h2>about myself.</h2>
                                 </div>
                                 <div className="mb-50 wow fadeIn text-white" data-wow-duration=".8s">
                                     <motion.div
@@ -92,7 +92,7 @@ const About = () => {
                                         initial={{ y: "10vh", opacity: 0 }}
                                         transition={{ type: "spring", stiffness: 300, delay: 2.8 }}
                                         animate={{ y: 0, opacity: 1 }}
-                                        href="mailto:ruitech00@gmail.com" className="primary-btn white" data-text="Hire Me">
+                                        href="mailto:ruitech00@gmail.com" className="primary-btn white" data-text="Hire Me.">
                                         <span>H</span>
                                         <span>i</span>
                                         <span>r</span>
@@ -100,18 +100,20 @@ const About = () => {
                                         <span style={{ marginLeft: "5px" }}></span>
                                         <span>M</span>
                                         <span>e</span>
+                                        <span>.</span>
                                     </motion.a>
                                     <motion.a
                                         initial={{ y: "10vh", opacity: 0 }}
                                         transition={{ type: "spring", stiffness: 300, delay: 2.8 }}
                                         animate={{ y: 0, opacity: 1 }}
-                                        href="/" className="primary-btn" data-text="Resume">
+                                        href="/" className="primary-btn" data-text="Resume.">
                                         <span>R</span>
                                         <span>e</span>
                                         <span>s</span>
                                         <span>u</span>
                                         <span>m</span>
                                         <span>e</span>
+                                        <span>.</span>
                                     </motion.a>
                                 </div>
                             </motion.div>

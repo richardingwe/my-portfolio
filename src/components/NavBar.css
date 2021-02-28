@@ -33,7 +33,8 @@
 	color: #e45447;
 }
 
-.nav-items img {
+.nav-items img,
+svg {
 	width: 45px;
 	height: 45px;
 }
@@ -72,4 +73,10 @@
 .rotate {
 	transform: rotate(540deg);
 	transition: 700ms;
+}
+.st0 {
+	fill: #ffffff;
+}
+.st1 {
+	fill: #096aba;
 }
