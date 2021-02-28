@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { NavLink } from 'react-router-dom';
-import Logo from "../Rui.svg";
+// import Logo from "../Rui.svg";
 import hamburger from "../hamburger.svg";
 import hamburgerClose from "../hamburgerClose.svg";
 import "./NavBar.css";
@@ -24,13 +24,10 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
         hidden: {
             pathLength: 0,
             fill: "rgba(255, 255, 255, 0)",
-            rotate: 180
         },
         visible: {
             pathLength: 1,
             fill: "rgb(255, 255, 255)",
-            rotate: 0
-
         }
     };
     const icon2 = {
@@ -65,7 +62,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 
                         <motion.svg
                             onClick={handleLogoClick}
-                            initial={{ x: "-10vw", opacity: 0 }}
+                            initial={{ x: "-10vw", opacity: 1 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.5, when: "beforeChildren" }}
                             version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
