@@ -29,6 +29,10 @@ export default {
             type: 'blockContent',
         },
         {
+            name: "link",
+            type: "url"
+        },
+        {
             name: "projectType",
             title: "Project type",
             type: "string",
@@ -37,7 +41,6 @@ export default {
                     { value: "personal", title: "Personal" },
                     { value: "client", title: "Client" },
                     { value: "collaboration", title: "Collaboration" },
-
                 ]
             }
         },
