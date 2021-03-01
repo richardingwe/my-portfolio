@@ -4,6 +4,8 @@ import imageUrlBuilder from "@sanity/image-url";
 import { Link } from "react-router-dom";
 import BlockContent from '@sanity/block-content-to-react';
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./About.css";
 
 
@@ -15,6 +17,12 @@ function urlFor(source) {
 
 const About = () => {
     const [author, setAuthor] = useState(null);
+
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
 
     useEffect(() => {
         document.title = "Rui - About";
@@ -81,17 +89,10 @@ const About = () => {
                                     <h2>about myself.</h2>
                                 </div>
                                 <div className="mb-50 wow fadeIn text-white" data-wow-duration=".8s">
-                                    <motion.div
-                                        initial={{ y: "10vh", opacity: 0 }}
-                                        transition={{ type: "spring", stiffness: 300, delay: 2.5 }}
-                                        animate={{ y: 0, opacity: 1 }}
-                                        className="text-white mb-30">
+                                    <div data-aos="fade-up" data-aos-delay="300">
                                         <BlockContent blocks={author.bio} projectId="y0xdnwwh" dataset="production" />
-                                    </motion.div>
-                                    <motion.a
-                                        initial={{ y: "10vh", opacity: 0 }}
-                                        transition={{ type: "spring", stiffness: 300, delay: 2.8 }}
-                                        animate={{ y: 0, opacity: 1 }}
+                                    </div>
+                                    <a data-aos="fade-up" data-aos-delay="300"
                                         href="mailto:ruitech00@gmail.com" className="primary-btn white" data-text="Hire Me.">
                                         <span>H</span>
                                         <span>i</span>
@@ -101,11 +102,8 @@ const About = () => {
                                         <span>M</span>
                                         <span>e</span>
                                         <span>.</span>
-                                    </motion.a>
-                                    <motion.a
-                                        initial={{ y: "10vh", opacity: 0 }}
-                                        transition={{ type: "spring", stiffness: 300, delay: 2.8 }}
-                                        animate={{ y: 0, opacity: 1 }}
+                                    </a>
+                                    <a data-aos="fade-up" data-aos-delay="300"
                                         href="/" className="primary-btn" data-text="Resume.">
                                         <span>R</span>
                                         <span>e</span>
@@ -114,7 +112,7 @@ const About = () => {
                                         <span>m</span>
                                         <span>e</span>
                                         <span>.</span>
-                                    </motion.a>
+                                    </a>
                                 </div>
                             </motion.div>
                         </div>
