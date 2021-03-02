@@ -1,0 +1,198 @@
+.single-category {
+	/* background: #fff; */
+	margin-bottom: 20px;
+	position: relative;
+	transition: 2s;
+}
+.single-category .short_details {
+	/* margin-top: -62px; */
+	/* right: -3%; */
+	top: 0;
+	left: 0;
+	/* bottom: 0; */
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	z-index: 555;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.692);
+	text-align: center;
+	transition: all 300ms linear 0s;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	transition: all 1s ease-in;
+}
+@media (max-width: 1199px) {
+	.single-category .short_details {
+		padding: 15px;
+	}
+}
+.single-category:hover .short_details {
+	display: flex;
+}
+.single-category .short_details a {
+	color: #f8f8f8;
+	font-weight: 600;
+}
+transition: 3s;
+.single-category .short_details a:hover {
+	color: #ff7a7f;
+}
+.single-category .short_details h4 {
+	font-size: 20px;
+}
+.single-category .thumb {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 350px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.single-category .thumb img {
+	width: 100%;
+	transition: all 300ms linear 0s;
+}
+.single-category .meta-bottom {
+	margin-bottom: 15px;
+}
+.single-category .meta-bottom a {
+	display: inline-block;
+	color: #797979;
+	position: relative;
+	font-size: 13px;
+	text-transform: uppercase;
+	transition: all 300ms linear 0s;
+	margin-right: 12px;
+}
+.single-category .meta-bottom a i {
+	margin-right: 5px;
+}
+.single-category .meta-bottom a:hover {
+	color: #ff7a7f;
+}
+.single-category .meta-top {
+	margin-bottom: 6px;
+}
+.single-category .meta-top a {
+	display: inline-block;
+	font-size: 11px;
+	color: #ff7a7f;
+	text-transform: uppercase;
+	position: relative;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+	transition: all 300ms linear 0s;
+}
+.single-category .meta-top a:hover {
+	color: #ff7a7f;
+}
+.single-category.small .short_details {
+	margin-top: 0;
+	right: 0;
+	width: 100%;
+	padding: 10px;
+}
+.single-category.small .thumb {
+	overflow: hidden;
+}
+.single-category.small .meta-bottom {
+	margin-bottom: 15px;
+}
+.single-category.small .meta-bottom a {
+	display: inline-block;
+	color: #797979;
+	position: relative;
+	font-size: 13px;
+	text-transform: uppercase;
+	transition: all 300ms linear 0s;
+	margin-right: 12px;
+}
+.single-category.small .meta-bottom a i {
+	margin-right: 5px;
+}
+.single-category.small .meta-bottom a:hover {
+	color: #ff7a7f;
+}
+.single-category.small .meta-top {
+	margin-bottom: 6px;
+}
+.single-category.small .meta-top a {
+	display: inline-block;
+	font-size: 11px;
+	color: #ff7a7f;
+	text-transform: uppercase;
+	position: relative;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+	transition: all 300ms linear 0s;
+}
+.single-category.small .meta-top a:hover {
+	color: #ff7a7f;
+}
+.single-category.small h4 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	line-height: 27px;
+	transition: all 300ms linear 0s;
+}
+@media (max-width: 1199px) {
+	.single-category.small h4 {
+		font-size: 18px;
+	}
+}
+@media (max-width: 991px) {
+	.single-category.small h4 {
+		margin-bottom: 8px;
+	}
+}
+.single-category:hover img {
+	transform: scale(1);
+}
+
+.category-page .main_btn {
+	display: inline-block;
+	background: #ff7a7f;
+	padding: 0px 18px;
+	color: #fff;
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 48px;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid #ff7a7f;
+	cursor: pointer;
+	text-transform: capitalize;
+	margin-top: 15px;
+	transition: all 300ms linear 0s;
+}
+.category-page .main_btn:hover {
+	background: #fff;
+	color: #ff7a7f;
+	border: 1px solid #ff7a7f;
+}
+.category-page .main_btn .ti-angle-double-right {
+	font-size: 11px;
+}
+
+.single-category .meta-top a:first-child {
+	margin-right: 3px;
+}
+
+.single-category .meta-top a:last-child {
+	margin-left: 3px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}

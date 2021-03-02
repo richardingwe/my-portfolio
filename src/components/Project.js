@@ -46,12 +46,12 @@ const Project = () => {
                             animate={{ y: 0, opacity: 1 }}
                             className="about-content col-lg-12">
                             <h1 className="text-white">
-                                Projects
+                                Projects.
                             </h1>
                             <p className="link-nav">
                                 <span className="box">
-                                    <Link to="/">Home</Link>
-                                    <Link to="/project">Projects</Link>
+                                    <Link to="/">Home.</Link>
+                                    <Link to="/project">Projects.</Link>
                                 </span>
                             </p>
                         </motion.div>
@@ -88,14 +88,14 @@ const Project = () => {
                                     <motion.h1 initial={{ y: "10vh", opacity: 0 }}
                                         transition={{ type: "spring", stiffness: 300, delay: 2 }}
                                         animate={{ y: 0, opacity: 1 }}>
-                                        Design
+                                        Design.
                                     </motion.h1 >
                                     <motion.div
                                         initial={{ y: "10vh", opacity: 0 }}
                                         transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
                                         animate={{ y: 0, opacity: 1 }}
                                         className="action about-area">
-                                        <div className="primary-btn whitee" data-text="See Design Projects">
+                                        <div className="primary-btn whitee" data-text="See Design Projects.">
                                             <span>S</span>
                                             <span>e</span>
                                             <span>e</span>
@@ -115,6 +115,7 @@ const Project = () => {
                                             <span>c</span>
                                             <span>t</span>
                                             <span>s</span>
+                                            <span>.</span>
                                         </div>
                                     </motion.div>
                                 </div>
@@ -138,7 +139,7 @@ const Project = () => {
                                         transition={{ type: "spring", stiffness: 200, delay: 2.3 }}
                                         animate={{ y: 0, opacity: 1 }}
                                         className="action about-area">
-                                        <div className="primary-btn whitee" data-text="See Code Projects">
+                                        <div className="primary-btn whitee" data-text="See Code Projects.">
                                             <span>S</span>
                                             <span>e</span>
                                             <span>e</span>
@@ -156,6 +157,7 @@ const Project = () => {
                                             <span>c</span>
                                             <span>t</span>
                                             <span>s</span>
+                                            <span>.</span>
                                         </div>
                                     </motion.div>
                                 </div>
