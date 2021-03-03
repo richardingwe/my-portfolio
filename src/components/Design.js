@@ -34,6 +34,16 @@ const Design = () => {
             .catch(console.error);
     }, []);
 
+    if (!designData) return (
+        <div>
+            <div className="preloader-area">
+                <div className="loader-box">
+                    <div className="loader"></div>
+                </div>
+            </div>
+        </div>
+    );
+
     return (
         <main className="bg-gray-800 min-h-screen main">
             <section className="banner-area relative">
