@@ -86,7 +86,8 @@ const Design = () => {
                         {designData && designData.map(design => (
                             <div data-aos="fade-up" className="col-md-6 col-lg-4">
                                 <div className="single-category">
-                                    <a className="d-block" href={design.link}>
+                                    <a className="d-block" href={design.link} target="_blank"
+                                        rel="noopener noreferrer">
                                         <div className="thumb" style={{
                                             backgroundImage: `url(${design.projectImage.asset.url})`
                                         }}>
