@@ -64,9 +64,14 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
 }
 .single-category .thumb img {
 	width: 100%;
+	min-height: 100%;
 }
 .single-category .meta-bottom {
 	margin-bottom: 15px;

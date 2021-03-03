@@ -84,13 +84,12 @@ const Design = () => {
                 <div className="container">
                     <div className="row">
                         {designData && designData.map(design => (
-                            <div data-aos="fade-up" className="col-md-6 col-lg-4">
+                            <div key={design.projectImage.asset._id} data-aos="fade-up" className="col-md-6 col-lg-4">
                                 <div className="single-category">
                                     <a className="d-block" href={design.link} target="_blank"
                                         rel="noopener noreferrer">
-                                        <div className="thumb" style={{
-                                            backgroundImage: `url(${design.projectImage.asset.url})`
-                                        }}>
+                                        <div className="thumb">
+                                            <img className="img-fluid" src={design.projectImage.asset.url} alt={design.alt} />
                                         </div>
                                         <div className="short_details">
                                             <h4>{design.title}
