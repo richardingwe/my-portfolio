@@ -13,6 +13,7 @@
     "aos": "^2.3.4",
     "framer-motion": "^3.6.7",
     "react": "^16.13.1",
+    "react-cursor-custom": "^1.2.4",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
