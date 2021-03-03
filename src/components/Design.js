@@ -9,6 +9,15 @@ import "aos/dist/aos.css";
 const Design = () => {
     const [designData, setDesignData] = useState(null);
 
+
+    useEffect(() => {
+        AOS.init({
+            delay: 200
+        });
+        AOS.refresh();
+    }, []);
+
+
     useEffect(() => {
         document.title = "Rui - Design Projects";
     }, []);
@@ -75,7 +84,7 @@ const Design = () => {
                 <div className="container">
                     <div className="row">
                         {designData && designData.map(design => (
-                            <div className="col-md-6 col-lg-4">
+                            <div data-aos="fade-up" className="col-md-6 col-lg-4">
                                 <div className="single-category">
                                     <a className="d-block" href={design.link}>
                                         <div className="thumb" style={{
