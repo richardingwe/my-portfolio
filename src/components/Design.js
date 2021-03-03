@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import sanityClient from "../client";
 import { motion } from "framer-motion";
 import "./Design.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Design = () => {
     const [designData, setDesignData] = useState(null);
