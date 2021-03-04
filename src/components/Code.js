@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import img from "./1.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./Code.css";
 
 
 const Code = () => {
@@ -24,7 +25,8 @@ const Code = () => {
             description,
             projectType,
             link,
-            tags,
+            githubLink,
+            technologiesUsed,
             projectImage{
             asset->{
                 _id,
@@ -33,8 +35,12 @@ const Code = () => {
             alt
         }
         }`)
-            .then(data => setCodeData(data))
+            .then(data => {
+                setCodeData(data);
+                console.log(data);
+            })
             .catch(console.error);
+
     }, []);
 
     useEffect(() => {
@@ -69,9 +75,9 @@ const Code = () => {
 
             <section className="about-area section-gap">
                 <div className="container">
-                    {codeData && codeData.map(code => (
+                    {codeData && codeData.map((code, index) => (
 
-                        <div className="row align-items-center justify-content-between">
+                        <div key={index} className="row align-items-center justify-content-between">
                             <div data-aos="fade-up" data-aos-delay="200"
                                 className="col-lg-6 about-left">
                                 <img className="img-fluid" src={code.projectImage ? code.projectImage.asset.url : img} alt={code.alt || "hello"} />
@@ -82,6 +88,13 @@ const Code = () => {
                                     <h2>{code.title}</h2>
                                 </div>
                                 <div className="mb-50 wow fadeIn text-white" data-wow-duration=".8s">
+                                    <div className="tech-used">
+                                        {code.technologiesUsed.map((tech, i) => (
+                                            <div key={i} className="tech">
+                                                {tech}
+                                            </div>
+                                        ))}
+                                    </div>
                                     <div>
                                         <p>{code.description}</p>
                                     </div>
