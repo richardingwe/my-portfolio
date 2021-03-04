@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import img from "./1.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Code = () => {
+      useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <main className="bg-gray-800 min-h-screen main">
             <section className="banner-area relative">
@@ -32,17 +39,11 @@ const Code = () => {
             <section className="about-area section-gap">
                 <div className="container">
                     <div className="row align-items-center justify-content-between">
-                        <motion.div
-                            initial={{ y: "10vh", opacity: 0 }}
-                            transition={{ type: "spring", stiffness: 300, delay: 1.6 }}
-                            animate={{ y: 0, opacity: 1 }}
+                        <div  data-aos="fade-up" data-aos-delay="200"
                             className="col-lg-6 about-left">
                             <img className="img-fluid" src={img} alt="Richard Ingwe" />
-                        </motion.div>
-                        <motion.div
-                            initial={{ y: "10vh", opacity: 0 }}
-                            transition={{ type: "spring", stiffness: 300, delay: 2 }}
-                            animate={{ y: 0, opacity: 1 }}
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="300"
                             className="col-lg-5 col-md-12 about-right">
                             <div className="section-title text-white">
                                 <h2>about project.</h2>
@@ -52,7 +53,7 @@ const Code = () => {
                                     <p>lorem ipsum lalalalalalalalalala alalal alal allalala ala </p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>
