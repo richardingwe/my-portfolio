@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import img from "./1.jpg";
 
 const Code = () => {
     return (
@@ -23,6 +24,34 @@ const Code = () => {
                                     <Link to="/project/code">Code</Link>
                                 </span>
                             </p>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="about-area section-gap">
+                <div className="container">
+                    <div className="row align-items-center justify-content-between">
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 1.6 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="col-lg-6 about-left">
+                            <img className="img-fluid" src={img} alt="Richard Ingwe" />
+                        </motion.div>
+                        <motion.div
+                            initial={{ y: "10vh", opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 300, delay: 2 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="col-lg-5 col-md-12 about-right">
+                            <div className="section-title text-white">
+                                <h2>about project.</h2>
+                            </div>
+                            <div className="mb-50 wow fadeIn text-white" data-wow-duration=".8s">
+                                <div>
+                                    <p>lorem ipsum lalalalalalalalalala alalal alal allalala ala </p>
+                                </div>
+                            </div>
                         </motion.div>
                     </div>
                 </div>
