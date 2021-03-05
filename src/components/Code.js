@@ -37,7 +37,6 @@ const Code = () => {
         }`)
             .then(data => {
                 setCodeData(data);
-                console.log(data);
             })
             .catch(console.error);
 
@@ -47,6 +46,17 @@ const Code = () => {
         AOS.init();
         AOS.refresh();
     }, []);
+
+    
+    if (!codeData) return (
+        <div>
+            <div className="preloader-area">
+                <div className="loader-box">
+                    <div className="loader"></div>
+                </div>
+            </div>
+        </div>
+    );
 
     return (
         <main className="bg-gray-800 min-h-screen main">
