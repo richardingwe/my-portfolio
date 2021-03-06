@@ -28,6 +28,7 @@ const Post = () => {
         slug,
         publishedAt,
         body,
+        subtitle,
         "name": author->name,
         mainImage{
             asset->{
@@ -101,7 +102,7 @@ const Post = () => {
                                         </div>
                                         <h3 className="heading"><Link to={`/blog/${blog.slug.current}`}>{blog.title}</Link></h3>
                                         <p>
-                                            {blog.body[0].children[0].text.substr(0, 130).concat("...")}
+                                            {blog.subtitle || blog.body[0].children[0].text.substr(0, 130).concat("...")}
                                         </p>
                                         <div className="d-flex align-items-center mt-4 meta">
                                             <p className="mb-0"><Link to={`/blog/${blog.slug.current}`} className="btn text-dark btn-secondary">Read More <span className="ion-ios-arrow-round-forward"></span></Link></p>
