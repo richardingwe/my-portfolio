@@ -78,7 +78,7 @@ const Post = () => {
             </section>
             {!blogData.length && (
                 <div className="no-post container text-white text-center d-flex align-items-center justify-content-center my-5" >
-                    <h1>oops!! No Blog Post is Available For Now.</h1>
+                    <h1>Oops!! No Blog Post Is Available For Now.</h1>
                 </div>
             )}
             <section className="ftco-section text-white" data-section="blog">
