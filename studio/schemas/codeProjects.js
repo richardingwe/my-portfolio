@@ -1,6 +1,6 @@
 export default {
     name: "CodeProject",
-    title: "Code Project",
+    title: "Code Projects",
     type: "document",
     fields: [
         {

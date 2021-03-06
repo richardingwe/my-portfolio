@@ -4,17 +4,15 @@ import { motion } from "framer-motion";
 import sanityClient from "../client";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-
-import "./Post.css";
+import "./Blog.css";
 
 const Post = () => {
-    const [postData, setPostData] = useState(null);
+    const [blogData, setBlogData] = useState(null);
 
     useEffect(() => {
         document.title = "Rui - Blog";
     }, []);
-    
+
     useEffect(() => {
         AOS.init({
             delay: 200
@@ -25,7 +23,7 @@ const Post = () => {
     useEffect(() => {
         sanityClient
             .fetch(
-                `*[_type == "post"]{
+                `*[_type == "blog"]{
         title,
         slug,
         publishedAt,
@@ -39,14 +37,14 @@ const Post = () => {
             alt
         }
     }`)
-            .then((data) => setPostData(data))
+            .then((data) => setBlogData(data))
             .catch(console.error);
     }, []);
 
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 
-    if (!postData) return (
+    if (!blogData) return (
         <div>
             <div className="preloader-area">
                 <div className="loader-box">
@@ -71,7 +69,7 @@ const Post = () => {
                             <p className="link-nav">
                                 <span className="box">
                                     <Link to="/">Home</Link>
-                                    <Link to="/post">Blog</Link>
+                                    <Link to="/blog">Blog</Link>
                                 </span>
                             </p>
                         </motion.div>
@@ -81,29 +79,29 @@ const Post = () => {
             <section className="ftco-section text-white" data-section="blog">
                 <div className="container">
                     <div className="row d-flex" >
-                        {postData && postData.map((post, index) => (
-                            <div data-aos="fade-up" className="col-lg-4 col-md-6 col-xs-12 d-flex ftco-animate" key={post.slug.current}>
+                        {blogData && blogData.map((blog, index) => (
+                            <div data-aos="fade-up" className="col-lg-4 col-md-6 col-xs-12 d-flex ftco-animate" key={blog.slug.current}>
                                 <div className="blog-entry justify-content-end">
-                                    <Link to={`/post/${post.slug.current}`} className="block-20" style={{ backgroundImage: `url(${post.mainImage.asset.url})` }}>
+                                    <Link to={`/blog/${blog.slug.current}`} className="block-20" style={{ backgroundImage: `url(${blog.mainImage.asset.url})` }}>
                                     </Link>
                                     <div className="text mt-3 text-light float-right d-block">
                                         <div className="d-flex align-items-center pt-2 mb-4 topp">
                                             <div className="one mr-3">
-                                                <span className="day">{new Date(post.publishedAt).getDate()}</span>
+                                                <span className="day">{new Date(blog.publishedAt).getDate()}</span>
                                             </div>
                                             <div className="two">
-                                                <span className="yr">{new Date(post.publishedAt).getFullYear()}</span>
-                                                <span className="mos">{months[new Date(post.publishedAt).getMonth()]}</span>
+                                                <span className="yr">{new Date(blog.publishedAt).getFullYear()}</span>
+                                                <span className="mos">{months[new Date(blog.publishedAt).getMonth()]}</span>
                                             </div>
                                         </div>
-                                        <h3 className="heading"><Link to={`/post/${post.slug.current}`}>{post.title}</Link></h3>
+                                        <h3 className="heading"><Link to={`/blog/${blog.slug.current}`}>{blog.title}</Link></h3>
                                         <p>
-                                            {post.body[0].children[0].text.substr(0, 130).concat("...")}
+                                            {blog.body[0].children[0].text.substr(0, 130).concat("...")}
                                         </p>
                                         <div className="d-flex align-items-center mt-4 meta">
-                                            <p className="mb-0"><Link to={`/post/${post.slug.current}`} className="btn text-dark btn-secondary">Read More <span className="ion-ios-arrow-round-forward"></span></Link></p>
+                                            <p className="mb-0"><Link to={`/blog/${blog.slug.current}`} className="btn text-dark btn-secondary">Read More <span className="ion-ios-arrow-round-forward"></span></Link></p>
                                             <p className="ml-auto mb-0">
-                                                <Link to="/about" className="mr-2">{post.name}</Link>
+                                                <Link to="/about" className="mr-2">{blog.name}</Link>
                                                 {/* <a href="/" class="meta-chat"><span class="icon-chat"></span> 3</a> */}
                                             </p>
                                         </div>

@@ -1,12 +1,19 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'blog',
+  title: 'Blog Posts',
   type: 'document',
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
+    },
+    {
+      name: "subtitle",
+      type: "text",
+      options: {
+        maxLength: 135,
+      },
     },
     {
       name: 'slug',

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "./components/Home";
 import About from "./components/About";
-import SinglePost from "./components/SinglePost";
-import Post from "./components/Post";
+import SingleBlog from "./components/SingleBlog";
+import Blog from "./components/Blog";
 import Project from "./components/Project";
 import NavBar from './components/NavBar';
 import WhatsApp from './components/WhatsApp';
@@ -25,8 +25,8 @@ function App() {
       <Switch>
         <Route component={Home} path="/" exact />
         <Route component={About} path="/about" />
-        <Route component={SinglePost} path="/post/:slug" />
-        <Route component={Post} path="/post" />
+        <Route component={SingleBlog} path="/blog/:slug" />
+        <Route component={Blog} path="/blog" />
         <Route component={Design} path="/project/design" />
         <Route component={Code} path="/project/code" />
         <Route component={Project} path="/project" />

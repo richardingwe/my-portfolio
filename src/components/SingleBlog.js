@@ -6,18 +6,18 @@ import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./SinglePost.css";
+import "./SingleBlog.css";
 
 // const builder = imageUrlBuilder(sanityClient);
 // function urlFor(source) {
 //     return builder.image(source);
 // }
 
-const SinglePost = () => {
-    const [singlePost, setSinglePost] = useState(null);
+const SingleBlog = () => {
+    const [singleBlog, setSingleBlog] = useState(null);
     const { slug } = useParams();
 
-     useEffect(() => {
+    useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);
@@ -37,15 +37,15 @@ const SinglePost = () => {
             body,
             "name": author->name,
             "authorImage": author->image
-        }`).then((data) => setSinglePost(data[0]))
+        }`).then((data) => setSingleBlog(data[0]))
             .catch(console.error);
     }, [slug]);
 
     useEffect(() => {
-        document.title = `Rui - Blog ${singlePost ? `- ${singlePost.title}` : " "}`;
-    }, [singlePost]);
+        document.title = `Rui - Blog ${singleBlog ? `- ${singleBlog.title}` : " "}`;
+    }, [singleBlog]);
 
-    if (!singlePost) return (
+    if (!singleBlog) return (
         <div>
             <div className="preloader-area">
                 <div className="loader-box">
@@ -74,23 +74,23 @@ const SinglePost = () => {
                             <p className="link-nav">
                                 <span className="box">
                                     <Link to="/">Home </Link>
-                                    <Link to="/post">Blog</Link>
-                                    <Link to={`/post/${slug}`}>Blog Details</Link>
+                                    <Link to="/blog">Blog</Link>
+                                    <Link to={`/blog/${slug}`}>Blog Details</Link>
                                 </span>
                             </p>
                         </motion.div>
                     </div>
                 </div>
             </section>
-            {singlePost &&
+            {singleBlog &&
                 <section className="post-content-area single-post-area section-gap">
                     <div className="container">
                         <div className="">
                             <div className="posts-list">
                                 <div className="single-post row text-white">
                                     <div className="col-lg-12">
-                                        <div data-aos="fade-up" data-aos-delay="200" className="feature-img" style={{ backgroundImage: `url(${singlePost.mainImage.asset.url})` }}>
-                                            {/* <img className="img-fluid" src={singlePost.mainImage.asset.url} alt={singlePost.title} /> */}
+                                        <div data-aos="fade-up" data-aos-delay="200" className="feature-img" style={{ backgroundImage: `url(${singleBlog.mainImage.asset.url})` }}>
+                                            {/* <img className="img-fluid" src={singleBlog.mainImage.asset.url} alt={singleBlog.title} /> */}
                                         </div>
                                     </div>
                                     <div className="col-lg-3  col-md-3 meta-details">
@@ -101,8 +101,8 @@ const SinglePost = () => {
                                             <li><a href="/">Lifestyle</a></li>
                                         </ul> */}
                                         <div data-aos="fade-up" data-aos-delay="300" className="user-details row mt-2">
-                                            <p className="user-name col-lg-12 col-md-12 col-6"><a href="/about">{singlePost.name}</a><i className="fa fa-user" /></p>
-                                            <p className="date col-lg-12 col-md-12 col-6">{new Date(singlePost.publishedAt).getDate()} {months[new Date(singlePost.publishedAt).getMonth()]},  {new Date(singlePost.publishedAt).getFullYear()}   <i className="fa fa-calendar" /></p>
+                                            <p className="user-name col-lg-12 col-md-12 col-6"><a href="/about">{singleBlog.name}</a><i className="fa fa-user" /></p>
+                                            <p className="date col-lg-12 col-md-12 col-6">{new Date(singleBlog.publishedAt).getDate()} {months[new Date(singleBlog.publishedAt).getMonth()]},  {new Date(singleBlog.publishedAt).getFullYear()}   <i className="fa fa-calendar" /></p>
                                             {/* <p className="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span className="lnr lnr-eye"></span></p> */}
                                             {/* <p className="comments col-lg-12 col-md-12 col-6"><a href="/">06 Comments</a> <span className="lnr lnr-bubble"></span></p> */}
                                             {/* <ul className="social-links col-lg-12 col-md-12 col-6">
@@ -114,9 +114,9 @@ const SinglePost = () => {
                                         </div>
                                     </div>
                                     <div data-aos="fade-up" data-aos-delay="300" className="col-lg-9 col-md-9">
-                                        <h3 className="mt-5 mb-1 blog-title">{singlePost && singlePost.title}</h3>
+                                        <h3 className="mt-5 mb-1 blog-title">{singleBlog && singleBlog.title}</h3>
                                         <div className="excert">
-                                            <BlockContent blocks={singlePost.body} projectId="y0xdnwwh" dataset="production" />
+                                            <BlockContent blocks={singleBlog.body} projectId="y0xdnwwh" dataset="production" />
                                         </div>
                                         {/* <p className="excert">
                                             MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money
@@ -307,25 +307,25 @@ const SinglePost = () => {
                 //         <div className="absolute h-full w-full flex items-center justify-center p-8">
                 //             <div className="bg-white bg-opacity-75 rounded p-12">
                 //                 <h1 className="cursive text-3xl lg:text-6xl mb-4">
-                //                     {singlePost.title}
+                //                     {singleBlog.title}
                 //                 </h1>
                 //                 <div className="flex justify-center text-gray-800">
-                //                     <img src={urlFor(singlePost.authorImage).url()} alt={singlePost.name} className="w-10 h-10 rounded-full" />
+                //                     <img src={urlFor(singleBlog.authorImage).url()} alt={singleBlog.name} className="w-10 h-10 rounded-full" />
                 //                     <p className="cursive flex items-center pl-2 text-2xl">
-                //                         {singlePost.name}
+                //                         {singleBlog.name}
                 //                     </p>
                 //                 </div>
                 //             </div>
                 //         </div>
                 //         <img
-                //             src={singlePost.mainImage.asset.url}
-                //             alt={singlePost.title}
+                //             src={singleBlog.mainImage.asset.url}
+                //             alt={singleBlog.title}
                 //             className="w-full object-cover rounded-t"
                 //             style={{ height: "400px" }}
                 //         />
                 //     </header>
                 //     <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
-                //         <BlockContent blocks={singlePost.body} projectId="y0xdnwwh" dataset="production" />
+                //         <BlockContent blocks={singleBlog.body} projectId="y0xdnwwh" dataset="production" />
                 //     </div>
                 // </article>
             }
@@ -333,4 +333,4 @@ const SinglePost = () => {
     );
 };
 
-export default SinglePost;
+export default SingleBlog;
