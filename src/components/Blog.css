@@ -39,7 +39,35 @@
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0) 27%, black 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=0);
 }
+.no-post {
+	height: 55vh;
+}
+.no-post h1 {
+	font-size: 30px;
+	padding: 13px 16px;
+	border: 1px solid white;
+	border-radius: 155px;
+}
 
+@media (max-width: 767.98px) {
+	.no-post {
+		height: 40vh;
+	}
+}
+@media (max-width: 367.98px) {
+	.no-post {
+		height: 20vh;
+	}
+}
+@media (max-width: 322.98px) {
+	.no-post {
+		height: 0.5vh;
+		margin: 6rem 0 !important;
+	}
+	.no-post h1 {
+		font-size: 16px;
+	}
+}
 .ftco-section {
 	padding: 7em 0;
 	position: relative;

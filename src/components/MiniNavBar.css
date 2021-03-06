@@ -49,6 +49,18 @@
 	/* border-bottom: 1px solid white; */
 	font-size: 3rem;
 }
+
+@media (max-width: 322.98px) {
+	.MiniNavBar .NavLinks a {
+		font-size: 1.5rem;
+	}
+	.MiniNavBar {
+		background-color: rgba(0, 0, 0, 0.548);
+		backdrop-filter: blur(15px);
+		border: 1px solid rgb(122 122 122 / 30%);
+	}
+}
+
 .MiniNavBar .NavLinks a:nth-child(3) {
 	border-bottom: none;
 }

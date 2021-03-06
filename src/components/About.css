@@ -839,8 +839,12 @@ h6,
 }
 @media (max-width: 374px) {
 	.about-area .primary-btn.white {
-		margin-right: 15px;
+		margin-right: 30px;
+		display: block;
 		margin-bottom: 15px;
+	}
+	.about-area .primary-btn {
+		width: 100%;
 	}
 }
 
