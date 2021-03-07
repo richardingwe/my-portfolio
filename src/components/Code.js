@@ -47,7 +47,7 @@ const Code = () => {
         AOS.refresh();
     }, []);
 
-    
+
     if (!codeData) return (
         <div>
             <div className="preloader-area">
