@@ -12,7 +12,8 @@ const Design = () => {
 
     useEffect(() => {
         AOS.init({
-            delay: 200
+            delay: 200,
+            offset: 230
         });
         AOS.refresh();
     }, []);
@@ -84,7 +85,7 @@ const Design = () => {
                 <div className="container">
                     <div className="row">
                         {designData && designData.map(design => (
-                            <div key={design.projectImage.asset._id} data-aos="fade-up" className="col-md-6 col-lg-4">
+                            <div key={design.projectImage.asset._id} data-aos="fade-up" className="col-md-6">
                                 <div className="single-category">
                                     <a className="d-block" href={design.link} target="_blank"
                                         rel="noopener noreferrer">

@@ -1325,9 +1325,24 @@ h6,
 	transition-duration: 500ms;
 	background-color: #ffffff;
 }
+
 .team-content-area .member-thumb {
-	margin: 0 auto 40px;
-	width: 165px;
+	margin: 0 auto 30px;
+	/* width: 165px; */
+	width: 100%;
+}
+@media only screen and (max-width: 320px) {
+	.team-content-area {
+		padding: 15px;
+	}
+	.team-content-area .member-thumb {
+		margin: 0 auto 0;
+		/* width: 165px; */
+		width: 100%;
+	}
+	.team-content-area h5 {
+		display: none;
+	}
 }
 .team-content-area .member-thumb img {
 	-webkit-transition-duration: 500ms;

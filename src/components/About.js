@@ -7,6 +7,14 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./About.css";
+import jsImg from "../images/js1.jpg";
+import reactImg from "../images/react2.jpg";
+import vueImg from "../images/vue2.jpg";
+import gitImg from "../images/git2.jpg";
+import sassImg from "../images/sass2.jpg";
+import nodeImg from "../images/node2.jpg";
+import firebaseImg from "../images/firebase2.jpg";
+// import AiImg from "../images/Ai.png";
 
 
 const builder = imageUrlBuilder(sanityClient);
@@ -131,69 +139,77 @@ const About = () => {
                     </div>
 
                     <div className="row">
-                        <div className="col-md-6 col-xl-3">
+                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
                                 <div className="member-thumb">
-                                    <img src="img/bg-img/19.jpg" alt="" />
+                                    <img src={jsImg} alt="" />
                                 </div>
-                                <h5>Andrew Dean</h5>
-                                <span>Photographer</span>
-                                <div className="member-social-info">
-                                    <a href="/"><i className="ti-facebook"></i></a>
-                                    <a href="/"><i className="ti-twitter-alt"></i></a>
-                                    <a href="/"><i className="ti-linkedin"></i></a>
-                                    <a href="/"><i className="ti-pinterest"></i></a>
-                                </div>
+                                <h5>Javascript</h5>
                             </div>
                         </div>
 
-                        <div className="col-md-6 col-xl-3">
+                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
                                 <div className="member-thumb">
-                                    <img src="img/bg-img/20.jpg" alt="" />
+                                    <img src={reactImg} alt="" />
                                 </div>
-                                <h5>Tommy Kim</h5>
-                                <span>Photographer</span>
-                                <div className="member-social-info">
-                                    <a href="/"><i className="ti-facebook"></i></a>
-                                    <a href="/"><i className="ti-twitter-alt"></i></a>
-                                    <a href="/"><i className="ti-linkedin"></i></a>
-                                    <a href="/"><i className="ti-pinterest"></i></a>
-                                </div>
+                                <h5>React.js</h5>
                             </div>
                         </div>
 
-                        <div className="col-md-6 col-xl-3">
+                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
                                 <div className="member-thumb">
-                                    <img src="img/bg-img/21.jpg" alt="" />
+                                    <img src={vueImg} alt="" />
                                 </div>
-                                <h5>Max McCormick</h5>
-                                <span>Photographer</span>
-                                <div className="member-social-info">
-                                    <a href="/"><i className="ti-facebook"></i></a>
-                                    <a href="/"><i className="ti-twitter-alt"></i></a>
-                                    <a href="/"><i className="ti-linkedin"></i></a>
-                                    <a href="/"><i className="ti-pinterest"></i></a>
-                                </div>
+                                <h5>Vue.js</h5>
                             </div>
                         </div>
 
-                        <div className="col-md-6 col-xl-3">
+                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src="img/bg-img/22.jpg" alt="" />
+                                    <img src={gitImg} alt="" />
                                 </div>
-                                <h5>Robert Ward</h5>
-                                <span>Photographer</span>
-                                <div className="member-social-info">
-                                    <a href="/"><i className="ti-facebook"></i></a>
-                                    <a href="/"><i className="ti-twitter-alt"></i></a>
-                                    <a href="/"><i className="ti-linkedin"></i></a>
-                                    <a href="/"><i className="ti-pinterest"></i></a>
-                                </div>
+                                <h5>Git</h5>
                             </div>
                         </div>
+
+                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={sassImg} alt="" />
+                                </div>
+                                <h5>Sass</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={nodeImg} alt="" />
+                                </div>
+                                <h5>Node.js</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={firebaseImg} alt="" />
+                                </div>
+                                <h5>Firebase</h5>
+                            </div>
+                        </div>
+
+                        {/* <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={AiImg} alt="" />
+                                </div>
+                                <h5>Adobe Illustrator</h5>
+                            </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
