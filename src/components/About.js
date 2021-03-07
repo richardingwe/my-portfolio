@@ -119,6 +119,84 @@ const About = () => {
                     </div>
                 </section>
             }
+
+            <section className="our-team-area section-padding-80-50">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="section-heading text-white text-center wow fadeInUp" data-wow-delay="100ms">
+                                <h2>Stack And Tools.</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-6 col-xl-3">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
+                                <div className="member-thumb">
+                                    <img src="img/bg-img/19.jpg" alt="" />
+                                </div>
+                                <h5>Andrew Dean</h5>
+                                <span>Photographer</span>
+                                <div className="member-social-info">
+                                    <a href="/"><i className="ti-facebook"></i></a>
+                                    <a href="/"><i className="ti-twitter-alt"></i></a>
+                                    <a href="/"><i className="ti-linkedin"></i></a>
+                                    <a href="/"><i className="ti-pinterest"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-6 col-xl-3">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
+                                <div className="member-thumb">
+                                    <img src="img/bg-img/20.jpg" alt="" />
+                                </div>
+                                <h5>Tommy Kim</h5>
+                                <span>Photographer</span>
+                                <div className="member-social-info">
+                                    <a href="/"><i className="ti-facebook"></i></a>
+                                    <a href="/"><i className="ti-twitter-alt"></i></a>
+                                    <a href="/"><i className="ti-linkedin"></i></a>
+                                    <a href="/"><i className="ti-pinterest"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-6 col-xl-3">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
+                                <div className="member-thumb">
+                                    <img src="img/bg-img/21.jpg" alt="" />
+                                </div>
+                                <h5>Max McCormick</h5>
+                                <span>Photographer</span>
+                                <div className="member-social-info">
+                                    <a href="/"><i className="ti-facebook"></i></a>
+                                    <a href="/"><i className="ti-twitter-alt"></i></a>
+                                    <a href="/"><i className="ti-linkedin"></i></a>
+                                    <a href="/"><i className="ti-pinterest"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-6 col-xl-3">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src="img/bg-img/22.jpg" alt="" />
+                                </div>
+                                <h5>Robert Ward</h5>
+                                <span>Photographer</span>
+                                <div className="member-social-info">
+                                    <a href="/"><i className="ti-facebook"></i></a>
+                                    <a href="/"><i className="ti-twitter-alt"></i></a>
+                                    <a href="/"><i className="ti-linkedin"></i></a>
+                                    <a href="/"><i className="ti-pinterest"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 };
