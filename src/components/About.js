@@ -155,7 +155,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
                                 <div className="member-thumb">
-                                    <img src={jsImg} alt="" />
+                                    <img src={jsImg} alt="javascript" />
                                 </div>
                                 <h5>Javascript</h5>
                             </div>
@@ -164,7 +164,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
                                 <div className="member-thumb">
-                                    <img src={reactImg} alt="" />
+                                    <img src={reactImg} alt="react.js" />
                                 </div>
                                 <h5>React.js</h5>
                             </div>
@@ -173,7 +173,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
                                 <div className="member-thumb">
-                                    <img src={nextImg} alt="" />
+                                    <img src={nextImg} alt="next.js" />
                                 </div>
                                 <h5>Next.js</h5>
                             </div>
@@ -182,7 +182,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
                                 <div className="member-thumb">
-                                    <img src={vueImg} alt="" />
+                                    <img src={vueImg} alt="vue.js" />
                                 </div>
                                 <h5>Vue.js</h5>
                             </div>
@@ -191,7 +191,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
                                 <div className="member-thumb">
-                                    <img src={pwaImg} alt="" />
+                                    <img src={pwaImg} alt="pwa" />
                                 </div>
                                 <h5>PWA</h5>
                             </div>
@@ -200,7 +200,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
                                 <div className="member-thumb">
-                                    <img src={bsImg} alt="" />
+                                    <img src={bsImg} alt="bootstrap" />
                                 </div>
                                 <h5>Bootstrap</h5>
                             </div>
@@ -209,7 +209,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={gitImg} alt="" />
+                                    <img src={gitImg} alt="git" />
                                 </div>
                                 <h5>Git</h5>
                             </div>
@@ -218,7 +218,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={sassImg} alt="" />
+                                    <img src={sassImg} alt="sass" />
                                 </div>
                                 <h5>Sass</h5>
                             </div>
@@ -227,7 +227,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={nodeImg} alt="" />
+                                    <img src={nodeImg} alt="node.js" />
                                 </div>
                                 <h5>Node.js</h5>
                             </div>
@@ -236,7 +236,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={mongoImg} alt="" />
+                                    <img src={mongoImg} alt="mongoDB" />
                                 </div>
                                 <h5>MongoDB</h5>
                             </div>
@@ -245,7 +245,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={mysqlImg} alt="" />
+                                    <img src={mysqlImg} alt="mysql" />
                                 </div>
                                 <h5>MySql</h5>
                             </div>
@@ -254,7 +254,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={firebaseImg} alt="" />
+                                    <img src={firebaseImg} alt="firebase" />
                                 </div>
                                 <h5>Firebase</h5>
                             </div>
@@ -263,7 +263,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={awsImg} alt="" />
+                                    <img src={awsImg} alt="aws" />
                                 </div>
                                 <h5>AWS</h5>
                             </div>
@@ -272,7 +272,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={reduxImg} alt="" />
+                                    <img src={reduxImg} alt="redux" />
                                 </div>
                                 <h5>Redux</h5>
                             </div>
@@ -281,7 +281,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={sanityImg} alt="" />
+                                    <img src={sanityImg} alt="sanity" />
                                 </div>
                                 <h5>Sanity</h5>
                             </div>
@@ -290,7 +290,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={aiImg} alt="" />
+                                    <img src={aiImg} alt="adobe illustrator" />
                                 </div>
                                 <h5>Illustrator</h5>
                             </div>
@@ -299,7 +299,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={psImg} alt="" />
+                                    <img src={psImg} alt="adobe photoshop" />
                                 </div>
                                 <h5>Photoshop</h5>
                             </div>
@@ -308,7 +308,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={xdImg} alt="" />
+                                    <img src={xdImg} alt="adobe xd" />
                                 </div>
                                 <h5>XD</h5>
                             </div>
@@ -317,7 +317,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={idImg} alt="" />
+                                    <img src={idImg} alt="adobe indesign" />
                                 </div>
                                 <h5>InDesign</h5>
                             </div>
@@ -326,7 +326,7 @@ const About = () => {
                         <div data-aos="fade-up" data-aos-delay="300" className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={aeImg} alt="" />
+                                    <img src={aeImg} alt="adobe after effects" />
                                 </div>
                                 <h5>AfterEffects</h5>
                             </div>

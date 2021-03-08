@@ -99,14 +99,14 @@ const Code = () => {
                                 </div>
                                 <div className="text-white">
                                     <div className="tech-used">
-                                        {code.technologiesUsed.map((tech, i) => (
+                                        {code.technologiesUsed && code.technologiesUsed.map((tech, i) => (
                                             <div key={i} className="tech">
                                                 {tech}
                                             </div>
                                         ))}
                                     </div>
                                     <div>
-                                        <p>{code.description}</p>
+                                        <p>{code.description && code.description}</p>
                                     </div>
                                     <div className="links">
                                         {code.link && (
