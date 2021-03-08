@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import { NavLink } from 'react-router-dom';
 // import Logo from "../Rui.svg";
@@ -32,24 +32,8 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 
         }
     };
-
-    const [lastScrollTop, setLastScrollTop] = useState(0);
-    const [navHide, setNavHide] = useState(false);
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (!navOpen && scrollTop > lastScrollTop) {
-                setNavHide(true);
-            } else {
-                setNavHide(false);
-            }
-            setLastScrollTop(scrollTop);
-        });
-    }, [lastScrollTop, navOpen]);
-
     return (
-        <header className="NavBar" style={{ transform: `${navHide ? "translateY(-30vh)" : "translateY(0)"}` }} >
+        <header className="NavBar" style={{ position: `${navOpen ? "fixed" : "absolute"}` }}>
             <div className="Nav">
                 <nav className="nav-items">
                     <NavLink
