@@ -12,14 +12,35 @@ const Home = () => {
                 <motion.h1
                     initial={{ x: "-10vw", opacity: 0 }}
                     transition={{ type: "spring", delay: 1, stiffness: 300 }}
-                    animate={{ x: 0, opacity: 1 }} className="text-white font-bold playfair home-name"><span className="hello">Hello,</span><br /> I am Rui.
+                    animate={{ x: 0, opacity: 1 }} className="text-white font-bold playfair home-name">
+                    <span className="hello">Hello,</span><br /> I am Rui.
                 </motion.h1>
+                <motion.div
+                    initial={{ x: "-10vw", opacity: 0 }}
+                    transition={{ type: "spring", delay: 1.2, stiffness: 300 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    className="title">
+                    <div />
+                    <p>
+                        Software Developer
+                    </p>
+                </motion.div>
+                <motion.div
+                    initial={{ x: "-10vw", opacity: 0 }}
+                    transition={{ type: "spring", delay: 1.4, stiffness: 300 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    className="title">
+                    <div />
+                    <p>
+                        Brand Identity Designer
+                    </p>
+                </motion.div>
                 <motion.p
                     initial={{ x: "10vw", opacity: 0 }}
-                    transition={{ type: "spring", delay: 1.5, stiffness: 200 }}
+                    transition={{ type: "spring", delay: 1.6, stiffness: 200 }}
                     animate={{ x: 0, opacity: 1 }}
-                ><span className="title">Software Developer && Brand Identity Designer.</span><br />
-                I Create Beautiful Experiences, That Could Keep Potential Customers Glued && Loyal To Your Businesses, Brands And Websites.
+                >
+                    I Create Beautiful Experiences, That Could Keep Potential Customers Glued && Loyal To Your Businesses, Brands And Websites.
                 </motion.p>
                 <motion.div
                     initial={{ y: "10vh", opacity: 0 }}
