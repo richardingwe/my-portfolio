@@ -7,13 +7,26 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./About.css";
-import jsImg from "../images/js1.jpg";
-import reactImg from "../images/react2.jpg";
-import vueImg from "../images/vue2.jpg";
-import gitImg from "../images/git2.jpg";
-import sassImg from "../images/sass2.jpg";
-import nodeImg from "../images/node2.jpg";
-import firebaseImg from "../images/firebase2.jpg";
+import jsImg from "../images/js.jpg";
+import reactImg from "../images/react.jpg";
+import vueImg from "../images/vue.jpg";
+import gitImg from "../images/git.jpg";
+import sassImg from "../images/sass.jpg";
+import nodeImg from "../images/node.jpg";
+import firebaseImg from "../images/firebase.jpg";
+import bsImg from "../images/bs.jpg";
+import pwaImg from "../images/pwa.jpg";
+import mongoImg from "../images/mongo.jpg";
+import awsImg from "../images/aws.jpg";
+import reduxImg from "../images/redux.jpg";
+import nextImg from "../images/next.jpg";
+import sanityImg from "../images/sanity.jpg";
+import mysqlImg from "../images/mysql.jpg";
+import aiImg from "../images/ai.jpg";
+import psImg from "../images/ps.jpg";
+import xdImg from "../images/xd.jpg";
+import idImg from "../images/id.jpg";
+import aeImg from "../images/ae.jpg";
 // import AiImg from "../images/Ai.png";
 
 
@@ -139,7 +152,7 @@ const About = () => {
                     </div>
 
                     <div className="row">
-                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
                                 <div className="member-thumb">
                                     <img src={jsImg} alt="" />
@@ -148,7 +161,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
                                 <div className="member-thumb">
                                     <img src={reactImg} alt="" />
@@ -157,7 +170,16 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
+                                <div className="member-thumb">
+                                    <img src={nextImg} alt="" />
+                                </div>
+                                <h5>Next.js</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
                                 <div className="member-thumb">
                                     <img src={vueImg} alt="" />
@@ -166,7 +188,25 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
+                                <div className="member-thumb">
+                                    <img src={pwaImg} alt="" />
+                                </div>
+                                <h5>PWA</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
+                                <div className="member-thumb">
+                                    <img src={bsImg} alt="" />
+                                </div>
+                                <h5>Bootstrap</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
                                     <img src={gitImg} alt="" />
@@ -175,7 +215,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
                                     <img src={sassImg} alt="" />
@@ -184,7 +224,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
                                     <img src={nodeImg} alt="" />
@@ -193,7 +233,25 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={mongoImg} alt="" />
+                                </div>
+                                <h5>MongoDB</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={mysqlImg} alt="" />
+                                </div>
+                                <h5>MySql</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
                                     <img src={firebaseImg} alt="" />
@@ -202,14 +260,77 @@ const About = () => {
                             </div>
                         </div>
 
-                        {/* <div className="col-6 col-sm-4 col-md-3 col-xl-2">
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
                             <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
                                 <div className="member-thumb">
-                                    <img src={AiImg} alt="" />
+                                    <img src={awsImg} alt="" />
                                 </div>
-                                <h5>Adobe Illustrator</h5>
+                                <h5>AWS</h5>
                             </div>
-                        </div> */}
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={reduxImg} alt="" />
+                                </div>
+                                <h5>Redux</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={sanityImg} alt="" />
+                                </div>
+                                <h5>Sanity</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={aiImg} alt="" />
+                                </div>
+                                <h5>Illustrator</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={psImg} alt="" />
+                                </div>
+                                <h5>Photoshop</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={xdImg} alt="" />
+                                </div>
+                                <h5>XD</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={idImg} alt="" />
+                                </div>
+                                <h5>InDesign</h5>
+                            </div>
+                        </div>
+
+                        <div className="col-4 col-sm-4 col-md-3 col-xl-2">
+                            <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+                                <div className="member-thumb">
+                                    <img src={aeImg} alt="" />
+                                </div>
+                                <h5>AfterEffects</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
