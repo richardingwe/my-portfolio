@@ -1,6 +1,6 @@
 .NavBar {
 	position: fixed;
-	z-index: 1000000;
+	z-index: 10;
 	/* top: 0; */
 	left: 0;
 	width: 100%;
@@ -9,27 +9,7 @@
 	align-items: center;
 	/* margin-top: 1rem; */
 	/* transform: translateY(-20vh); */
-	transition: 200ms ease;
-}
-.visible {
-	/* background-color: #1f2937; */
-
-	/* transform: translateY(0);
-	background-color: #fff;
-	background: rgb(115 115 115 / 30%);
-	background: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.3) 0%,
-		rgb(120 120 120 / 30%) 42%,
-		rgb(51 51 51 / 30%) 100%
-	);
-	backdrop-filter: blur(15px); */
-}
-.not-visible {
-	/* transform: translateY(0) !important; */
-	background-color: transparent;
-	background: transparent;
-	backdrop-filter: blur(0);
+	transition: 100ms ease-out;
 }
 .hamburger {
 	display: none;
@@ -61,9 +41,9 @@ svg {
 	height: 45px;
 }
 @media (max-width: 676px) {
-	.Nav {
-		/* margin-top: 0; */
-	}
+	/* .Nav {
+		margin-top: 0;
+	} */
 	.NavBar {
 		/* margin-top: 1.5rem; */
 		padding: 0 10px;

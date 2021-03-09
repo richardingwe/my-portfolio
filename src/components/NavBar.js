@@ -63,7 +63,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen, match }) => {
     return (
         <header className={`NavBar ${visible ? "visible" : "not-visible"}`} style={{
             transform: `${visible ? "translateY(0)" : "translateY(-20vh)"}`,
-            backgroundColor: `${location.pathname === "/" ? "transparent" : "#1f2937"}`
+            backgroundColor: `${navOpen || location.pathname === "/" ? "transparent" : "#1f2937"}`
         }}>
             <div className="Nav">
                 <nav className="nav-items">
