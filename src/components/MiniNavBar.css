@@ -26,7 +26,6 @@
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
-	/* margin: 0 auto; */
 	color: white;
 	align-items: center;
 }
@@ -46,7 +45,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* border-bottom: 1px solid white; */
 	font-size: 3rem;
 }
 

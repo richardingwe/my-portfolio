@@ -1,14 +1,12 @@
 .NavBar {
 	position: fixed;
 	z-index: 10;
-	/* top: 0; */
 	left: 0;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* margin-top: 1rem; */
-	/* transform: translateY(-20vh); */
+
 	transition: 100ms ease-out;
 }
 .hamburger {
@@ -22,7 +20,6 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	/* margin: 0 auto; */
 	color: white;
 	align-items: center;
 }
@@ -41,11 +38,7 @@ svg {
 	height: 45px;
 }
 @media (max-width: 676px) {
-	/* .Nav {
-		margin-top: 0;
-	} */
 	.NavBar {
-		/* margin-top: 1.5rem; */
 		padding: 0 10px;
 	}
 	.hamburger {
