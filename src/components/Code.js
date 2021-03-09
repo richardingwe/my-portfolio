@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import sanityClient from "../client";
 import { motion } from "framer-motion";
-import img from "./1.jpg";
+import imgNotAvailable from "../images/imageNotAvailable.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Code.css";
@@ -90,7 +90,7 @@ const Code = () => {
                         <div key={index} className="row align-items-center justify-content-between my-5">
                             <div data-aos="fade-up" data-aos-delay="200"
                                 className="col-lg-6 about-left">
-                                <img className="img-fluid" src={code.projectImage ? code.projectImage.asset.url : img} alt={code.alt || "hello"} />
+                                <img className="img-fluid" src={code.projectImage ? code.projectImage.asset.url : imgNotAvailable} alt={code.alt || "hello"} />
                             </div>
                             <div data-aos="fade-up" data-aos-delay="300"
                                 className="col-lg-5 col-md-12 about-right">

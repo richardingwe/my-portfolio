@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { NavLink } from 'react-router-dom';
-// import Logo from "../Rui.svg";
-import hamburger from "../hamburger.svg";
-import hamburgerClose from "../hamburgerClose.svg";
+// import Logo from "../images/Rui.svg";
+import hamburger from "../images/hamburger.svg";
+import hamburgerClose from "../images/hamburgerClose.svg";
 import { debounce } from '../utilities/helpers';
 import "./NavBar.css";
 import { useLocation } from 'react-router-dom';
 
 
-const NavBar = ({ handleClick, navOpen, setNavOpen, match }) => {
+const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
     const [rotate, setRotate] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
