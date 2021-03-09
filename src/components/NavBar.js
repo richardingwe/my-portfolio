@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { NavLink } from 'react-router-dom';
 // import Logo from "../Rui.svg";
 import hamburger from "../hamburger.svg";
 import hamburgerClose from "../hamburgerClose.svg";
+import { debounce } from '../utilities/helpers';
 import "./NavBar.css";
+import { useLocation } from 'react-router-dom';
 
-const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
+
+const NavBar = ({ handleClick, navOpen, setNavOpen, match }) => {
     const [rotate, setRotate] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+    const location = useLocation();
+
+
+    useEffect(() => {
+        console.log(location.pathname);
+    });
     const handleNavClick = () => {
         handleClick();
         setRotate(true);
@@ -32,8 +43,28 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 
         }
     };
+
+    const handleScroll = debounce(() => {
+        const currentScrollPos = window.pageYOffset;
+
+        !navOpen && setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+
+        setPrevScrollPos(currentScrollPos);
+    }, 100);
+
+    useEffect(() => {
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll);
+
+    }, [prevScrollPos, visible, handleScroll]);
+
     return (
-        <header className="NavBar" style={{ position: `${navOpen ? "fixed" : "absolute"}` }}>
+        <header className={`NavBar ${visible ? "visible" : "not-visible"}`} style={{
+            transform: `${visible ? "translateY(0)" : "translateY(-20vh)"}`,
+            backgroundColor: `${location.pathname === "/" ? "transparent" : "#1f2937"}`
+        }}>
             <div className="Nav">
                 <nav className="nav-items">
                     <NavLink
