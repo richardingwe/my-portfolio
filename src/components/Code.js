@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import imgNotAvailable from "../images/imageNotAvailable.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Code.css";
+import "../css/Code.css";
 
 
 const Code = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import "./MiniNavBar.css";
 import { motion } from "framer-motion";
+import "../css/MiniNavBar.css";
 
 const MiniNavBar = ({ handleClick }) => {
     return (

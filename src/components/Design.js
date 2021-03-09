@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import sanityClient from "../client";
 import { motion } from "framer-motion";
-import "./Design.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "../css/Design.css";
 
 const Design = () => {
     const [designData, setDesignData] = useState(null);

@@ -6,7 +6,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./About.css";
+import "../css/About.css";
 import jsImg from "../images/js.jpg";
 import reactImg from "../images/react.jpg";
 import vueImg from "../images/vue.jpg";
@@ -27,7 +27,6 @@ import psImg from "../images/ps.jpg";
 import xdImg from "../images/xd.jpg";
 import idImg from "../images/id.jpg";
 import aeImg from "../images/ae.jpg";
-// import AiImg from "../images/Ai.png";
 
 
 const builder = imageUrlBuilder(sanityClient);

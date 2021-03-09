@@ -6,7 +6,7 @@ import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./SingleBlog.css";
+import "../css/SingleBlog.css";
 
 // const builder = imageUrlBuilder(sanityClient);
 // function urlFor(source) {

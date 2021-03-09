@@ -1,5 +1,5 @@
 import React from 'react';
-import "./WhatsApp.css";
+import "../css/WhatsApp.css";
 import "animate.css";
 
 function WhatsApp() {

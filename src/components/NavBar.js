@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 // import Logo from "../images/Rui.svg";
 import hamburger from "../images/hamburger.svg";
 import hamburgerClose from "../images/hamburgerClose.svg";
 import { debounce } from '../utilities/helpers';
-import "./NavBar.css";
-import { useLocation } from 'react-router-dom';
+import "../css/NavBar.css";
 
 
 const NavBar = ({ handleClick, navOpen, setNavOpen }) => {

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import sanityClient from "../client";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Blog.css";
+import "../css/Blog.css";
 
 const Post = () => {
     const [blogData, setBlogData] = useState(null);
