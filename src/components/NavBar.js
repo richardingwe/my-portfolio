@@ -16,9 +16,6 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
     const location = useLocation();
 
 
-    useEffect(() => {
-        console.log(location.pathname);
-    });
     const handleNavClick = () => {
         handleClick();
         setRotate(true);
