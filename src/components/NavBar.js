@@ -58,7 +58,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
     }, [prevScrollPos, visible, handleScroll]);
 
     return (
-        <header className={`NavBar ${visible ? "visible" : "not-visible"}`} style={{
+        <header className="NavBar" style={{
             transform: `${visible ? "translateY(0)" : "translateY(-20vh)"}`,
             backgroundColor: `${navOpen || location.pathname === "/" ? "transparent" : "#1f2937"}`
         }}>
