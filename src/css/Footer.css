@@ -1,0 +1,25 @@
+.Footer {
+	background-color: rgb(11, 13, 20);
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	color: white;
+}
+
+.Footer div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.Footer div a {
+	color: inherit;
+	font-weight: 400;
+	transition: 500ms;
+}
+.Footer div a:hover {
+	color: #e45447;
+}

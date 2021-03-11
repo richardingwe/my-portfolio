@@ -6,6 +6,7 @@ import SingleBlog from "./components/SingleBlog";
 import Blog from "./components/Blog";
 import Project from "./components/Project";
 import NavBar from './components/NavBar';
+import Footer from "./components/Footer";
 import WhatsApp from './components/WhatsApp';
 import MiniNavBar from './components/MiniNavBar';
 import Design from './components/Design';
@@ -31,6 +32,7 @@ function App() {
         <Route component={Code} path="/project/code" />
         <Route component={Project} path="/project" />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }

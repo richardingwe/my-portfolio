@@ -68,6 +68,7 @@ const Home = () => {
                     </a>
                 </motion.div>
             </section>
+            {/* <Footer /> */}
             <motion.div
                 initial={{ y: "10vh", opacity: 0 }}
                 transition={{ delay: 2.3 }}
