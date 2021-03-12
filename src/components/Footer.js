@@ -16,7 +16,7 @@ const Footer = () => {
                 <span>© 2021 Rui Creative. All rights reserved. </span>
                 {/* <br /> */}
                 <a href="https://github.com/richardingwe" target="_blank" rel="nofollow noopener noreferrer" className="">
-                    Designed by Rui.
+                    Designed && Coded By Rui.
                 </a>
             </div>
         </footer>
