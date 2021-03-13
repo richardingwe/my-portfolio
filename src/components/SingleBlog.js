@@ -90,7 +90,7 @@ const SingleBlog = () => {
                             <div className="posts-list">
                                 <div className="single-post row text-white">
                                     <div className="col-lg-12">
-                                        <div className="subtitle">
+                                        <div data-aos="fade-up" data-aos-delay="300" className="subtitle">
                                             <p >{singleBlog.subtitle}</p>
                                         </div>
                                         <div data-aos="fade-up" data-aos-delay="200" className="feature-img" style={{ backgroundImage: `url(${singleBlog.mainImage.asset.url})` }}>
