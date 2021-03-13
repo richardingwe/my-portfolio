@@ -1,17 +1,29 @@
 .post-content-area .single-post {
 	margin-bottom: 50px;
 }
+/* .section-gap {
+	margin-top: -30px;
+} */
 .post-content-area .single-post .meta-details {
 	text-align: right;
 	margin-top: 35px;
 }
 .blog-title {
 	font-weight: bolder;
-	font-size: 30px;
+	font-size: 36px;
+	color: #e45447;
+	margin-bottom: 2rem;
 }
 @media (max-width: 767px) {
 	.post-content-area .single-post .meta-details {
 		text-align: left;
+	}
+	.user-details {
+		margin-top: 1.5rem !important;
+	}
+	.blog-title {
+		margin-top: 0.3rem !important;
+		margin-bottom: 1rem !important;
 	}
 }
 .post-content-area .single-post .meta-details .tags {
@@ -31,6 +43,7 @@
 .post-content-area .single-post .meta-details .tags li a:hover {
 	color: #e45447;
 }
+
 @media (max-width: 1024px) {
 	.post-content-area .single-post .meta-details {
 		margin-top: 0px;
@@ -41,11 +54,18 @@
 .post-content-area .single-post .view a,
 .post-content-area .single-post .comments a {
 	color: #ffffff;
-	margin-right: 10px;
+	/* margin-right: 10px; */
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
+}
+
+.author-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-left: 0.6rem;
 }
 .post-content-area .single-post .user-name a:hover,
 .post-content-area .single-post .date a:hover,
@@ -59,6 +79,20 @@
 .post-content-area .single-post .comments .lnr {
 	font-weight: 900;
 	color: #000;
+}
+.subtitle {
+	width: 65%;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	align-self: center;
+	padding: 1rem;
+	border-left: 5px solid white;
+}
+
+.subtitle p {
+	margin: 0;
+	font-size: 20px;
+	font-style: italic;
 }
 .post-content-area .single-post .feature-img {
 	overflow: hidden;
@@ -84,6 +118,12 @@
 		width: 100%;
 		/* max-width: 720px; */
 		height: 400px;
+	}
+	.subtitle {
+		width: 100%;
+	}
+	.subtitle p {
+		font-size: 18px;
 	}
 }
 .post-content-area .single-post .posts-title h3 {

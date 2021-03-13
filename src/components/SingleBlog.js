@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import sanityClient from "../client.js";
-// import imageUrlBuilder from "@sanity/image-url";
+import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/SingleBlog.css";
 
-// const builder = imageUrlBuilder(sanityClient);
-// function urlFor(source) {
-//     return builder.image(source);
-// }
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+    return builder.image(source);
+}
 
 const SingleBlog = () => {
     const [singleBlog, setSingleBlog] = useState(null);
@@ -25,6 +25,7 @@ const SingleBlog = () => {
     useEffect(() => {
         sanityClient.fetch(`*[slug.current == "${slug}"]{
             title,
+            subtitle,
             _id,
             slug,
         publishedAt,
@@ -89,6 +90,9 @@ const SingleBlog = () => {
                             <div className="posts-list">
                                 <div className="single-post row text-white">
                                     <div className="col-lg-12">
+                                        <div className="subtitle">
+                                            <p >{singleBlog.subtitle}</p>
+                                        </div>
                                         <div data-aos="fade-up" data-aos-delay="200" className="feature-img" style={{ backgroundImage: `url(${singleBlog.mainImage.asset.url})` }}>
                                             {/* <img className="img-fluid" src={singleBlog.mainImage.asset.url} alt={singleBlog.title} /> */}
                                         </div>
@@ -100,8 +104,14 @@ const SingleBlog = () => {
                                             <li><a href="/">Politics,</a></li>
                                             <li><a href="/">Lifestyle</a></li>
                                         </ul> */}
-                                        <div data-aos="fade-up" data-aos-delay="300" className="user-details row mt-2">
-                                            <p className="user-name col-lg-12 col-md-12 col-6"><a href="/about">{singleBlog.name}</a><i className="fa fa-user" /></p>
+                                        <div data-aos="fade-up" data-aos-delay="300" className="user-details row mt-2 justify-content-center align-items-center">
+                                            <p className="user-name col-lg-12 col-md-12 col-6">
+                                                <Link to="/about">{singleBlog.name}
+                                                    <img className="author-img" src={urlFor(singleBlog.authorImage).url()} alt=" ">
+                                                    </img>
+                                                </Link>
+                                                {/* <i className="fa fa-user" /> */}
+                                            </p>
                                             <p className="date col-lg-12 col-md-12 col-6">{new Date(singleBlog.publishedAt).getDate()} {months[new Date(singleBlog.publishedAt).getMonth()]},  {new Date(singleBlog.publishedAt).getFullYear()}   <i className="fa fa-calendar" /></p>
                                             {/* <p className="view col-lg-12 col-md-12 col-6"><a href="/">1.2M Views</a> <span className="lnr lnr-eye"></span></p> */}
                                             {/* <p className="comments col-lg-12 col-md-12 col-6"><a href="/">06 Comments</a> <span className="lnr lnr-bubble"></span></p> */}

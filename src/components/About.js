@@ -145,7 +145,7 @@ const About = () => {
                     <div className="row">
                         <div className="col-12">
                             <div className="section-heading text-white text-center wow fadeInUp" data-wow-delay="100ms">
-                                <h2 data-aos="fade-up" data-aos-delay="200">Stack And Tools.</h2>
+                                <h2 data-aos="fade-up" data-aos-delay="200" className="stack-tools">Stack And Tools.</h2>
                             </div>
                         </div>
                     </div>
