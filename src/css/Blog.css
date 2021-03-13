@@ -164,6 +164,7 @@
 	left: 0;
 	width: 100%;
 	padding-left: 2em;
+	background-color: rgba(255, 248, 220, 0.103);
 }
 .blog-entry span.day {
 	font-size: 50px;
