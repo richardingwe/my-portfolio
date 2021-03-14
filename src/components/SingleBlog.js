@@ -44,6 +44,7 @@ const SingleBlog = () => {
 
     useEffect(() => {
         document.title = `Rui - Blog ${singleBlog ? `- ${singleBlog.title}` : " "}`;
+        document.getElementsByTagName("META")[3].content = `${singleBlog ? `${singleBlog.subtitle}` : " "}`;
     }, [singleBlog]);
 
     if (!singleBlog) return (

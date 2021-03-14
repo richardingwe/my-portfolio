@@ -4,7 +4,8 @@ import "../css/Home.css";
 
 const Home = () => {
     useEffect(() => {
-        document.title = "Rui";
+        document.title = "Rui - Richard Unimke Ingwe";
+        document.getElementsByTagName("META")[3].content = "I Create Beautiful Experiences, That Could Keep Potential Customers Glued && Loyal To Your Businesses, Brands And Websites.";
     }, []);
     return (
         <main className="Main">

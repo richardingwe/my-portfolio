@@ -16,6 +16,7 @@
     "react-cursor": "^2.0.15",
     "react-cursor-custom": "^1.2.4",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-social-icons": "^4.1.0"
