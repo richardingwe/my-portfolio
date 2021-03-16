@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import { DiscussionEmbed } from 'disqus-react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/SingleBlog.css";
@@ -307,6 +308,17 @@ const SingleBlog = () => {
                             </div>*/}
                             </div>
                         </div>
+                        <DiscussionEmbed
+                            shortname='Rui'
+                            config={
+                                {
+                                    url: `https://ruingwe.netlify.app/blog/${singleBlog.title}`,
+                                    identifier: singleBlog._id,
+                                    title: singleBlog.title,
+                                    language: 'en' //e.g. for Traditional Chinese (Taiwan)	
+                                }
+                            }
+                        />
                     </div>
                 </section>
 
@@ -340,6 +352,7 @@ const SingleBlog = () => {
                 //     </div>
                 // </article>
             }
+
         </main>
     );
 };
