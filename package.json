@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.2.1",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "custom-cursor-react": "^1.0.5",
     "framer-motion": "^3.6.7",
     "react": "^16.13.1",
     "react-cursor": "^2.0.15",
