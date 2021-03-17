@@ -308,6 +308,11 @@ const SingleBlog = () => {
                             </div>*/}
                             </div>
                         </div>
+                        <div className="mb-2">
+                            <h3 className="leave-comment">
+                                Please leave a comment
+                            </h3>
+                        </div>
                         <DiscussionEmbed
                             shortname='Rui'
                             config={
