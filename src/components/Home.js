@@ -9,7 +9,7 @@ const Home = () => {
         document.getElementsByTagName("META")[3].content = "I Create Beautiful Experiences, That Could Keep Potential Customers Glued && Loyal To Your Businesses, Brands And Websites.";
     }, []);
     return (
-        <Carousel pause="false">
+        <Carousel pause="false" interval="7000">
             <Carousel.Item>
                 <main className="Main">
                     <section className="heading-text container">
