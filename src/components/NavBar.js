@@ -63,7 +63,12 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 			style={{
 				transform: `${visible ? 'translateY(0)' : 'translateY(-20vh)'}`,
 				backgroundColor: `${
-					navOpen || location.pathname === '/' ? 'transparent' : '#11161f'
+					navOpen || location.pathname === '/'
+						? 'transparent'
+						: 'rgba(17, 22, 31, 0.759)'
+				}`,
+				backdropFilter: `${
+					navOpen || location.pathname === '/' ? 'blur(0)' : 'blur(10px)'
 				}`,
 			}}
 		>
