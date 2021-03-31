@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Carousel from 'react-bootstrap/Carousel';
+import cv from '../files/MY CV.pdf';
 import '../css/Home.css';
 
 const Home = () => {
@@ -69,7 +70,7 @@ const Home = () => {
 								<span>e</span>
 								<span>.</span>
 							</a>
-							<a href='/' className='primary-btn' data-text='Resume.'>
+							<a href={cv} className='primary-btn' data-text='Resume.' download>
 								<span>R</span>
 								<span>e</span>
 								<span>s</span>
@@ -199,7 +200,7 @@ const Home = () => {
 								<span>e</span>
 								<span>.</span>
 							</a>
-							<a href='/' className='primary-btn' data-text='Resume.'>
+							<a href={cv} className='primary-btn' data-text='Resume.' download>
 								<span>R</span>
 								<span>e</span>
 								<span>s</span>
