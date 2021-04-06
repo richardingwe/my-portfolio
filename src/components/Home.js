@@ -1,10 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Carousel from 'react-bootstrap/Carousel';
 import cv from '../files/MY CV.pdf';
 import '../css/Home.css';
 
 const Home = () => {
+	const [downloadUrl, setDownloadUrl] = useState(null);
+
+	const download = () => {
+		setDownloadUrl(cv);
+	};
+
 	useEffect(() => {
 		document.title = 'Rui - Richard Unimke Ingwe';
 		document.getElementsByTagName('META')[3].content =
@@ -70,7 +76,13 @@ const Home = () => {
 								<span>e</span>
 								<span>.</span>
 							</a>
-							<a href={cv} className='primary-btn' data-text='Resume.' download>
+							<a
+								onClick={download}
+								href={downloadUrl}
+								className='primary-btn'
+								data-text='Resume.'
+								download
+							>
 								<span>R</span>
 								<span>e</span>
 								<span>s</span>
@@ -200,7 +212,13 @@ const Home = () => {
 								<span>e</span>
 								<span>.</span>
 							</a>
-							<a href={cv} className='primary-btn' data-text='Resume.' download>
+							<a
+								onClick={download}
+								href={downloadUrl}
+								className='primary-btn'
+								data-text='Resume.'
+								download
+							>
 								<span>R</span>
 								<span>e</span>
 								<span>s</span>

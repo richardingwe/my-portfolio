@@ -36,6 +36,11 @@ function urlFor(source) {
 
 const About = () => {
 	const [author, setAuthor] = useState(null);
+	const [downloadUrl, setDownloadUrl] = useState(null);
+
+	const download = () => {
+		setDownloadUrl(cv);
+	};
 
 	useEffect(() => {
 		AOS.init();
@@ -146,12 +151,12 @@ const About = () => {
 										<span>.</span>
 									</a>
 									<a
+										onClick={download}
 										data-aos='fade-up'
 										data-aos-delay='300'
-										href={cv}
+										href={downloadUrl}
 										className='primary-btn'
 										data-text='Resume.'
-										download
 									>
 										<span>R</span>
 										<span>e</span>
