@@ -36,7 +36,7 @@ function urlFor(source) {
 
 const About = () => {
 	const [author, setAuthor] = useState(null);
-	const [downloadUrl, setDownloadUrl] = useState(null);
+	const [downloadUrl, setDownloadUrl] = useState('/');
 
 	const download = () => {
 		setDownloadUrl(cv);

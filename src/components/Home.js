@@ -5,7 +5,7 @@ import cv from '../files/MY CV.pdf';
 import '../css/Home.css';
 
 const Home = () => {
-	const [downloadUrl, setDownloadUrl] = useState(null);
+	const [downloadUrl, setDownloadUrl] = useState('/');
 
 	const download = () => {
 		setDownloadUrl(cv);
