@@ -143,9 +143,14 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 						<NavLink
 							to='/project'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400'
+							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400 projects'
 						>
 							Projects.
+							<div className='projects-dropdown'>
+								<NavLink to='/project/design'>Design Projects.</NavLink>
+								<NavLink to='/project/code'>Code Projects.</NavLink>
+								<i class='fas fa-caret-up arrow'></i>
+							</div>
 						</NavLink>
 						<NavLink
 							to='/blog'
