@@ -189,8 +189,8 @@ const Home = () => {
 							transition={{ type: 'spring', delay: 1.6, stiffness: 200 }}
 							animate={{ x: 0, opacity: 1 }}
 						>
-							I Create Beautiful Experiences, That Could Keep Potential
-							Customers Glued && Loyal To Your Businesses, Brands And Websites.
+							I Create "Exquisite/Professional" Designs && Illustrations, That
+							Keep Brands && Businesses Appealing To Their Customers.
 						</motion.p>
 						<motion.div
 							initial={{ y: '10vh', opacity: 0 }}
