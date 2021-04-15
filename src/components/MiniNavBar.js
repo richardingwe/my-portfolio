@@ -22,7 +22,7 @@ const MiniNavBar = ({ handleClick }) => {
 							About Me.
 						</NavLink>
 						<NavLink
-							to='/project'
+							to='/projects'
 							activeClassName='navActive'
 							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400'
 						>
