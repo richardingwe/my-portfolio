@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import SingleBlog from './components/SingleBlog';
@@ -19,7 +19,7 @@ function App() {
 		setNavOpen(!navOpen);
 	};
 	return (
-		<BrowserRouter>
+		<>
 			<NavBar
 				handleClick={handleClick}
 				navOpen={navOpen}
@@ -37,7 +37,7 @@ function App() {
 				<Route component={Project} path='/projects' />
 			</Switch>
 			<Footer />
-		</BrowserRouter>
+		</>
 	);
 }
 
