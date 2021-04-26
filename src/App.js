@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import AnimatedCursor from 'react-animated-cursor';
 import Home from './components/Home';
 import About from './components/About';
 import SingleBlog from './components/SingleBlog';
@@ -20,6 +21,14 @@ function App() {
 	};
 	return (
 		<>
+			<AnimatedCursor
+				innerSize={13}
+				outerSize={15}
+				color='255, 255, 255'
+				outerAlpha={0.3}
+				innerScale={1}
+				outerScale={5.5}
+			/>
 			<NavBar
 				handleClick={handleClick}
 				navOpen={navOpen}
