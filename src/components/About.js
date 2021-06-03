@@ -6,7 +6,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import cv from '../files/MY CV.pdf';
-import Loader from './Loader.js';
+// import Loader from './Loader.js';
 import 'aos/dist/aos.css';
 import '../css/About.css';
 import jsImg from '../images/js.jpg';
@@ -69,14 +69,14 @@ const About = () => {
 
 	if (!author)
 		return (
-			// <div>
-			// 	<div className='preloader-area'>
-			// 		<div className='loader-box'>
-			// 			<div className='loader'></div>
-			// 		</div>
-			// 	</div>
-			// </div>
-			<Loader />
+			<div>
+				<div className='preloader-area'>
+					<div className='loader-box'>
+						<div className='loader'></div>
+					</div>
+				</div>
+			</div>
+			// <Loader />
 		);
 	return (
 		<main className='bg-gray-800 min-h-screen main'>

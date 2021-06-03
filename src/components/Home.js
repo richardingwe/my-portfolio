@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Carousel from 'react-bootstrap/Carousel';
 import cv from '../files/MY CV.pdf';
+import Loader from './Loader.js';
 import '../css/Home.css';
 
 const Home = () => {
 	const [downloadUrl, setDownloadUrl] = useState('/');
+	const [load, setLoad] = useState(true);
 
 	const download = () => {
 		setDownloadUrl(cv);
@@ -15,8 +17,22 @@ const Home = () => {
 		document.title = 'Rui - Richard Unimke Ingwe';
 		document.getElementsByTagName('META')[3].content =
 			'I Create Beautiful Experiences, That Could Keep Potential Customers Glued && Loyal To Your Businesses, Brands And Websites.';
+		showContents();
 	}, []);
+
+	const showContents = () => {
+		setTimeout(() => {
+			setLoad(false);
+		}, 3800);
+	};
+
+	if (load)
+		return (
+			<Loader />
+		);
+
 	return (
+
 		<Carousel pause={false} interval={7000}>
 			<Carousel.Item>
 				<main className='Main'>
@@ -29,7 +45,7 @@ const Home = () => {
 						>
 							<span className='hello'>Hello,</span>
 							<br /> I am Rui.
-						</motion.h1>
+							</motion.h1>
 						<motion.div
 							initial={{ x: '-10vw', opacity: 0 }}
 							transition={{ type: 'spring', delay: 1.2, stiffness: 300 }}
@@ -55,7 +71,7 @@ const Home = () => {
 						>
 							I Create Beautiful Experiences, That Could Keep Potential
 							Customers Glued && Loyal To Your Businesses, Brands And Websites.
-						</motion.p>
+							</motion.p>
 						<motion.div
 							initial={{ y: '10vh', opacity: 0 }}
 							transition={{ type: 'spring', stiffness: 300, delay: 2 }}
@@ -165,7 +181,7 @@ const Home = () => {
 						>
 							<span className='hello'>Hello,</span>
 							<br /> I am Rui.
-						</motion.h1>
+							</motion.h1>
 						<motion.div
 							initial={{ x: '-10vw', opacity: 0 }}
 							transition={{ type: 'spring', delay: 1.2, stiffness: 300 }}
@@ -191,7 +207,7 @@ const Home = () => {
 						>
 							I Create "Exquisite/Professional" Designs && Illustrations, That
 							Keep Brands && Businesses Appealing To Their Customers.
-						</motion.p>
+							</motion.p>
 						<motion.div
 							initial={{ y: '10vh', opacity: 0 }}
 							transition={{ type: 'spring', stiffness: 300, delay: 2 }}

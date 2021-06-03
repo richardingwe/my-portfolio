@@ -45,7 +45,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 			setVisible(
 				(prevScrollPos > currentScrollPos &&
 					prevScrollPos - currentScrollPos > 70) ||
-					currentScrollPos < 10
+				currentScrollPos < 10
 			);
 
 		setPrevScrollPos(currentScrollPos);
@@ -62,14 +62,12 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 			className='NavBar'
 			style={{
 				transform: `${visible ? 'translateY(0)' : 'translateY(-20vh)'}`,
-				backgroundColor: `${
-					navOpen || location.pathname === '/'
-						? 'transparent'
-						: 'rgba(17, 22, 31, 0.759)'
-				}`,
-				backdropFilter: `${
-					navOpen || location.pathname === '/' ? 'blur(0)' : 'blur(10px)'
-				}`,
+				backgroundColor: `${navOpen || location.pathname === '/'
+					? 'transparent'
+					: 'rgba(17, 22, 31, 0.759)'
+					}`,
+				backdropFilter: `${navOpen || location.pathname === '/' ? 'blur(0)' : 'blur(10px)'
+					}`,
 			}}
 		>
 			<div className='Nav'>
@@ -149,7 +147,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 							<div className='projects-dropdown'>
 								<NavLink to='/projects/design'>Design Projects.</NavLink>
 								<NavLink to='/projects/code'>Code Projects.</NavLink>
-								<i class='fas fa-caret-up arrow'></i>
+								<i className='fas fa-caret-up arrow'></i>
 							</div>
 						</NavLink>
 						<NavLink
