@@ -1172,6 +1172,7 @@ h6,
 .primary-btn.white:hover span {
 	color: #fff;
 }
+
 .preloader-area {
 	background-color: #0e131a;
 	/* background-color: #1f2937; */
@@ -1189,6 +1190,11 @@ h6,
 	-ms-transform: translate(-50%, -50%);
 	-o-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+}
+
+.preloader-area .loader-box img {
+	width: 100px;
+	height: auto;
 }
 .preloader-area .loader {
 	width: 70px;

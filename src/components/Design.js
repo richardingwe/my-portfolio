@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/Design.css';
+import LoaderTwo from './LoaderTwo';
 
 const Design = () => {
 	const [designData, setDesignData] = useState(null);
@@ -50,7 +51,8 @@ const Design = () => {
 			<div>
 				<div className='preloader-area'>
 					<div className='loader-box'>
-						<div className='loader'></div>
+						<LoaderTwo />
+						{/* <div className='loader'></div> */}
 					</div>
 				</div>
 			</div>

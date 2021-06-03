@@ -8,6 +8,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/SingleBlog.css";
+import LoaderTwo from './LoaderTwo.js';
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -52,7 +53,8 @@ const SingleBlog = () => {
         <div>
             <div className="preloader-area">
                 <div className="loader-box">
-                    <div className="loader"></div>
+                    <LoaderTwo />
+                    {/* <div className="loader"></div> */}
                 </div>
             </div>
         </div>

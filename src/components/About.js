@@ -4,9 +4,9 @@ import imageUrlBuilder from '@sanity/image-url';
 import { Link } from 'react-router-dom';
 import BlockContent from '@sanity/block-content-to-react';
 import { motion } from 'framer-motion';
+import LoaderTwo from './LoaderTwo.js';
 import AOS from 'aos';
 import cv from '../files/MY CV.pdf';
-// import Loader from './Loader.js';
 import 'aos/dist/aos.css';
 import '../css/About.css';
 import jsImg from '../images/js.jpg';
@@ -72,11 +72,11 @@ const About = () => {
 			<div>
 				<div className='preloader-area'>
 					<div className='loader-box'>
-						<div className='loader'></div>
+						<LoaderTwo />
+						{/* <div className='loader'></div> */}
 					</div>
 				</div>
 			</div>
-			// <Loader />
 		);
 	return (
 		<main className='bg-gray-800 min-h-screen main'>

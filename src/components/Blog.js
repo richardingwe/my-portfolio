@@ -5,6 +5,7 @@ import sanityClient from "../client";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/Blog.css";
+import LoaderTwo from './LoaderTwo';
 
 const Post = () => {
     const [blogData, setBlogData] = useState(null);
@@ -49,7 +50,8 @@ const Post = () => {
         <div>
             <div className="preloader-area">
                 <div className="loader-box">
-                    <div className="loader"></div>
+                    <LoaderTwo />
+                    {/* <div className="loader"></div> */}
                 </div>
             </div>
         </div>

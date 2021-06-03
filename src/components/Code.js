@@ -6,6 +6,7 @@ import imgNotAvailable from '../images/imageNotAvailable.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/Code.css';
+import LoaderTwo from './LoaderTwo';
 
 const Code = () => {
 	const [codeData, setCodeData] = useState(null);
@@ -51,7 +52,8 @@ const Code = () => {
 			<div>
 				<div className='preloader-area'>
 					<div className='loader-box'>
-						<div className='loader'></div>
+						<LoaderTwo />
+						{/* <div className='loader'></div> */}
 					</div>
 				</div>
 			</div>
