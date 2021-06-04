@@ -1,5 +1,5 @@
 import React from 'react';
-import ruiLogo from '../images/Rui.svg';
+import ruiLogo from '../images/Rui-loader.svg';
 import '../css/LoaderTwo.css';
 
 
