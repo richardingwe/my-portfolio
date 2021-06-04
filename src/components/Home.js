@@ -93,8 +93,10 @@ const Home = () => {
 								<span>.</span>
 							</a>
 							<a
-								onClick={download}
-								href={downloadUrl}
+								// onClick={download}
+								href='https://richardingwe.github.io/my-cv/'
+								target='_blank'
+								rel='noopener noreferrer'
 								className='primary-btn'
 								data-text='Resume.'
 								download
@@ -229,8 +231,10 @@ const Home = () => {
 								<span>.</span>
 							</a>
 							<a
-								onClick={download}
-								href={downloadUrl}
+								// onClick={download}
+								href='https://richardingwe.github.io/my-cv/'
+								target='_blank'
+								rel='noopener noreferrer'
 								className='primary-btn'
 								data-text='Resume.'
 								download

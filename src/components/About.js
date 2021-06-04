@@ -153,10 +153,12 @@ const About = () => {
 										<span>.</span>
 									</a>
 									<a
-										onClick={download}
+										// onClick={download}
 										data-aos='fade-up'
 										data-aos-delay='300'
-										href={downloadUrl}
+										href='https://richardingwe.github.io/my-cv/'
+										target='_blank'
+										rel='noopener noreferrer'
 										className='primary-btn'
 										data-text='Resume.'
 									>
