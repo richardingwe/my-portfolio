@@ -68,6 +68,8 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 					}`,
 				backdropFilter: `${navOpen || location.pathname === '/' ? 'blur(0)' : 'blur(10px)'
 					}`,
+				display: `${location.pathname === '/resume' ? 'none' : 'flex'
+					}`,
 			}}
 		>
 			<div className='Nav'>
