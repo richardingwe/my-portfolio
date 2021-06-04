@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Carousel from 'react-bootstrap/Carousel';
-import cv from '../files/MY CV.pdf';
+// import cv from '../files/MY CV.pdf';
 import Loader from './Loader.js';
 import '../css/Home.css';
 
 const Home = () => {
-	const [downloadUrl, setDownloadUrl] = useState('/');
+	// const [downloadUrl, setDownloadUrl] = useState('/');
 	const [load, setLoad] = useState(true);
 
-	const download = () => {
-		setDownloadUrl(cv);
-	};
+	// const download = () => {
+	// 	setDownloadUrl(cv);
+	// };
 
 	useEffect(() => {
 		document.title = 'Rui - Richard Unimke Ingwe';

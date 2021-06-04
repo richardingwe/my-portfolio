@@ -6,7 +6,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import { motion } from 'framer-motion';
 import LoaderTwo from './LoaderTwo.js';
 import AOS from 'aos';
-import cv from '../files/MY CV.pdf';
+// import cv from '../files/MY CV.pdf';
 import 'aos/dist/aos.css';
 import '../css/About.css';
 import jsImg from '../images/js.jpg';
@@ -37,11 +37,11 @@ function urlFor(source) {
 
 const About = () => {
 	const [author, setAuthor] = useState(null);
-	const [downloadUrl, setDownloadUrl] = useState('/');
+	// const [downloadUrl, setDownloadUrl] = useState('/');
 
-	const download = () => {
-		setDownloadUrl(cv);
-	};
+	// const download = () => {
+	// 	setDownloadUrl(cv);
+	// };
 
 	useEffect(() => {
 		AOS.init();
