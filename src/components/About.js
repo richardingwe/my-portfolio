@@ -156,7 +156,7 @@ const About = () => {
 										// onClick={download}
 										data-aos='fade-up'
 										data-aos-delay='300'
-										href='/resume'
+										href='https://richardingwe.github.io/my-cv/'
 										target='_blank'
 										rel='noopener noreferrer'
 										className='primary-btn'
