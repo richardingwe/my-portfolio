@@ -1,26 +1,33 @@
-import React from 'react';
-import '../css/Resume.css';
+import React, { useEffect } from 'react';
+// import '../css/Resume.css';
 
 const Resume = () => {
+    useEffect(() => {
+        document.title = 'Rui - Resume';
+        document.getElementsByTagName('LINK')[3].href = 'style.css';
+        const styleElem = document.querySelectorAll('STYLE');
+
+        styleElem.forEach(style => style.remove());
+    }, []);
     return (
         <div id='body'>
-            <div class="containerr">
-                <div class="header">
-                    <div class="heading">
+            <div className="container">
+                <div className="header">
+                    <div className="heading">
                         <h1>RICHARD <span>INGWE</span></h1>
                         <h4>CONTACT</h4>
                     </div>
-                    <div class="title-phone">
+                    <div className="title-phone">
                         <div>WEB DEVELOPER</div>
                         <div>+23480 955 40169</div>
                     </div>
-                    <div class="title-email">
+                    <div className="title-email">
                         <div>BRAND IDENTITY DESIGNER</div>
                         <a href="mailto:richardingwe5@gmail.com">
                             <div>richardingwe5@gmail.com</div>
                         </a>
                     </div>
-                    <div class="github">
+                    <div className="github">
                         <div>
                             <svg
                                 id="Layer_1"
@@ -32,17 +39,17 @@ const Resume = () => {
                                 </defs>
                                 <path
                                     id="github"
-                                    class="cls-3"
+                                    className="cls-3"
                                     d="M2.06,4.83H2C2.06,4.83,2.06,4.8,2.06,4.83Zm-.39,0,.06.06c.06.06.07,0,.07,0l-.05-.06A.06.06,0,0,0,1.67,4.83Zm.55,0a.09.09,0,0,0-.06.07.06.06,0,0,0,.08,0s.06,0,0-.06,0,0-.07,0ZM3,0A3,3,0,0,0,0,3,3.13,3.13,0,0,0,2.1,6c.16,0,.22-.07.22-.16V5.08s-.86.19-1-.37c0,0-.14-.36-.34-.45,0,0-.29-.2,0-.19a.68.68,0,0,1,.48.32.66.66,0,0,0,.88.28l0,0a.75.75,0,0,1,.2-.42c-.69-.08-1.39-.18-1.39-1.37a1,1,0,0,1,.29-.73,1.21,1.21,0,0,1,0-.84c.26-.09.86.33.86.33a3.17,3.17,0,0,1,1.56,0s.59-.42.85-.33a1.11,1.11,0,0,1,0,.84,1,1,0,0,1,.32.73c0,1.2-.73,1.29-1.42,1.37a.75.75,0,0,1,.21.58v1c0,.08.05.18.21.15a3.07,3.07,0,0,0,2.1-3,3,3,0,0,0-3-3ZM1.21,4.28v.06a0,0,0,0,0,.07,0V4.27C1.28,4.2,1.22,4.26,1.21,4.28Zm-.14-.1v.05h0A0,0,0,0,0,1.07,4.18Zm.4.44V4.7c0,.08.06,0,.08,0s0,0,0-.08a.06.06,0,0,0-.07,0Zm-.14-.18v.07c0,.07.06,0,.07,0a.06.06,0,0,0,0-.08H1.33Z"
                                 />
                             </svg>
 						Find me on Github!
 					</div>
-                        <a href="https://github.com/richardingwe" target="_blank">
+                        <a href="https://github.com/richardingwe" target="_blank" rel='noopener noreferrer'>
                             <span>www.github.com/richardingwe</span>
                         </a>
                     </div>
-                    <div class="behance">
+                    <div className="behance">
                         <div>
                             <svg
                                 id="Layer_1"
@@ -54,17 +61,17 @@ const Resume = () => {
                                 </defs>
                                 <path
                                     id="behance"
-                                    class="cls-3"
+                                    className="cls-3"
                                     d="M2.88,2a1,1,0,0,0,.6-.92C3.48.21,2.83,0,2.07,0H0V4.4H2.13c.8,0,1.55-.39,1.55-1.28A1.05,1.05,0,0,0,2.88,2ZM1,.75h.9c.35,0,.67.1.67.5s-.25.53-.59.53H1v-1Zm1,2.9H1V2.44H2c.43,0,.69.18.69.63s-.32.58-.71.58Zm4.45-3H4.67V.22H6.45Zm.7,2.19A1.57,1.57,0,0,0,5.74,1.13H5.6A1.6,1.6,0,0,0,4,2.72v.09A1.55,1.55,0,0,0,5.42,4.48H5.6A1.42,1.42,0,0,0,7.09,3.41H6.32a.76.76,0,0,1-.7.41.71.71,0,0,1-.78-.65.43.43,0,0,1,0-.16h2.3V2.85ZM4.84,2.45a.69.69,0,0,1,.7-.68h0a.66.66,0,0,1,.7.62v.06Z"
                                 />
                             </svg>
 						Find me on Behance!
 					</div>
-                        <a href="https://behance.net/richardingwe" target="_blank">
+                        <a href="https://behance.net/richardingwe" target="_blank" rel='noopener noreferrer'>
                             <span>www.behance.net/richardingwe</span>
                         </a>
                     </div>
-                    <div class="linkedin">
+                    <div className="linkedin">
                         <div>
                             <svg
                                 id="Layer_1"
@@ -76,22 +83,22 @@ const Resume = () => {
                                 </defs>
                                 <path
                                     id="linkedin-in"
-                                    class="cls-3"
+                                    className="cls-3"
                                     d="M1.25,5.54H.1V1.83H1.25ZM.67,1.34A.67.67,0,1,1,1.34.67h0a.67.67,0,0,1-.67.67Zm4.89,4.2H4.41V3.73c0-.43,0-1-.59-1s-.7.47-.7,1V5.54H2V1.83H3.08v.51h0a1.24,1.24,0,0,1,1.09-.6c1.17,0,1.39.77,1.39,1.77v2Z"
                                 />
                             </svg>
 						Find me on Linkedin!
 					</div>
-                        <a href="https://linkedin.com/in/richard-ingwe-9a91a5190">
+                        <a href="https://linkedin.com/in/richard-ingwe-9a91a5190" target='_blank' rel='noopener noreferrer'>
                             <span>www.linkedin.com/in/richard-ingwe-9a91a5190</span>
                         </a>
                     </div>
                 </div>
-                <div class="body">
-                    <div class="about-me">
-                        <div class="about">
+                <div className="body">
+                    <div className="about-me">
+                        <div className="about">
                             <h2>ABOUT</h2>
-                            <div class="paragraph">
+                            <div className="paragraph">
                                 <p>
                                     I am a Software Developer and a Graphic Designer, I am very
                                     passionate about bringing ideas to reality through Codes and
@@ -113,12 +120,12 @@ const Resume = () => {
 							</p>
                             </div>
                         </div>
-                        <div class="software">
+                        <div className="software">
                             <h2>SOFTWARES</h2>
-                            <div class="apps">
-                                <div class="app">
-                                    <div class="app-name">Adobe Illustrator</div>
-                                    <div class="app-rating">
+                            <div className="apps">
+                                <div className="app">
+                                    <div className="app-name">Adobe Illustrator</div>
+                                    <div className="app-rating">
                                         <svg
                                             id="Layer_1"
                                             data-name="Layer 1"
@@ -128,7 +135,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -141,7 +148,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -154,7 +161,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -167,7 +174,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -180,7 +187,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -193,98 +200,15 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="app">
-                                    <div class="app-name">Adobe Photoshop</div>
-                                    <div class="app-rating">
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-2"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="app">
-                                    <div class="app-name">Adobe XD</div>
-                                    <div class="app-rating">
+                                <div className="app">
+                                    <div className="app-name">Adobe Photoshop</div>
+                                    <div className="app-rating">
                                         <svg
                                             id="Layer_1"
                                             data-name="Layer 1"
@@ -294,7 +218,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -307,7 +231,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -320,7 +244,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -333,7 +257,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -346,7 +270,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -359,98 +283,15 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="app">
-                                    <div class="app-name">Adobe InDesign</div>
-                                    <div class="app-rating">
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-2"
+                                                className="cls-2"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="app">
-                                    <div class="app-name">Adobe After Effects</div>
-                                    <div class="app-rating">
+                                <div className="app">
+                                    <div className="app-name">Adobe XD</div>
+                                    <div className="app-rating">
                                         <svg
                                             id="Layer_1"
                                             data-name="Layer 1"
@@ -460,7 +301,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -473,7 +314,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -486,7 +327,173 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-2"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="app">
+                                    <div className="app-name">Adobe InDesign</div>
+                                    <div className="app-rating">
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-2"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="app">
+                                    <div className="app-name">Adobe After Effects</div>
+                                    <div className="app-rating">
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -500,7 +507,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
+                                                className="cls-2"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -513,7 +520,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
+                                                className="cls-2"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -526,7 +533,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
+                                                className="cls-2"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -534,12 +541,12 @@ const Resume = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="skills">
+                        <div className="skills">
                             <h2>SKILLS</h2>
-                            <div class="apps">
-                                <div class="app">
-                                    <div class="app-name">Graphic Design</div>
-                                    <div class="app-rating">
+                            <div className="apps">
+                                <div className="app">
+                                    <div className="app-name">Graphic Design</div>
+                                    <div className="app-rating">
                                         <svg
                                             id="Layer_1"
                                             data-name="Layer 1"
@@ -549,7 +556,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -562,7 +569,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -575,7 +582,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -588,7 +595,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -601,7 +608,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -614,15 +621,15 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="app">
-                                    <div class="app-name">UI/UX Design</div>
-                                    <div class="app-rating">
+                                <div className="app">
+                                    <div className="app-name">UI/UX Design</div>
+                                    <div className="app-rating">
                                         <svg
                                             id="Layer_1"
                                             data-name="Layer 1"
@@ -632,7 +639,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -645,7 +652,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -658,7 +665,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -671,7 +678,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -685,7 +692,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
+                                                className="cls-2"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -698,98 +705,15 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="app">
-                                    <div class="app-name">Web Development</div>
-                                    <div class="app-rating">
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
-                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
-                                            />
-                                        </svg>
-                                        <svg
-                                            id="Layer_1"
-                                            data-name="Layer 1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 6.15 6"
-                                        >
-                                            <defs>
-                                            </defs>
-                                            <path
-                                                class="cls-1"
+                                                className="cls-2"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="app">
-                                    <div class="app-name">Communication</div>
-                                    <div class="app-rating">
+                                <div className="app">
+                                    <div className="app-name">Web Development</div>
+                                    <div className="app-rating">
                                         <svg
                                             id="Layer_1"
                                             data-name="Layer 1"
@@ -799,7 +723,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -812,7 +736,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -825,7 +749,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -838,7 +762,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -851,7 +775,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -864,15 +788,15 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="app">
-                                    <div class="app-name">Marketting</div>
-                                    <div class="app-rating">
+                                <div className="app">
+                                    <div className="app-name">Communication</div>
+                                    <div className="app-rating">
                                         <svg
                                             id="Layer_1"
                                             data-name="Layer 1"
@@ -882,7 +806,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -895,7 +819,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -908,7 +832,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -921,7 +845,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -934,7 +858,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -947,7 +871,90 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-2"
+                                                className="cls-2"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="app">
+                                    <div className="app-name">Marketting</div>
+                                    <div className="app-rating">
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-1"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-2"
+                                                d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
+                                            />
+                                        </svg>
+                                        <svg
+                                            id="Layer_1"
+                                            data-name="Layer 1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 6.15 6"
+                                        >
+                                            <defs>
+                                            </defs>
+                                            <path
+                                                className="cls-2"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -956,9 +963,9 @@ const Resume = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="stack">
-                        <h2 class="heading">STACK</h2>
-                        <div class="row1">
+                    <div className="stack">
+                        <h2 className="heading">STACK</h2>
+                        <div className="row1">
                             <div>Javascript</div>
                             <svg
                                 id="Layer_1"
@@ -968,7 +975,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>React.js</div>
                             <svg
@@ -979,7 +986,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>Vue.js</div>
                             <svg
@@ -990,7 +997,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>Next.js</div>
                             <svg
@@ -1001,7 +1008,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>PWA</div>
                             <svg
@@ -1012,7 +1019,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>Bootstrap</div>
                             <svg
@@ -1023,7 +1030,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>Git</div>
                             <svg
@@ -1034,11 +1041,11 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>SASS</div>
                         </div>
-                        <div class="row2">
+                        <div className="row2">
                             <div>Node.js</div>
                             <svg
                                 id="Layer_1"
@@ -1048,7 +1055,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>MongoDB</div>
                             <svg
@@ -1059,7 +1066,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>MySql</div>
                             <svg
@@ -1070,7 +1077,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>Firebase</div>
                             <svg
@@ -1081,7 +1088,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>AWS</div>
                             <svg
@@ -1092,7 +1099,7 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>Redux</div>
                             <svg
@@ -1103,15 +1110,15 @@ const Resume = () => {
                             >
                                 <defs>
                                 </defs>
-                                <path class="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
+                                <path className="cls-1" d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z" />
                             </svg>
                             <div>Sanity</div>
                         </div>
                     </div>
-                    <div class="exp-edu">
-                        <div class="exp">
-                            <h2 class="heading">EXPERIENCE</h2>
-                            {/* <div class="row">
+                    <div className="exp-edu">
+                        <div className="exp">
+                            <h2 className="heading">EXPERIENCE</h2>
+                            {/* <div className="row">
                                 <h3>SATELLITE TOWN HOTEL</h3>
                                 <div>2015 - 2017</div>
                                 <p>
@@ -1121,7 +1128,7 @@ const Resume = () => {
                                     year.
 							</p>
                             </div>  */}
-                            <div class="row">
+                            <div className="row">
                                 <h3>RUI CREATIVE</h3>
                                 <div>2018 - 2021</div>
                                 <p>
@@ -1141,26 +1148,26 @@ const Resume = () => {
                             <defs>
                             </defs>
                             <path
-                                class="cls-1"
+                                className="cls-1"
                                 d="M7.61,3.81A3.81,3.81,0,1,1,3.81,0,3.8,3.8,0,0,1,7.61,3.81Z"
                             />
                             <path
-                                class="cls-1"
+                                className="cls-1"
                                 d="M7.61,45.26a3.81,3.81,0,1,1-3.8-3.81A3.8,3.8,0,0,1,7.61,45.26Z"
                             />
                             <path
-                                class="cls-1"
+                                className="cls-1"
                                 d="M7.61,86.71a3.81,3.81,0,1,1-3.8-3.81A3.8,3.8,0,0,1,7.61,86.71Z"
                             />
                             <path
-                                class="cls-1"
+                                className="cls-1"
                                 d="M7.61,128.16a3.81,3.81,0,1,1-3.8-3.81A3.8,3.8,0,0,1,7.61,128.16Z"
                             />
-                            <rect class="cls-1" x="3" y="3.81" width="1.6" height="123.71" />
+                            <rect className="cls-1" x="3" y="3.81" width="1.6" height="123.71" />
                         </svg>
-                        <div class="edu">
-                            <h2 class="heading">EDUCATION</h2>
-                            <div class="row">
+                        <div className="edu">
+                            <h2 className="heading">EDUCATION</h2>
+                            <div className="row">
                                 <h3>FSLC</h3>
                                 <div>2009</div>
                                 <p>
@@ -1168,33 +1175,33 @@ const Resume = () => {
                                     NIGERIA
 							</p>
                             </div>
-                            <div class="row">
+                            <div className="row">
                                 <h3>WASSCE, NABTEB, NECO</h3>
                                 <div>2015</div>
                                 <p>
                                     DIVINE TECHNICAL COLLEGE, CALABAR, CROSSRIVER STATE, NIGERIA.
 							</p>
                             </div>
-                            <div class="row">
+                            <div className="row">
                                 <h3>BSC PHYSICS</h3>
                                 <div>2020</div>
                                 <p>CROSSRIVER UNIVERSITY OF TECHNOLOGY, NIGERIA.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="about-me">
-                        <div class="about">
+                    <div className="about-me">
+                        <div className="about">
                             <h2>INTEREST</h2>
-                            <div class="paragraph">
+                            <div className="paragraph">
                                 <p>Design, Mathematics, Tech, Programming E.t.c...</p>
                             </div>
                         </div>
-                        <div class="software">
+                        <div className="software">
                             <h2>LANGUAGES</h2>
-                            <div class="apps">
-                                <div class="app">
-                                    <div class="app-name">English</div>
-                                    <div class="app-rating">
+                            <div className="apps">
+                                <div className="app">
+                                    <div className="app-name">English</div>
+                                    <div className="app-rating">
                                         <svg
                                             id="Layer_1"
                                             data-name="Layer 1"
@@ -1204,7 +1211,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -1217,7 +1224,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -1230,7 +1237,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -1243,7 +1250,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -1256,7 +1263,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -1269,7 +1276,7 @@ const Resume = () => {
                                             <defs>
                                             </defs>
                                             <path
-                                                class="cls-1"
+                                                className="cls-1"
                                                 d="M6.08,3a3,3,0,1,1-3-3A3,3,0,0,1,6.08,3Z"
                                             />
                                         </svg>
@@ -1277,16 +1284,16 @@ const Resume = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="about">
+                        <div className="about">
                             <h2>HOBBIES</h2>
-                            <div class="paragraph">
+                            <div className="paragraph">
                                 <p>Designing, Coding, Reading, Writing, Gaming E.t.c...</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="./pdf/MY CV.pdf" class="download heartbeat" download>
+            <a href="./pdf/MY CV.pdf" className="download heartbeat" download>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"

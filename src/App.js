@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import WhatsApp from './components/WhatsApp';
 import MiniNavBar from './components/MiniNavBar';
 import Design from './components/Design';
-// import Resume from './components/Resume';
+import Resume from './components/Resume';
 import Code from './components/Code';
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
 				<Route component={Design} path='/projects/design' />
 				<Route component={Code} path='/projects/code' />
 				<Route component={Project} path='/projects' />
-				{/* <Route component={Resume} path='/resume' /> */}
+				<Route component={Resume} path='/resume' />
 			</Switch>
 			<Footer />
 		</>
