@@ -74,7 +74,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 		>
 			<div className='Nav'>
 				<nav className='nav-items'>
-					<NavLink to='/' exact activeClassName='text-white' className=''>
+					<NavLink to='/' exact className='logoo'>
 						{/* <motion.img
                             onClick={handleLogoClick}
                             initial={{ x: "-10vw", opacity: 0 }}
@@ -136,14 +136,14 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 						<NavLink
 							to='/about'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 text-bold hover:text-blue-400'
+							className='inline-flex items-center'
 						>
 							About Me.
 						</NavLink>
 						<NavLink
 							to='/projects'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400 projects'
+							className='inline-flex items-center projects'
 						>
 							Projects.
 							<div className='projects-dropdown'>
@@ -155,7 +155,7 @@ const NavBar = ({ handleClick, navOpen, setNavOpen }) => {
 						<NavLink
 							to='/blog'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400'
+							className='inline-flex items-center'
 						>
 							Blog.
 						</NavLink>

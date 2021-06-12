@@ -27,6 +27,12 @@
 	color: white;
 	font-weight: 400;
 	transition: 500ms;
+	cursor: pointer;
+	margin: 0 1rem;
+	height: initial !important;
+}
+.logoo {
+	margin: 0 !important;
 }
 .nav-items a:hover {
 	color: #e45447;
@@ -119,7 +125,7 @@ svg {
 	content: '';
 	position: absolute;
 	left: 0;
-	bottom: 7px;
+	bottom: -7px;
 	width: 100%;
 	height: 2px;
 	transition: 300ms;
