@@ -17,21 +17,21 @@ const MiniNavBar = ({ handleClick }) => {
 						<NavLink
 							to='/about'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 text-bold hover:text-blue-400'
+							className='inline-flex items-center'
 						>
 							About Me.
 						</NavLink>
 						<NavLink
 							to='/projects'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400'
+							className='inline-flex items-center'
 						>
 							Projects.
 						</NavLink>
 						<NavLink
 							to='/blog'
 							activeClassName='navActive'
-							className='inline-flex items-center py-3 px-3 my-6 rounded text-gray-100 hover:text-blue-400'
+							className='inline-flex items-center'
 						>
 							Blog.
 						</NavLink>
