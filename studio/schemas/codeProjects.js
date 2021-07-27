@@ -8,6 +8,15 @@ export default {
             type: "string"
         },
         {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: {
+                source: 'title',
+                maxLength: 96,
+            },
+        },
+        {
             name: "date",
             type: "datetime"
         },
@@ -24,8 +33,19 @@ export default {
             },
         },
         {
+            name: 'imagesGallery',
+            title: 'Images gallery',
+            type: 'array',
+            of: [{ type: 'image' }]
+        },
+        {
             name: "description",
             type: "text"
+        },
+        {
+            name: 'body',
+            title: 'Body',
+            type: 'blockContent',
         },
         {
             name: "projectType",
